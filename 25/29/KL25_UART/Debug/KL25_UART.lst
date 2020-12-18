@@ -1,0 +1,2605 @@
+
+KL25_UART.elf:     file format elf32-littlearm
+KL25_UART.elf
+architecture: arm, flags 0x00000012:
+EXEC_P, HAS_SYMS
+start address 0x00001119
+
+Program Header:
+    LOAD off    0x000000d4 vaddr 0x00000000 paddr 0x00000000 align 2**2
+         filesz 0x000000c0 memsz 0x000000c0 flags rw-
+    LOAD off    0x00000194 vaddr 0x00000800 paddr 0x00000800 align 2**2
+         filesz 0x00000c28 memsz 0x00000c28 flags r-x
+    LOAD off    0x00000dbc vaddr 0x20000410 paddr 0x00001428 align 2**2
+         filesz 0x00000004 memsz 0x00000004 flags rw-
+    LOAD off    0x00000dc0 vaddr 0x1ffff410 paddr 0x0000142c align 2**0
+         filesz 0x00000024 memsz 0x00000024 flags rw-
+    LOAD off    0x00000de4 vaddr 0x20000414 paddr 0x0000142c align 2**0
+         filesz 0x00000000 memsz 0x00000404 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .interrupts   000000c0  00000000  00000000  000000d4  2**2  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000c28  00000800  00000800  00000194  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000004  20000410  00001428  00000dbc  2**2  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000004  20000414  0000142c  00000de4  2**0  ALLOC
+  4 ._user_heap_stack 00000400  20000418  00001430  00000de4  2**0  ALLOC
+  5 .romp         00000024  1ffff410  0000142c  00000dc0  2**0  CONTENTS, ALLOC, LOAD, DATA
+  6 .ARM.attributes 00000032  00000000  00000000  00000de4  2**0  CONTENTS, READONLY
+  7 .debug_info   00001c50  00000000  00000000  00000e16  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000840  00000000  00000000  00002a66  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_aranges 00000208  00000000  00000000  000032a6  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000178  00000000  00000000  000034ae  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_macro  00006b6a  00000000  00000000  00003626  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   00001337  00000000  00000000  0000a190  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00021dd5  00000000  00000000  0000b4c7  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .comment      0000002a  00000000  00000000  0002d29c  2**0  CONTENTS, READONLY
+ 15 .debug_frame  00000528  00000000  00000000  0002d2c8  2**2  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .interrupts	00000000 .interrupts
+00000800 l    d  .text	00000000 .text
+20000410 l    d  .data	00000000 .data
+20000414 l    d  .bss	00000000 .bss
+20000418 l    d  ._user_heap_stack	00000000 ._user_heap_stack
+1ffff410 l    d  .romp	00000000 .romp
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 _udivsi3.o
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 isr.c
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 common.c
+00000000 l    df *ABS*	00000000 light.c
+00000000 l    df *ABS*	00000000 uart.c
+000013f8 l     O .text	00000008 UART_ARR
+20000410 l     O .data	00000003 table_irq_uart
+00000aa0 l     F .text	00000058 MCGIRCLK_OutEnable
+00000000 l    df *ABS*	00000000 gpio.c
+00001400 l     O .text	00000014 PORT_ARR
+00001414 l     O .text	00000014 GPIO_ARR
+00000f7c l     F .text	00000034 gpio_port_pin_resolution
+00000000 l    df *ABS*	00000000 startup.c
+00001144 l     F .text	00000054 vector_init
+00001198 l     F .text	0000003c m_zero_fill_bss
+000011d4 l     F .text	00000048 m_data_seg_init
+0000121c l     F .text	00000024 sys_pin_enable_port
+00000000 l    df *ABS*	00000000 sysinit.c
+00000000 l    df *ABS*	00000000 
+00000400 l       *ABS*	00000000 __stack_size
+20000410 l       .data	00000000 _sdata
+1ffff410 l       .data	00000000 ___m_data_1FFFF000_RAMStart
+00001428 l       .data	00000000 ___ROM_AT
+00000000 l       *ABS*	00000000 __heap_size
+20003000 l       *ABS*	00000000 __SP_INIT
+1ffff410 l       .data	00000000 ___m_data_1FFFF000_RAMEnd
+20003000 l       *ABS*	00000000 _estack
+20000414 l       .data	00000000 _edata
+00000920 g     F .text	00000040 isr_uart2_re
+20000410 g       .data	00000000 __START_DATA
+20000418 g       ._user_heap_stack	00000000 __heap_addr
+00000a74 g     F .text	0000002a light_init
+00001428 g       .data	00000000 __exidx_end
+00000f14 g     F .text	00000068 uart_enable_re_int
+00001428 g       .text	00000000 _etext
+00001118 g     F .text	0000002c startup
+000008e0 g     F .text	00000040 isr_uart1_re
+00000a14 g     F .text	00000060 enable_irq
+00001240 g     F .text	00000180 sys_init
+00001428 g       .data	00000000 __DTOR_END__
+00000800 g     F .text	00000088 .hidden __udivsi3
+20000414 g       .bss	00000000 __START_BSS
+20000414 g     O .bss	00000001 flag
+20000414 g       .bss	00000000 __bss_start__
+00001428 g       .data	00000000 __exidx_start
+20003000 g       *ABS*	00000000 __BOOT_STACK_ADDRESS
+000013c0 g     F .text	00000008 NOS_isrDummy
+1ffff000 g       *ABS*	00000000 __VECTOR_RAM
+00000df8 g     F .text	0000006e uart_send_string
+00001428 g       .data	00000000 __CTOR_LIST__
+00000af8 g     F .text	0000026c uart_init
+20000418 g       .bss	00000000 __bss_end__
+00000000 g       .interrupts	00000000 __vector_table
+00000000 g       *ABS*	00000000 ___m_data_1FFFF000_ROMSize
+0000089c  w    F .text	00000002 .hidden __aeabi_ldiv0
+00000e68 g     F .text	000000ac uart_re1
+00000960 g     F .text	000000b4 main
+00000800 g     F .text	00000000 .hidden __aeabi_uidiv
+00001428 g       .text	00000000 __START_DATA_ROM
+00001428 g       .data	00000000 __CTOR_END__
+00001428 g       .data	00000000 __DTOR_LIST__
+20000418 g       .bss	00000000 __END_BSS
+0000142c g       .data	00000000 _romp_at
+0000142c g       .data	00000000 ___m_data_1FFFF000_ROMStart
+000008a0 g     F .text	00000040 isr_uart0_re
+0000142c g       .data	00000000 __S_romp
+00000888 g     F .text	00000012 .hidden __aeabi_uidivmod
+0000089c  w    F .text	00000002 .hidden __aeabi_idiv0
+20000415 g     O .bss	00000001 ch
+00000d64 g     F .text	00000094 uart_send1
+20000414 g       .data	00000000 __END_DATA
+00001098 g     F .text	00000080 gpio_set
+00000000 g     O .interrupts	000000c0 rom_vector
+00000fb0 g     F .text	000000e8 gpio_init
+00000004 g       *ABS*	00000000 ___data_size
+
+
+
+Disassembly of section .text:
+
+00000800 <__aeabi_uidiv>:
+__udivsi3():
+     800:	2900      	cmp	r1, #0
+     802:	d034      	beq.n	86e <__aeabi_uidiv+0x6e>
+     804:	2301      	movs	r3, #1
+     806:	2200      	movs	r2, #0
+     808:	b410      	push	{r4}
+     80a:	4288      	cmp	r0, r1
+     80c:	d32c      	bcc.n	868 <__aeabi_uidiv+0x68>
+     80e:	2401      	movs	r4, #1
+     810:	0724      	lsls	r4, r4, #28
+     812:	42a1      	cmp	r1, r4
+     814:	d204      	bcs.n	820 <__aeabi_uidiv+0x20>
+     816:	4281      	cmp	r1, r0
+     818:	d202      	bcs.n	820 <__aeabi_uidiv+0x20>
+     81a:	0109      	lsls	r1, r1, #4
+     81c:	011b      	lsls	r3, r3, #4
+     81e:	e7f8      	b.n	812 <__aeabi_uidiv+0x12>
+     820:	00e4      	lsls	r4, r4, #3
+     822:	42a1      	cmp	r1, r4
+     824:	d204      	bcs.n	830 <__aeabi_uidiv+0x30>
+     826:	4281      	cmp	r1, r0
+     828:	d202      	bcs.n	830 <__aeabi_uidiv+0x30>
+     82a:	0049      	lsls	r1, r1, #1
+     82c:	005b      	lsls	r3, r3, #1
+     82e:	e7f8      	b.n	822 <__aeabi_uidiv+0x22>
+     830:	4288      	cmp	r0, r1
+     832:	d301      	bcc.n	838 <__aeabi_uidiv+0x38>
+     834:	1a40      	subs	r0, r0, r1
+     836:	431a      	orrs	r2, r3
+     838:	084c      	lsrs	r4, r1, #1
+     83a:	42a0      	cmp	r0, r4
+     83c:	d302      	bcc.n	844 <__aeabi_uidiv+0x44>
+     83e:	1b00      	subs	r0, r0, r4
+     840:	085c      	lsrs	r4, r3, #1
+     842:	4322      	orrs	r2, r4
+     844:	088c      	lsrs	r4, r1, #2
+     846:	42a0      	cmp	r0, r4
+     848:	d302      	bcc.n	850 <__aeabi_uidiv+0x50>
+     84a:	1b00      	subs	r0, r0, r4
+     84c:	089c      	lsrs	r4, r3, #2
+     84e:	4322      	orrs	r2, r4
+     850:	08cc      	lsrs	r4, r1, #3
+     852:	42a0      	cmp	r0, r4
+     854:	d302      	bcc.n	85c <__aeabi_uidiv+0x5c>
+     856:	1b00      	subs	r0, r0, r4
+     858:	08dc      	lsrs	r4, r3, #3
+     85a:	4322      	orrs	r2, r4
+     85c:	2800      	cmp	r0, #0
+     85e:	d003      	beq.n	868 <__aeabi_uidiv+0x68>
+     860:	091b      	lsrs	r3, r3, #4
+     862:	d001      	beq.n	868 <__aeabi_uidiv+0x68>
+     864:	0909      	lsrs	r1, r1, #4
+     866:	e7e3      	b.n	830 <__aeabi_uidiv+0x30>
+     868:	1c10      	adds	r0, r2, #0
+     86a:	bc10      	pop	{r4}
+     86c:	4770      	bx	lr
+     86e:	2800      	cmp	r0, #0
+     870:	d001      	beq.n	876 <__aeabi_uidiv+0x76>
+     872:	2000      	movs	r0, #0
+     874:	43c0      	mvns	r0, r0
+     876:	b407      	push	{r0, r1, r2}
+     878:	4802      	ldr	r0, [pc, #8]	; (884 <__aeabi_uidiv+0x84>)
+     87a:	a102      	add	r1, pc, #8	; (adr r1, 884 <__aeabi_uidiv+0x84>)
+     87c:	1840      	adds	r0, r0, r1
+     87e:	9002      	str	r0, [sp, #8]
+     880:	bd03      	pop	{r0, r1, pc}
+     882:	46c0      	nop			; (mov r8, r8)
+     884:	00000019 	.word	0x00000019
+
+00000888 <__aeabi_uidivmod>:
+__aeabi_uidivmod():
+     888:	2900      	cmp	r1, #0
+     88a:	d0f0      	beq.n	86e <__aeabi_uidiv+0x6e>
+     88c:	b503      	push	{r0, r1, lr}
+     88e:	f7ff ffb9 	bl	804 <__aeabi_uidiv+0x4>
+     892:	bc0e      	pop	{r1, r2, r3}
+     894:	4342      	muls	r2, r0
+     896:	1a89      	subs	r1, r1, r2
+     898:	4718      	bx	r3
+     89a:	46c0      	nop			; (mov r8, r8)
+
+0000089c <__aeabi_idiv0>:
+__aeabi_ldiv0():
+     89c:	4770      	bx	lr
+     89e:	46c0      	nop			; (mov r8, r8)
+
+000008a0 <isr_uart0_re>:
+isr_uart0_re():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:12
+#include "includes.h"
+
+//========================中断函数服务例程===============================
+//串口0接收中断服务例程
+void isr_uart0_re(void)
+{
+     8a0:	b580      	push	{r7, lr}
+     8a2:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:15
+    //uint_8 ch;
+    //uint_8 flag = 1;
+	flag = 1;
+     8a4:	4b0c      	ldr	r3, [pc, #48]	; (8d8 <isr_uart0_re+0x38>)
+     8a6:	2201      	movs	r2, #1
+     8a8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:16
+    DISABLE_INTERRUPTS;
+     8aa:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:18
+    
+    ch = uart_re1(UART_0, &flag);
+     8ac:	4b0a      	ldr	r3, [pc, #40]	; (8d8 <isr_uart0_re+0x38>)
+     8ae:	2000      	movs	r0, #0
+     8b0:	1c19      	adds	r1, r3, #0
+     8b2:	f000 fad9 	bl	e68 <uart_re1>
+     8b6:	1c03      	adds	r3, r0, #0
+     8b8:	1c1a      	adds	r2, r3, #0
+     8ba:	4b08      	ldr	r3, [pc, #32]	; (8dc <isr_uart0_re+0x3c>)
+     8bc:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:19
+    if (0 == flag)
+     8be:	4b06      	ldr	r3, [pc, #24]	; (8d8 <isr_uart0_re+0x38>)
+     8c0:	781b      	ldrb	r3, [r3, #0]
+     8c2:	2b00      	cmp	r3, #0
+     8c4:	d105      	bne.n	8d2 <isr_uart0_re+0x32>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:21
+    {
+        uart_send1(UART_0, ch);
+     8c6:	4b05      	ldr	r3, [pc, #20]	; (8dc <isr_uart0_re+0x3c>)
+     8c8:	781b      	ldrb	r3, [r3, #0]
+     8ca:	2000      	movs	r0, #0
+     8cc:	1c19      	adds	r1, r3, #0
+     8ce:	f000 fa49 	bl	d64 <uart_send1>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:24
+    }
+    
+    ENABLE_INTERRUPTS;
+     8d2:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:25
+}
+     8d4:	46bd      	mov	sp, r7
+     8d6:	bd80      	pop	{r7, pc}
+     8d8:	20000414 	.word	0x20000414
+     8dc:	20000415 	.word	0x20000415
+
+000008e0 <isr_uart1_re>:
+isr_uart1_re():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:30
+
+
+//串口1接收中断服务例程
+void isr_uart1_re(void)
+{
+     8e0:	b580      	push	{r7, lr}
+     8e2:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:33
+    //uint_8 ch;
+    //uint_8 flag = 1;
+	flag = 1;
+     8e4:	4b0c      	ldr	r3, [pc, #48]	; (918 <isr_uart1_re+0x38>)
+     8e6:	2201      	movs	r2, #1
+     8e8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:34
+    DISABLE_INTERRUPTS;
+     8ea:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:36
+    
+    ch = uart_re1(UART_1, &flag);//1口收2口发
+     8ec:	4b0a      	ldr	r3, [pc, #40]	; (918 <isr_uart1_re+0x38>)
+     8ee:	2001      	movs	r0, #1
+     8f0:	1c19      	adds	r1, r3, #0
+     8f2:	f000 fab9 	bl	e68 <uart_re1>
+     8f6:	1c03      	adds	r3, r0, #0
+     8f8:	1c1a      	adds	r2, r3, #0
+     8fa:	4b08      	ldr	r3, [pc, #32]	; (91c <isr_uart1_re+0x3c>)
+     8fc:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:37
+    if (0 == flag)
+     8fe:	4b06      	ldr	r3, [pc, #24]	; (918 <isr_uart1_re+0x38>)
+     900:	781b      	ldrb	r3, [r3, #0]
+     902:	2b00      	cmp	r3, #0
+     904:	d105      	bne.n	912 <isr_uart1_re+0x32>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:39
+    {
+        uart_send1(UART_2, ch);
+     906:	4b05      	ldr	r3, [pc, #20]	; (91c <isr_uart1_re+0x3c>)
+     908:	781b      	ldrb	r3, [r3, #0]
+     90a:	2002      	movs	r0, #2
+     90c:	1c19      	adds	r1, r3, #0
+     90e:	f000 fa29 	bl	d64 <uart_send1>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:55
+    //	light_init(RUN_LIGHT_RED, LIGHT_OFF);  //绿灯初始化
+    //	light_init(RUN_LIGHT_GREEN, LIGHT_OFF);  //绿灯初始化
+    //}
+
+ 
+    ENABLE_INTERRUPTS;
+     912:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:56
+}
+     914:	46bd      	mov	sp, r7
+     916:	bd80      	pop	{r7, pc}
+     918:	20000414 	.word	0x20000414
+     91c:	20000415 	.word	0x20000415
+
+00000920 <isr_uart2_re>:
+isr_uart2_re():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:60
+
+//串口2接收中断服务例程
+void isr_uart2_re(void)
+{
+     920:	b580      	push	{r7, lr}
+     922:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:63
+    //uint_8 ch;
+    //uint_8 flag = 1;
+	flag = 1;
+     924:	4b0c      	ldr	r3, [pc, #48]	; (958 <isr_uart2_re+0x38>)
+     926:	2201      	movs	r2, #1
+     928:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:64
+    DISABLE_INTERRUPTS;
+     92a:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:66
+    
+    ch = uart_re1(UART_2, &flag);
+     92c:	4b0a      	ldr	r3, [pc, #40]	; (958 <isr_uart2_re+0x38>)
+     92e:	2002      	movs	r0, #2
+     930:	1c19      	adds	r1, r3, #0
+     932:	f000 fa99 	bl	e68 <uart_re1>
+     936:	1c03      	adds	r3, r0, #0
+     938:	1c1a      	adds	r2, r3, #0
+     93a:	4b08      	ldr	r3, [pc, #32]	; (95c <isr_uart2_re+0x3c>)
+     93c:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:67
+    if (0 == flag)
+     93e:	4b06      	ldr	r3, [pc, #24]	; (958 <isr_uart2_re+0x38>)
+     940:	781b      	ldrb	r3, [r3, #0]
+     942:	2b00      	cmp	r3, #0
+     944:	d105      	bne.n	952 <isr_uart2_re+0x32>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:69
+    {
+        uart_send1(UART_2, ch);
+     946:	4b05      	ldr	r3, [pc, #20]	; (95c <isr_uart2_re+0x3c>)
+     948:	781b      	ldrb	r3, [r3, #0]
+     94a:	2002      	movs	r0, #2
+     94c:	1c19      	adds	r1, r3, #0
+     94e:	f000 fa09 	bl	d64 <uart_send1>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:72
+    }
+        
+    ENABLE_INTERRUPTS;
+     952:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/isr.c:73
+}
+     954:	46bd      	mov	sp, r7
+     956:	bd80      	pop	{r7, pc}
+     958:	20000414 	.word	0x20000414
+     95c:	20000415 	.word	0x20000415
+
+00000960 <main>:
+main():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:8
+
+#include "includes.h"   //包含总头文件
+
+
+int main(void)
+{
+     960:	b580      	push	{r7, lr}
+     962:	b082      	sub	sp, #8
+     964:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:12
+	//1. 声明主函数使用的变量
+	uint_32  mRuncount;     //主循环计数器
+	//2. 关总中断
+	DISABLE_INTERRUPTS;
+     966:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:15
+
+	//3. 初始化外设模块
+	light_init(RUN_LIGHT_RED, LIGHT_OFF);  //红灯初始化
+     968:	2314      	movs	r3, #20
+     96a:	33ff      	adds	r3, #255	; 0xff
+     96c:	1c18      	adds	r0, r3, #0
+     96e:	2101      	movs	r1, #1
+     970:	f000 f880 	bl	a74 <light_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:16
+	light_init(RUN_LIGHT_BLUE, LIGHT_OFF);  //蓝灯初始化
+     974:	230a      	movs	r3, #10
+     976:	33ff      	adds	r3, #255	; 0xff
+     978:	1c18      	adds	r0, r3, #0
+     97a:	2101      	movs	r1, #1
+     97c:	f000 f87a 	bl	a74 <light_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:17
+	light_init(RUN_LIGHT_GREEN, LIGHT_ON);  //绿灯初始化
+     980:	2389      	movs	r3, #137	; 0x89
+     982:	005b      	lsls	r3, r3, #1
+     984:	1c18      	adds	r0, r3, #0
+     986:	2100      	movs	r1, #0
+     988:	f000 f874 	bl	a74 <light_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:18
+	uart_init(UART_0,MCGIRCLK, 9600);    //串口0时钟MCGIRCLK(4000Khz)
+     98c:	2396      	movs	r3, #150	; 0x96
+     98e:	019b      	lsls	r3, r3, #6
+     990:	2000      	movs	r0, #0
+     992:	2100      	movs	r1, #0
+     994:	1c1a      	adds	r2, r3, #0
+     996:	f000 f8af 	bl	af8 <uart_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:19
+	uart_init (UART_1,BUSCLK, 9600);     //串口1、2使用总线时钟24000Khz
+     99a:	2396      	movs	r3, #150	; 0x96
+     99c:	019b      	lsls	r3, r3, #6
+     99e:	2001      	movs	r0, #1
+     9a0:	2102      	movs	r1, #2
+     9a2:	1c1a      	adds	r2, r3, #0
+     9a4:	f000 f8a8 	bl	af8 <uart_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:20
+	uart_init (UART_2,BUSCLK, 9600);     //波特率使用9600
+     9a8:	2396      	movs	r3, #150	; 0x96
+     9aa:	019b      	lsls	r3, r3, #6
+     9ac:	2002      	movs	r0, #2
+     9ae:	2102      	movs	r1, #2
+     9b0:	1c1a      	adds	r2, r3, #0
+     9b2:	f000 f8a1 	bl	af8 <uart_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:21
+	uart_send_string(UART_0, "Hello Uart_0!\r\n"); //串口发送初始化提示
+     9b6:	4b13      	ldr	r3, [pc, #76]	; (a04 <main+0xa4>)
+     9b8:	2000      	movs	r0, #0
+     9ba:	1c19      	adds	r1, r3, #0
+     9bc:	f000 fa1c 	bl	df8 <uart_send_string>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:22
+	uart_send_string(UART_1, "Hello Uart_1!\r\n");
+     9c0:	4b11      	ldr	r3, [pc, #68]	; (a08 <main+0xa8>)
+     9c2:	2001      	movs	r0, #1
+     9c4:	1c19      	adds	r1, r3, #0
+     9c6:	f000 fa17 	bl	df8 <uart_send_string>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:23
+	uart_send_string(UART_2, "Hello Uart_2!\r\n");
+     9ca:	4b10      	ldr	r3, [pc, #64]	; (a0c <main+0xac>)
+     9cc:	2002      	movs	r0, #2
+     9ce:	1c19      	adds	r1, r3, #0
+     9d0:	f000 fa12 	bl	df8 <uart_send_string>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:25
+	//4. 给有关变量赋初值
+	mRuncount=0;            //主循环计数器
+     9d4:	2300      	movs	r3, #0
+     9d6:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:27
+	//5. 使能模块中断
+	uart_enable_re_int(UART_0);   //使能串口0接收中断
+     9d8:	2000      	movs	r0, #0
+     9da:	f000 fa9b 	bl	f14 <uart_enable_re_int>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:28
+	uart_enable_re_int(UART_1);   //使能串口1接收中断
+     9de:	2001      	movs	r0, #1
+     9e0:	f000 fa98 	bl	f14 <uart_enable_re_int>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:29
+	uart_enable_re_int(UART_2);   //使能串口2接收中断
+     9e4:	2002      	movs	r0, #2
+     9e6:	f000 fa95 	bl	f14 <uart_enable_re_int>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:31
+	//6. 开总中断
+	ENABLE_INTERRUPTS;
+     9ea:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:39
+	//主循环开始==================================================================
+	for(;;)
+	{
+
+		//运行指示灯（RUN_LIGHT）闪烁---------------------------------------------
+		mRuncount++;					   //主循环次数计数器+1
+     9ec:	687b      	ldr	r3, [r7, #4]
+     9ee:	3301      	adds	r3, #1
+     9f0:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:40
+		if (mRuncount >= RUN_COUNTER_MAX)  //主循环次数计数器大于设定的宏常数
+     9f2:	687a      	ldr	r2, [r7, #4]
+     9f4:	4b06      	ldr	r3, [pc, #24]	; (a10 <main+0xb0>)
+     9f6:	429a      	cmp	r2, r3
+     9f8:	d902      	bls.n	a00 <main+0xa0>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:42
+		{
+			mRuncount=0;				   //主循环次数计数器清零
+     9fa:	2300      	movs	r3, #0
+     9fc:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../08_Source/main.c:53
+			//else
+			//light_change(RUN_LIGHT_RED);  //蓝色运行指示灯（RUN_LIGHT_BLUE）状态变化
+
+		}
+		//以下加入用户程序--------------------------------------------------------
+	}//主循环end_for
+     9fe:	e7f5      	b.n	9ec <main+0x8c>
+     a00:	e7f4      	b.n	9ec <main+0x8c>
+     a02:	46c0      	nop			; (mov r8, r8)
+     a04:	000013c8 	.word	0x000013c8
+     a08:	000013d8 	.word	0x000013d8
+     a0c:	000013e8 	.word	0x000013e8
+     a10:	0016e35f 	.word	0x0016e35f
+
+00000a14 <enable_irq>:
+enable_irq():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:65
+//函数返回：无  
+//参数说明：irq：irq号
+//功能概要：使能irq中断 
+//============================================================================
+void enable_irq (uint_16 irq)
+{
+     a14:	b590      	push	{r4, r7, lr}
+     a16:	b083      	sub	sp, #12
+     a18:	af00      	add	r7, sp, #0
+     a1a:	1c02      	adds	r2, r0, #0
+     a1c:	1dbb      	adds	r3, r7, #6
+     a1e:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:67
+    //确定irq号为有效的irq号
+    if (irq > 32)	irq=32;
+     a20:	1dbb      	adds	r3, r7, #6
+     a22:	881b      	ldrh	r3, [r3, #0]
+     a24:	2b20      	cmp	r3, #32
+     a26:	d902      	bls.n	a2e <enable_irq+0x1a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:67 (discriminator 1)
+     a28:	1dbb      	adds	r3, r7, #6
+     a2a:	2220      	movs	r2, #32
+     a2c:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:69
+    
+    NVIC_ICPR |= (1<<(irq%32));
+     a2e:	4a10      	ldr	r2, [pc, #64]	; (a70 <enable_irq+0x5c>)
+     a30:	490f      	ldr	r1, [pc, #60]	; (a70 <enable_irq+0x5c>)
+     a32:	23c0      	movs	r3, #192	; 0xc0
+     a34:	005b      	lsls	r3, r3, #1
+     a36:	58c9      	ldr	r1, [r1, r3]
+     a38:	1dbb      	adds	r3, r7, #6
+     a3a:	8818      	ldrh	r0, [r3, #0]
+     a3c:	231f      	movs	r3, #31
+     a3e:	4003      	ands	r3, r0
+     a40:	2001      	movs	r0, #1
+     a42:	1c04      	adds	r4, r0, #0
+     a44:	409c      	lsls	r4, r3
+     a46:	1c23      	adds	r3, r4, #0
+     a48:	4319      	orrs	r1, r3
+     a4a:	23c0      	movs	r3, #192	; 0xc0
+     a4c:	005b      	lsls	r3, r3, #1
+     a4e:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:70
+    NVIC_ISER |= (1<<(irq%32));
+     a50:	4b07      	ldr	r3, [pc, #28]	; (a70 <enable_irq+0x5c>)
+     a52:	4a07      	ldr	r2, [pc, #28]	; (a70 <enable_irq+0x5c>)
+     a54:	6811      	ldr	r1, [r2, #0]
+     a56:	1dba      	adds	r2, r7, #6
+     a58:	8810      	ldrh	r0, [r2, #0]
+     a5a:	221f      	movs	r2, #31
+     a5c:	4002      	ands	r2, r0
+     a5e:	2001      	movs	r0, #1
+     a60:	1c04      	adds	r4, r0, #0
+     a62:	4094      	lsls	r4, r2
+     a64:	1c22      	adds	r2, r4, #0
+     a66:	430a      	orrs	r2, r1
+     a68:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../07_Soft_Component/common/common.c:72
+
+}
+     a6a:	46bd      	mov	sp, r7
+     a6c:	b003      	add	sp, #12
+     a6e:	bd90      	pop	{r4, r7, pc}
+     a70:	e000e100 	.word	0xe000e100
+
+00000a74 <light_init>:
+light_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../06_App_Component/light/light.c:18
+//       state：设定小灯状态。由light.h中宏定义。
+//函数返回：无
+//功能概要：指示灯驱动初始化。
+//===========================================================================
+void light_init(uint_16 port_pin, uint_8 state)
+{
+     a74:	b580      	push	{r7, lr}
+     a76:	b082      	sub	sp, #8
+     a78:	af00      	add	r7, sp, #0
+     a7a:	1c0a      	adds	r2, r1, #0
+     a7c:	1dbb      	adds	r3, r7, #6
+     a7e:	1c01      	adds	r1, r0, #0
+     a80:	8019      	strh	r1, [r3, #0]
+     a82:	1d7b      	adds	r3, r7, #5
+     a84:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../06_App_Component/light/light.c:19
+    gpio_init(port_pin, 1, state);
+     a86:	1dbb      	adds	r3, r7, #6
+     a88:	881a      	ldrh	r2, [r3, #0]
+     a8a:	1d7b      	adds	r3, r7, #5
+     a8c:	781b      	ldrb	r3, [r3, #0]
+     a8e:	1c10      	adds	r0, r2, #0
+     a90:	2101      	movs	r1, #1
+     a92:	1c1a      	adds	r2, r3, #0
+     a94:	f000 fa8c 	bl	fb0 <gpio_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../06_App_Component/light/light.c:20
+}
+     a98:	46bd      	mov	sp, r7
+     a9a:	b002      	add	sp, #8
+     a9c:	bd80      	pop	{r7, pc}
+     a9e:	46c0      	nop			; (mov r8, r8)
+
+00000aa0 <MCGIRCLK_OutEnable>:
+MCGIRCLK_OutEnable():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:18
+
+//---------------------------内部函数开始----------------------------------
+//============================================================================
+//启用MCGIRCLK时钟，输出时钟频率在31.25Khz ~ 4Mhz
+static void MCGIRCLK_OutEnable(void)
+{
+     aa0:	b580      	push	{r7, lr}
+     aa2:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:20
+
+	MCG_C1 |= MCG_C1_IRCLKEN_MASK|MCG_C1_IREFSTEN_MASK;
+     aa4:	4b13      	ldr	r3, [pc, #76]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     aa6:	4a13      	ldr	r2, [pc, #76]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     aa8:	7812      	ldrb	r2, [r2, #0]
+     aaa:	b2d2      	uxtb	r2, r2
+     aac:	2103      	movs	r1, #3
+     aae:	430a      	orrs	r2, r1
+     ab0:	b2d2      	uxtb	r2, r2
+     ab2:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:21
+	MCG_SC |= MCG_SC_FCRDIV(0x0);  //内部4M快速参考时钟分频因子，
+     ab4:	4b0f      	ldr	r3, [pc, #60]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ab6:	4a0f      	ldr	r2, [pc, #60]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ab8:	7a12      	ldrb	r2, [r2, #8]
+     aba:	b2d2      	uxtb	r2, r2
+     abc:	721a      	strb	r2, [r3, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:23
+	                              //可将时钟分频在31.25Khz ~ 4Mhz
+	MCG_C4 |= MCG_C4_FCTRIM(0xA);
+     abe:	4b0d      	ldr	r3, [pc, #52]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ac0:	4a0c      	ldr	r2, [pc, #48]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ac2:	78d2      	ldrb	r2, [r2, #3]
+     ac4:	b2d2      	uxtb	r2, r2
+     ac6:	2114      	movs	r1, #20
+     ac8:	430a      	orrs	r2, r1
+     aca:	b2d2      	uxtb	r2, r2
+     acc:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:24
+	MCG_C2 |= MCG_C2_IRCS_MASK;
+     ace:	4b09      	ldr	r3, [pc, #36]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ad0:	4a08      	ldr	r2, [pc, #32]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ad2:	7852      	ldrb	r2, [r2, #1]
+     ad4:	b2d2      	uxtb	r2, r2
+     ad6:	2101      	movs	r1, #1
+     ad8:	430a      	orrs	r2, r1
+     ada:	b2d2      	uxtb	r2, r2
+     adc:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:25
+	while (!(MCG_S & MCG_S_IRCST_MASK));
+     ade:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:25 (discriminator 1)
+     ae0:	4b04      	ldr	r3, [pc, #16]	; (af4 <MCGIRCLK_OutEnable+0x54>)
+     ae2:	799b      	ldrb	r3, [r3, #6]
+     ae4:	b2db      	uxtb	r3, r3
+     ae6:	1c1a      	adds	r2, r3, #0
+     ae8:	2301      	movs	r3, #1
+     aea:	4013      	ands	r3, r2
+     aec:	d0f8      	beq.n	ae0 <MCGIRCLK_OutEnable+0x40>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:26
+}
+     aee:	46bd      	mov	sp, r7
+     af0:	bd80      	pop	{r7, pc}
+     af2:	46c0      	nop			; (mov r8, r8)
+     af4:	40064000 	.word	0x40064000
+
+00000af8 <uart_init>:
+uart_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:43
+//函数返回：无
+//说明： 当参数为UART_0时，sel_clk只能选择MCGIRCLK或MCGPLL，若选择内部时钟MCGIRCLK,
+//波特率需小于19200； 当参数为UART_1或是UART_2时，sel_clk只能选择BUSCLK
+//============================================================================
+ void  uart_init (uint_8 uartNo,uint_32 sel_clk,uint_32 baud_rate) 
+ {	  
+     af8:	b590      	push	{r4, r7, lr}
+     afa:	b089      	sub	sp, #36	; 0x24
+     afc:	af00      	add	r7, sp, #0
+     afe:	60b9      	str	r1, [r7, #8]
+     b00:	607a      	str	r2, [r7, #4]
+     b02:	1c3b      	adds	r3, r7, #0
+     b04:	330f      	adds	r3, #15
+     b06:	1c02      	adds	r2, r0, #0
+     b08:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:48
+	//局部变量声明
+	register uint_16 sbr;
+	uint_8 temp;  
+	uint_32 clk_Khz;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;//声明uartch1为UARTLP_MemMapPtr结构体类型指针 
+     b0a:	4b8d      	ldr	r3, [pc, #564]	; (d40 <uart_init+0x248>)
+     b0c:	61bb      	str	r3, [r7, #24]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:50
+    UART_MemMapPtr uartch2;     //声明uartch2为UART_MemMapPtr结构体类型指针 
+    uartch2 = UART_ARR[uartNo-1]; //获得UART1、2模块相应口基地址
+     b0e:	1c3b      	adds	r3, r7, #0
+     b10:	330f      	adds	r3, #15
+     b12:	781b      	ldrb	r3, [r3, #0]
+     b14:	1e5a      	subs	r2, r3, #1
+     b16:	4b8b      	ldr	r3, [pc, #556]	; (d44 <uart_init+0x24c>)
+     b18:	0092      	lsls	r2, r2, #2
+     b1a:	58d3      	ldr	r3, [r2, r3]
+     b1c:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:54
+	
+	//根据带入参数uartNo，给局部变量uartch1赋值
+	
+	if(uartNo==0)
+     b1e:	1c3b      	adds	r3, r7, #0
+     b20:	330f      	adds	r3, #15
+     b22:	781b      	ldrb	r3, [r3, #0]
+     b24:	2b00      	cmp	r3, #0
+     b26:	d000      	beq.n	b2a <uart_init+0x32>
+     b28:	e099      	b.n	c5e <uart_init+0x166>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:56
+	{
+		switch(sel_clk)
+     b2a:	68bb      	ldr	r3, [r7, #8]
+     b2c:	2b00      	cmp	r3, #0
+     b2e:	d002      	beq.n	b36 <uart_init+0x3e>
+     b30:	2b01      	cmp	r3, #1
+     b32:	d00c      	beq.n	b4e <uart_init+0x56>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:70
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1);   //UART0选择MCGFLLCLK_khz=48000Khz时钟源
+			SIM_SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK;    
+			break;
+		   
+		default:
+			break;
+     b34:	e01e      	b.n	b74 <uart_init+0x7c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:60
+	{
+		switch(sel_clk)
+		{
+		case MCGIRCLK:
+			//启用并选择UART0时钟源MCGIRCLK
+			MCGIRCLK_OutEnable();      //启用内部快速时钟	
+     b36:	f7ff ffb3 	bl	aa0 <MCGIRCLK_OutEnable>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:61
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(0x3);  //UART0选择MCGIRCLK=4000Khz时钟源
+     b3a:	4a83      	ldr	r2, [pc, #524]	; (d48 <uart_init+0x250>)
+     b3c:	4982      	ldr	r1, [pc, #520]	; (d48 <uart_init+0x250>)
+     b3e:	4b83      	ldr	r3, [pc, #524]	; (d4c <uart_init+0x254>)
+     b40:	58cb      	ldr	r3, [r1, r3]
+     b42:	21c0      	movs	r1, #192	; 0xc0
+     b44:	0509      	lsls	r1, r1, #20
+     b46:	4319      	orrs	r1, r3
+     b48:	4b80      	ldr	r3, [pc, #512]	; (d4c <uart_init+0x254>)
+     b4a:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:62
+			break;
+     b4c:	e012      	b.n	b74 <uart_init+0x7c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:65
+	   
+		case MCGPLL:
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1);   //UART0选择MCGFLLCLK_khz=48000Khz时钟源
+     b4e:	4a7e      	ldr	r2, [pc, #504]	; (d48 <uart_init+0x250>)
+     b50:	497d      	ldr	r1, [pc, #500]	; (d48 <uart_init+0x250>)
+     b52:	4b7e      	ldr	r3, [pc, #504]	; (d4c <uart_init+0x254>)
+     b54:	58cb      	ldr	r3, [r1, r3]
+     b56:	2180      	movs	r1, #128	; 0x80
+     b58:	04c9      	lsls	r1, r1, #19
+     b5a:	4319      	orrs	r1, r3
+     b5c:	4b7b      	ldr	r3, [pc, #492]	; (d4c <uart_init+0x254>)
+     b5e:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:66
+			SIM_SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK;    
+     b60:	4a79      	ldr	r2, [pc, #484]	; (d48 <uart_init+0x250>)
+     b62:	4979      	ldr	r1, [pc, #484]	; (d48 <uart_init+0x250>)
+     b64:	4b79      	ldr	r3, [pc, #484]	; (d4c <uart_init+0x254>)
+     b66:	58cb      	ldr	r3, [r1, r3]
+     b68:	2180      	movs	r1, #128	; 0x80
+     b6a:	0249      	lsls	r1, r1, #9
+     b6c:	4319      	orrs	r1, r3
+     b6e:	4b77      	ldr	r3, [pc, #476]	; (d4c <uart_init+0x254>)
+     b70:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:67
+			break;
+     b72:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:74
+		default:
+			break;
+		}
+		
+		//引脚复用为串口功能并启用串口模块时钟  	   
+		PORTA_PCR14 = PORT_PCR_MUX(0x3);      //使能UART0_TXD
+     b74:	4b76      	ldr	r3, [pc, #472]	; (d50 <uart_init+0x258>)
+     b76:	22c0      	movs	r2, #192	; 0xc0
+     b78:	0092      	lsls	r2, r2, #2
+     b7a:	639a      	str	r2, [r3, #56]	; 0x38
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:75
+		PORTA_PCR15 = PORT_PCR_MUX(0x3);      //使能UART0_RXD	
+     b7c:	4b74      	ldr	r3, [pc, #464]	; (d50 <uart_init+0x258>)
+     b7e:	22c0      	movs	r2, #192	; 0xc0
+     b80:	0092      	lsls	r2, r2, #2
+     b82:	63da      	str	r2, [r3, #60]	; 0x3c
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:76
+		SIM_SCGC4 |= SIM_SCGC4_UART0_MASK;    //启动串口0时钟
+     b84:	4a70      	ldr	r2, [pc, #448]	; (d48 <uart_init+0x250>)
+     b86:	4970      	ldr	r1, [pc, #448]	; (d48 <uart_init+0x250>)
+     b88:	4b72      	ldr	r3, [pc, #456]	; (d54 <uart_init+0x25c>)
+     b8a:	58cb      	ldr	r3, [r1, r3]
+     b8c:	2180      	movs	r1, #128	; 0x80
+     b8e:	00c9      	lsls	r1, r1, #3
+     b90:	4319      	orrs	r1, r3
+     b92:	4b70      	ldr	r3, [pc, #448]	; (d54 <uart_init+0x25c>)
+     b94:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:79
+		
+		//暂时关闭串口0发送与接收功能  
+		uartch1->C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK); 
+     b96:	69bb      	ldr	r3, [r7, #24]
+     b98:	78db      	ldrb	r3, [r3, #3]
+     b9a:	b2db      	uxtb	r3, r3
+     b9c:	220c      	movs	r2, #12
+     b9e:	4393      	bics	r3, r2
+     ba0:	b2da      	uxtb	r2, r3
+     ba2:	69bb      	ldr	r3, [r7, #24]
+     ba4:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:82
+	
+		//根据时钟源选择时钟频率
+		if(MCGIRCLK == sel_clk)
+     ba6:	68bb      	ldr	r3, [r7, #8]
+     ba8:	2b00      	cmp	r3, #0
+     baa:	d103      	bne.n	bb4 <uart_init+0xbc>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:83
+			clk_Khz = MCGIR_CLK_KHZ;
+     bac:	23fa      	movs	r3, #250	; 0xfa
+     bae:	011b      	lsls	r3, r3, #4
+     bb0:	61fb      	str	r3, [r7, #28]
+     bb2:	e004      	b.n	bbe <uart_init+0xc6>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:84
+		else if (MCGPLL == sel_clk)
+     bb4:	68bb      	ldr	r3, [r7, #8]
+     bb6:	2b01      	cmp	r3, #1
+     bb8:	d101      	bne.n	bbe <uart_init+0xc6>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:85
+			clk_Khz = MCGPLL_CLK_KHZ;
+     bba:	4b67      	ldr	r3, [pc, #412]	; (d58 <uart_init+0x260>)
+     bbc:	61fb      	str	r3, [r7, #28]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:88 (discriminator 1)
+   
+		//配置串口工作模式:8位无校验模式
+		sbr = (uint_16)((clk_Khz*1000)/(baud_rate * 16));
+     bbe:	69fb      	ldr	r3, [r7, #28]
+     bc0:	22fa      	movs	r2, #250	; 0xfa
+     bc2:	0092      	lsls	r2, r2, #2
+     bc4:	435a      	muls	r2, r3
+     bc6:	687b      	ldr	r3, [r7, #4]
+     bc8:	011b      	lsls	r3, r3, #4
+     bca:	1c10      	adds	r0, r2, #0
+     bcc:	1c19      	adds	r1, r3, #0
+     bce:	f7ff fe17 	bl	800 <__aeabi_uidiv>
+     bd2:	1c03      	adds	r3, r0, #0
+     bd4:	b29c      	uxth	r4, r3
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:89 (discriminator 1)
+		temp = UART_BDH_REG(uartch1) & ~(UART_BDH_SBR(0x1F));
+     bd6:	69bb      	ldr	r3, [r7, #24]
+     bd8:	781b      	ldrb	r3, [r3, #0]
+     bda:	b2da      	uxtb	r2, r3
+     bdc:	1c3b      	adds	r3, r7, #0
+     bde:	3313      	adds	r3, #19
+     be0:	211f      	movs	r1, #31
+     be2:	438a      	bics	r2, r1
+     be4:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:90 (discriminator 1)
+		UART_BDH_REG(uartch1) = temp |  UART_BDH_SBR(((sbr & 0x1F00) >> 8));
+     be6:	1c22      	adds	r2, r4, #0
+     be8:	23f8      	movs	r3, #248	; 0xf8
+     bea:	015b      	lsls	r3, r3, #5
+     bec:	4013      	ands	r3, r2
+     bee:	121b      	asrs	r3, r3, #8
+     bf0:	b2da      	uxtb	r2, r3
+     bf2:	231f      	movs	r3, #31
+     bf4:	4013      	ands	r3, r2
+     bf6:	b2da      	uxtb	r2, r3
+     bf8:	1c3b      	adds	r3, r7, #0
+     bfa:	3313      	adds	r3, #19
+     bfc:	781b      	ldrb	r3, [r3, #0]
+     bfe:	4313      	orrs	r3, r2
+     c00:	b2da      	uxtb	r2, r3
+     c02:	69bb      	ldr	r3, [r7, #24]
+     c04:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:91 (discriminator 1)
+		UART_BDL_REG(uartch1) = (uint_8)(sbr & UART_BDL_SBR_MASK);
+     c06:	b2e2      	uxtb	r2, r4
+     c08:	69bb      	ldr	r3, [r7, #24]
+     c0a:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:94 (discriminator 1)
+
+		//初始化控制寄存器、清标志位
+		UART0_C4 = 0x0F;
+     c0c:	4b4c      	ldr	r3, [pc, #304]	; (d40 <uart_init+0x248>)
+     c0e:	220f      	movs	r2, #15
+     c10:	729a      	strb	r2, [r3, #10]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:95 (discriminator 1)
+		UART0_C1 = 0x00;
+     c12:	4b4b      	ldr	r3, [pc, #300]	; (d40 <uart_init+0x248>)
+     c14:	2200      	movs	r2, #0
+     c16:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:96 (discriminator 1)
+		UART0_C3 = 0x00;
+     c18:	4b49      	ldr	r3, [pc, #292]	; (d40 <uart_init+0x248>)
+     c1a:	2200      	movs	r2, #0
+     c1c:	719a      	strb	r2, [r3, #6]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:97 (discriminator 1)
+		UART0_MA1 = 0x00;
+     c1e:	4b48      	ldr	r3, [pc, #288]	; (d40 <uart_init+0x248>)
+     c20:	2200      	movs	r2, #0
+     c22:	721a      	strb	r2, [r3, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:98 (discriminator 1)
+		UART0_MA2 = 0x00;
+     c24:	4b46      	ldr	r3, [pc, #280]	; (d40 <uart_init+0x248>)
+     c26:	2200      	movs	r2, #0
+     c28:	725a      	strb	r2, [r3, #9]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:99 (discriminator 1)
+		UART0_S1 |= 0x1F;
+     c2a:	4b45      	ldr	r3, [pc, #276]	; (d40 <uart_init+0x248>)
+     c2c:	4a44      	ldr	r2, [pc, #272]	; (d40 <uart_init+0x248>)
+     c2e:	7912      	ldrb	r2, [r2, #4]
+     c30:	b2d2      	uxtb	r2, r2
+     c32:	211f      	movs	r1, #31
+     c34:	430a      	orrs	r2, r1
+     c36:	b2d2      	uxtb	r2, r2
+     c38:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:100 (discriminator 1)
+		UART0_S2 |= 0xC0;    
+     c3a:	4b41      	ldr	r3, [pc, #260]	; (d40 <uart_init+0x248>)
+     c3c:	4a40      	ldr	r2, [pc, #256]	; (d40 <uart_init+0x248>)
+     c3e:	7952      	ldrb	r2, [r2, #5]
+     c40:	b2d2      	uxtb	r2, r2
+     c42:	2140      	movs	r1, #64	; 0x40
+     c44:	4249      	negs	r1, r1
+     c46:	430a      	orrs	r2, r1
+     c48:	b2d2      	uxtb	r2, r2
+     c4a:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:103 (discriminator 1)
+	   	
+		//启动发送接收
+		uartch1->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);    
+     c4c:	69bb      	ldr	r3, [r7, #24]
+     c4e:	78db      	ldrb	r3, [r3, #3]
+     c50:	b2db      	uxtb	r3, r3
+     c52:	220c      	movs	r2, #12
+     c54:	4313      	orrs	r3, r2
+     c56:	b2da      	uxtb	r2, r3
+     c58:	69bb      	ldr	r3, [r7, #24]
+     c5a:	70da      	strb	r2, [r3, #3]
+     c5c:	e06d      	b.n	d3a <uart_init+0x242>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:107
+	}
+	else
+	{
+		 switch (uartNo)
+     c5e:	1c3b      	adds	r3, r7, #0
+     c60:	330f      	adds	r3, #15
+     c62:	781b      	ldrb	r3, [r3, #0]
+     c64:	2b01      	cmp	r3, #1
+     c66:	d002      	beq.n	c6e <uart_init+0x176>
+     c68:	2b02      	cmp	r3, #2
+     c6a:	d012      	beq.n	c92 <uart_init+0x19a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:120
+		           PORTE_PCR22 = PORT_PCR_MUX(0x4); //使能UART2_TXD
+		           PORTE_PCR23 = PORT_PCR_MUX(0x4); //使能UART2_RXD
+		           SIM_SCGC4 |= SIM_SCGC4_UART2_MASK;//启动串口2时钟
+		           break;
+		       default:
+		    	   break;  //传参错误，返回
+     c6c:	e023      	b.n	cb6 <uart_init+0x1be>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:110
+	else
+	{
+		 switch (uartNo)
+		       {
+		       case UART_1:
+		           PORTE_PCR0 = PORT_PCR_MUX(0x3);    //使能UART1_TXD
+     c6e:	4b3b      	ldr	r3, [pc, #236]	; (d5c <uart_init+0x264>)
+     c70:	22c0      	movs	r2, #192	; 0xc0
+     c72:	0092      	lsls	r2, r2, #2
+     c74:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:111
+		           PORTE_PCR1 = PORT_PCR_MUX(0x3);    //使能UART1_RXD
+     c76:	4b39      	ldr	r3, [pc, #228]	; (d5c <uart_init+0x264>)
+     c78:	22c0      	movs	r2, #192	; 0xc0
+     c7a:	0092      	lsls	r2, r2, #2
+     c7c:	605a      	str	r2, [r3, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:112
+		           SIM_SCGC4 |= SIM_SCGC4_UART1_MASK; //启动串口1时钟
+     c7e:	4a32      	ldr	r2, [pc, #200]	; (d48 <uart_init+0x250>)
+     c80:	4931      	ldr	r1, [pc, #196]	; (d48 <uart_init+0x250>)
+     c82:	4b34      	ldr	r3, [pc, #208]	; (d54 <uart_init+0x25c>)
+     c84:	58cb      	ldr	r3, [r1, r3]
+     c86:	2180      	movs	r1, #128	; 0x80
+     c88:	0109      	lsls	r1, r1, #4
+     c8a:	4319      	orrs	r1, r3
+     c8c:	4b31      	ldr	r3, [pc, #196]	; (d54 <uart_init+0x25c>)
+     c8e:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:113
+		           break;
+     c90:	e011      	b.n	cb6 <uart_init+0x1be>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:115
+		       case UART_2:
+		           PORTE_PCR22 = PORT_PCR_MUX(0x4); //使能UART2_TXD
+     c92:	4b32      	ldr	r3, [pc, #200]	; (d5c <uart_init+0x264>)
+     c94:	2280      	movs	r2, #128	; 0x80
+     c96:	00d2      	lsls	r2, r2, #3
+     c98:	659a      	str	r2, [r3, #88]	; 0x58
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:116
+		           PORTE_PCR23 = PORT_PCR_MUX(0x4); //使能UART2_RXD
+     c9a:	4b30      	ldr	r3, [pc, #192]	; (d5c <uart_init+0x264>)
+     c9c:	2280      	movs	r2, #128	; 0x80
+     c9e:	00d2      	lsls	r2, r2, #3
+     ca0:	65da      	str	r2, [r3, #92]	; 0x5c
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:117
+		           SIM_SCGC4 |= SIM_SCGC4_UART2_MASK;//启动串口2时钟
+     ca2:	4a29      	ldr	r2, [pc, #164]	; (d48 <uart_init+0x250>)
+     ca4:	4928      	ldr	r1, [pc, #160]	; (d48 <uart_init+0x250>)
+     ca6:	4b2b      	ldr	r3, [pc, #172]	; (d54 <uart_init+0x25c>)
+     ca8:	58cb      	ldr	r3, [r1, r3]
+     caa:	2180      	movs	r1, #128	; 0x80
+     cac:	0149      	lsls	r1, r1, #5
+     cae:	4319      	orrs	r1, r3
+     cb0:	4b28      	ldr	r3, [pc, #160]	; (d54 <uart_init+0x25c>)
+     cb2:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:118
+		           break;
+     cb4:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:124
+		       default:
+		    	   break;  //传参错误，返回
+		       }
+		       
+		 //暂时关闭串口1、2发送与接收功能  
+		uartch2->C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK);
+     cb6:	697b      	ldr	r3, [r7, #20]
+     cb8:	78db      	ldrb	r3, [r3, #3]
+     cba:	b2db      	uxtb	r3, r3
+     cbc:	220c      	movs	r2, #12
+     cbe:	4393      	bics	r3, r2
+     cc0:	b2da      	uxtb	r2, r3
+     cc2:	697b      	ldr	r3, [r7, #20]
+     cc4:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:128
+		   	  
+		//配置波特率,KL25串口1、2时钟频率只能使用 Bus clock = 24M 总线时钟
+		//配置串口工作模式,8位无校验模式
+		uartch2->C1 = 0;          
+     cc6:	697b      	ldr	r3, [r7, #20]
+     cc8:	2200      	movs	r2, #0
+     cca:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:129
+		sbr = (uint_16)((BUS_CLK_KHZ*1000)/(baud_rate * 16));
+     ccc:	687b      	ldr	r3, [r7, #4]
+     cce:	011b      	lsls	r3, r3, #4
+     cd0:	4823      	ldr	r0, [pc, #140]	; (d60 <uart_init+0x268>)
+     cd2:	1c19      	adds	r1, r3, #0
+     cd4:	f7ff fd94 	bl	800 <__aeabi_uidiv>
+     cd8:	1c03      	adds	r3, r0, #0
+     cda:	b29c      	uxth	r4, r3
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:130
+		temp = UART_BDH_REG(uartch2) & ~(UART_BDH_SBR(0x1F));
+     cdc:	697b      	ldr	r3, [r7, #20]
+     cde:	781b      	ldrb	r3, [r3, #0]
+     ce0:	b2da      	uxtb	r2, r3
+     ce2:	1c3b      	adds	r3, r7, #0
+     ce4:	3313      	adds	r3, #19
+     ce6:	211f      	movs	r1, #31
+     ce8:	438a      	bics	r2, r1
+     cea:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:131
+		UART_BDH_REG(uartch2) = temp |  UART_BDH_SBR(((sbr & 0x1F00) >> 8));
+     cec:	1c22      	adds	r2, r4, #0
+     cee:	23f8      	movs	r3, #248	; 0xf8
+     cf0:	015b      	lsls	r3, r3, #5
+     cf2:	4013      	ands	r3, r2
+     cf4:	121b      	asrs	r3, r3, #8
+     cf6:	b2da      	uxtb	r2, r3
+     cf8:	231f      	movs	r3, #31
+     cfa:	4013      	ands	r3, r2
+     cfc:	b2da      	uxtb	r2, r3
+     cfe:	1c3b      	adds	r3, r7, #0
+     d00:	3313      	adds	r3, #19
+     d02:	781b      	ldrb	r3, [r3, #0]
+     d04:	4313      	orrs	r3, r2
+     d06:	b2da      	uxtb	r2, r3
+     d08:	697b      	ldr	r3, [r7, #20]
+     d0a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:132
+		UART_BDL_REG(uartch2) = (uint_8)(sbr & UART_BDL_SBR_MASK);
+     d0c:	b2e2      	uxtb	r2, r4
+     d0e:	697b      	ldr	r3, [r7, #20]
+     d10:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:135
+		           
+		//初始化控制寄存器、清标志位
+		uartch2->C1 = 0x00;
+     d12:	697b      	ldr	r3, [r7, #20]
+     d14:	2200      	movs	r2, #0
+     d16:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:136
+		uartch2->C3 = 0x00;
+     d18:	697b      	ldr	r3, [r7, #20]
+     d1a:	2200      	movs	r2, #0
+     d1c:	719a      	strb	r2, [r3, #6]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:137
+		uartch2->S1 = 0x1F;
+     d1e:	697b      	ldr	r3, [r7, #20]
+     d20:	221f      	movs	r2, #31
+     d22:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:138
+		uartch2->S2 = 0x00;   	               
+     d24:	697b      	ldr	r3, [r7, #20]
+     d26:	2200      	movs	r2, #0
+     d28:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:140
+		//启动发送接收
+		uartch2->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);                           	
+     d2a:	697b      	ldr	r3, [r7, #20]
+     d2c:	78db      	ldrb	r3, [r3, #3]
+     d2e:	b2db      	uxtb	r3, r3
+     d30:	220c      	movs	r2, #12
+     d32:	4313      	orrs	r3, r2
+     d34:	b2da      	uxtb	r2, r3
+     d36:	697b      	ldr	r3, [r7, #20]
+     d38:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:142
+	}
+ }
+     d3a:	46bd      	mov	sp, r7
+     d3c:	b009      	add	sp, #36	; 0x24
+     d3e:	bd90      	pop	{r4, r7, pc}
+     d40:	4006a000 	.word	0x4006a000
+     d44:	000013f8 	.word	0x000013f8
+     d48:	40047000 	.word	0x40047000
+     d4c:	00001004 	.word	0x00001004
+     d50:	40049000 	.word	0x40049000
+     d54:	00001034 	.word	0x00001034
+     d58:	0000bb80 	.word	0x0000bb80
+     d5c:	4004d000 	.word	0x4004d000
+     d60:	016e3600 	.word	0x016e3600
+
+00000d64 <uart_send1>:
+uart_send1():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:151
+//          ch:要发送的字节
+//函数返回：函数执行状态：0=正常；非0=异常。
+//功能概要：串行发送1个字节
+ //============================================================================
+uint_8 uart_send1(uint_8 uartNo, uint_8 ch)
+{
+     d64:	b580      	push	{r7, lr}
+     d66:	b086      	sub	sp, #24
+     d68:	af00      	add	r7, sp, #0
+     d6a:	1c0a      	adds	r2, r1, #0
+     d6c:	1dfb      	adds	r3, r7, #7
+     d6e:	1c01      	adds	r1, r0, #0
+     d70:	7019      	strb	r1, [r3, #0]
+     d72:	1dbb      	adds	r3, r7, #6
+     d74:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:153
+    uint_32 t;       
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR; //获取UART0基地址
+     d76:	4b1d      	ldr	r3, [pc, #116]	; (dec <uart_send1+0x88>)
+     d78:	613b      	str	r3, [r7, #16]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:154
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1]; //获取UART1或者2基地址
+     d7a:	1dfb      	adds	r3, r7, #7
+     d7c:	781b      	ldrb	r3, [r3, #0]
+     d7e:	1e5a      	subs	r2, r3, #1
+     d80:	4b1b      	ldr	r3, [pc, #108]	; (df0 <uart_send1+0x8c>)
+     d82:	0092      	lsls	r2, r2, #2
+     d84:	58d3      	ldr	r3, [r2, r3]
+     d86:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:156
+    
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     d88:	2300      	movs	r3, #0
+     d8a:	617b      	str	r3, [r7, #20]
+     d8c:	e01e      	b.n	dcc <uart_send1+0x68>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:159
+    {
+        
+    	if(0==uartNo)     //判断使用的哪个串口
+     d8e:	1dfb      	adds	r3, r7, #7
+     d90:	781b      	ldrb	r3, [r3, #0]
+     d92:	2b00      	cmp	r3, #0
+     d94:	d10b      	bne.n	dae <uart_send1+0x4a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:161
+    	{
+			if ( (uartch1->S1) & UART_S1_TDRE_MASK )//判断发送缓冲区是否为空
+     d96:	693b      	ldr	r3, [r7, #16]
+     d98:	791b      	ldrb	r3, [r3, #4]
+     d9a:	b2db      	uxtb	r3, r3
+     d9c:	b2db      	uxtb	r3, r3
+     d9e:	b25b      	sxtb	r3, r3
+     da0:	2b00      	cmp	r3, #0
+     da2:	da10      	bge.n	dc6 <uart_send1+0x62>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:163
+			{
+				uartch1->D = ch;   //获取数据并发送
+     da4:	693b      	ldr	r3, [r7, #16]
+     da6:	1dba      	adds	r2, r7, #6
+     da8:	7812      	ldrb	r2, [r2, #0]
+     daa:	71da      	strb	r2, [r3, #7]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:164
+				break;             //跳出循环
+     dac:	e012      	b.n	dd4 <uart_send1+0x70>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:169
+			}
+    	}
+    	else
+    	{
+			if ( (uartch2->S1) & UART_S1_TDRE_MASK )//判断发送缓冲区是否为空
+     dae:	68fb      	ldr	r3, [r7, #12]
+     db0:	791b      	ldrb	r3, [r3, #4]
+     db2:	b2db      	uxtb	r3, r3
+     db4:	b2db      	uxtb	r3, r3
+     db6:	b25b      	sxtb	r3, r3
+     db8:	2b00      	cmp	r3, #0
+     dba:	da04      	bge.n	dc6 <uart_send1+0x62>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:171
+			{
+				uartch2->D = ch;   //获取数据并发送
+     dbc:	68fb      	ldr	r3, [r7, #12]
+     dbe:	1dba      	adds	r2, r7, #6
+     dc0:	7812      	ldrb	r2, [r2, #0]
+     dc2:	71da      	strb	r2, [r3, #7]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:172
+				break;             //跳出循环
+     dc4:	e006      	b.n	dd4 <uart_send1+0x70>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:156
+{
+    uint_32 t;       
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR; //获取UART0基地址
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1]; //获取UART1或者2基地址
+    
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     dc6:	697b      	ldr	r3, [r7, #20]
+     dc8:	3301      	adds	r3, #1
+     dca:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:156 (discriminator 1)
+     dcc:	697a      	ldr	r2, [r7, #20]
+     dce:	4b09      	ldr	r3, [pc, #36]	; (df4 <uart_send1+0x90>)
+     dd0:	429a      	cmp	r2, r3
+     dd2:	d9dc      	bls.n	d8e <uart_send1+0x2a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:177
+				break;             //跳出循环
+			}
+    	}
+        
+    }//end for
+    if (t >= 0xFBBB)
+     dd4:	697a      	ldr	r2, [r7, #20]
+     dd6:	4b07      	ldr	r3, [pc, #28]	; (df4 <uart_send1+0x90>)
+     dd8:	429a      	cmp	r2, r3
+     dda:	d901      	bls.n	de0 <uart_send1+0x7c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:178
+        return 1; //发送超时，发送失败
+     ddc:	2301      	movs	r3, #1
+     dde:	e000      	b.n	de2 <uart_send1+0x7e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:180
+    else
+        return 0; //成功发送
+     de0:	2300      	movs	r3, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:182
+        
+}
+     de2:	1c18      	adds	r0, r3, #0
+     de4:	46bd      	mov	sp, r7
+     de6:	b006      	add	sp, #24
+     de8:	bd80      	pop	{r7, pc}
+     dea:	46c0      	nop			; (mov r8, r8)
+     dec:	4006a000 	.word	0x4006a000
+     df0:	000013f8 	.word	0x000013f8
+     df4:	0000fbba 	.word	0x0000fbba
+
+00000df8 <uart_send_string>:
+uart_send_string():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:216
+//          buff:要发送的字符串的首地址
+//函数返回： 函数执行状态：0=正常；非0=异常。
+//功能概要：从指定UART端口发送一个以'\0'结束的字符串
+//============================================================================
+uint_8 uart_send_string(uint_8 uartNo, void *buff)
+{
+     df8:	b580      	push	{r7, lr}
+     dfa:	b084      	sub	sp, #16
+     dfc:	af00      	add	r7, sp, #0
+     dfe:	1c02      	adds	r2, r0, #0
+     e00:	6039      	str	r1, [r7, #0]
+     e02:	1dfb      	adds	r3, r7, #7
+     e04:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:217
+    uint_16 i = 0;
+     e06:	1c3b      	adds	r3, r7, #0
+     e08:	330e      	adds	r3, #14
+     e0a:	2200      	movs	r2, #0
+     e0c:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:218
+    uint_8 *buff_ptr = (uint_8 *)buff;    //定义指针指向要发送字符串首地址
+     e0e:	683b      	ldr	r3, [r7, #0]
+     e10:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:219
+    for(i = 0; buff_ptr[i] != '\0'; i++)  //遍历字符串里的字符
+     e12:	1c3b      	adds	r3, r7, #0
+     e14:	330e      	adds	r3, #14
+     e16:	2200      	movs	r2, #0
+     e18:	801a      	strh	r2, [r3, #0]
+     e1a:	e017      	b.n	e4c <uart_send_string+0x54>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:221
+    {
+        if (uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
+     e1c:	1c3b      	adds	r3, r7, #0
+     e1e:	330e      	adds	r3, #14
+     e20:	881b      	ldrh	r3, [r3, #0]
+     e22:	68ba      	ldr	r2, [r7, #8]
+     e24:	18d3      	adds	r3, r2, r3
+     e26:	781b      	ldrb	r3, [r3, #0]
+     e28:	1dfa      	adds	r2, r7, #7
+     e2a:	7812      	ldrb	r2, [r2, #0]
+     e2c:	1c10      	adds	r0, r2, #0
+     e2e:	1c19      	adds	r1, r3, #0
+     e30:	f7ff ff98 	bl	d64 <uart_send1>
+     e34:	1c03      	adds	r3, r0, #0
+     e36:	2b00      	cmp	r3, #0
+     e38:	d001      	beq.n	e3e <uart_send_string+0x46>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:222
+            return 1;  //发送失败
+     e3a:	2301      	movs	r3, #1
+     e3c:	e00f      	b.n	e5e <uart_send_string+0x66>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:219
+//============================================================================
+uint_8 uart_send_string(uint_8 uartNo, void *buff)
+{
+    uint_16 i = 0;
+    uint_8 *buff_ptr = (uint_8 *)buff;    //定义指针指向要发送字符串首地址
+    for(i = 0; buff_ptr[i] != '\0'; i++)  //遍历字符串里的字符
+     e3e:	1c3b      	adds	r3, r7, #0
+     e40:	330e      	adds	r3, #14
+     e42:	881a      	ldrh	r2, [r3, #0]
+     e44:	1c3b      	adds	r3, r7, #0
+     e46:	330e      	adds	r3, #14
+     e48:	3201      	adds	r2, #1
+     e4a:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:219 (discriminator 1)
+     e4c:	1c3b      	adds	r3, r7, #0
+     e4e:	330e      	adds	r3, #14
+     e50:	881b      	ldrh	r3, [r3, #0]
+     e52:	68ba      	ldr	r2, [r7, #8]
+     e54:	18d3      	adds	r3, r2, r3
+     e56:	781b      	ldrb	r3, [r3, #0]
+     e58:	2b00      	cmp	r3, #0
+     e5a:	d1df      	bne.n	e1c <uart_send_string+0x24>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:224
+    {
+        if (uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
+            return 1;  //发送失败
+    }
+    return 0;         //发送成功
+     e5c:	2300      	movs	r3, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:225
+}
+     e5e:	1c18      	adds	r0, r3, #0
+     e60:	46bd      	mov	sp, r7
+     e62:	b004      	add	sp, #16
+     e64:	bd80      	pop	{r7, pc}
+     e66:	46c0      	nop			; (mov r8, r8)
+
+00000e68 <uart_re1>:
+uart_re1():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:235
+//          fp:接收成功标志的指针:*fp=0，成功接收；*fp=1，接收失败
+//函数返回：接收返回字节
+//功能概要：串行接收1个字节
+//============================================================================
+uint_8 uart_re1 (uint_8 uartNo,uint_8 *fp)
+{
+     e68:	b580      	push	{r7, lr}
+     e6a:	b086      	sub	sp, #24
+     e6c:	af00      	add	r7, sp, #0
+     e6e:	1c02      	adds	r2, r0, #0
+     e70:	6039      	str	r1, [r7, #0]
+     e72:	1dfb      	adds	r3, r7, #7
+     e74:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:238
+    uint_32 t;
+    uint_8  dat;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;    //获取UART0基地址
+     e76:	4b24      	ldr	r3, [pc, #144]	; (f08 <uart_re1+0xa0>)
+     e78:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:239
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];//获取UART1或者2基地址
+     e7a:	1dfb      	adds	r3, r7, #7
+     e7c:	781b      	ldrb	r3, [r3, #0]
+     e7e:	1e5a      	subs	r2, r3, #1
+     e80:	4b22      	ldr	r3, [pc, #136]	; (f0c <uart_re1+0xa4>)
+     e82:	0092      	lsls	r2, r2, #2
+     e84:	58d3      	ldr	r3, [r2, r3]
+     e86:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:241
+
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     e88:	2300      	movs	r3, #0
+     e8a:	617b      	str	r3, [r7, #20]
+     e8c:	e026      	b.n	edc <uart_re1+0x74>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:243
+    {
+    	if(0==uartNo)  //判断使用的哪个串口
+     e8e:	1dfb      	adds	r3, r7, #7
+     e90:	781b      	ldrb	r3, [r3, #0]
+     e92:	2b00      	cmp	r3, #0
+     e94:	d10f      	bne.n	eb6 <uart_re1+0x4e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:246
+    	{
+            //判断接收缓冲区是否满
+            if ((uartch1->S1) & UART_S1_RDRF_MASK )
+     e96:	68fb      	ldr	r3, [r7, #12]
+     e98:	791b      	ldrb	r3, [r3, #4]
+     e9a:	b2db      	uxtb	r3, r3
+     e9c:	1c1a      	adds	r2, r3, #0
+     e9e:	2320      	movs	r3, #32
+     ea0:	4013      	ands	r3, r2
+     ea2:	d018      	beq.n	ed6 <uart_re1+0x6e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:248
+            {
+                dat = uartch1->D; //获取数据 
+     ea4:	1c3b      	adds	r3, r7, #0
+     ea6:	3313      	adds	r3, #19
+     ea8:	68fa      	ldr	r2, [r7, #12]
+     eaa:	79d2      	ldrb	r2, [r2, #7]
+     eac:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:249
+                *fp= 0;  //接受成功
+     eae:	683b      	ldr	r3, [r7, #0]
+     eb0:	2200      	movs	r2, #0
+     eb2:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:250
+                break;
+     eb4:	e016      	b.n	ee4 <uart_re1+0x7c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:256
+            }
+    	}
+    	else
+    	{
+            //判断接收缓冲区是否满
+            if ((uartch2->S1) & UART_S1_RDRF_MASK )
+     eb6:	68bb      	ldr	r3, [r7, #8]
+     eb8:	791b      	ldrb	r3, [r3, #4]
+     eba:	b2db      	uxtb	r3, r3
+     ebc:	1c1a      	adds	r2, r3, #0
+     ebe:	2320      	movs	r3, #32
+     ec0:	4013      	ands	r3, r2
+     ec2:	d008      	beq.n	ed6 <uart_re1+0x6e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:258
+            {
+                dat = uartch2->D; //获取数据 
+     ec4:	1c3b      	adds	r3, r7, #0
+     ec6:	3313      	adds	r3, #19
+     ec8:	68ba      	ldr	r2, [r7, #8]
+     eca:	79d2      	ldrb	r2, [r2, #7]
+     ecc:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:259
+                *fp= 0;  //接受成功
+     ece:	683b      	ldr	r3, [r7, #0]
+     ed0:	2200      	movs	r2, #0
+     ed2:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:260
+                break;
+     ed4:	e006      	b.n	ee4 <uart_re1+0x7c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:241
+    uint_32 t;
+    uint_8  dat;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;    //获取UART0基地址
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];//获取UART1或者2基地址
+
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     ed6:	697b      	ldr	r3, [r7, #20]
+     ed8:	3301      	adds	r3, #1
+     eda:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:241 (discriminator 1)
+     edc:	697a      	ldr	r2, [r7, #20]
+     ede:	4b0c      	ldr	r3, [pc, #48]	; (f10 <uart_re1+0xa8>)
+     ee0:	429a      	cmp	r2, r3
+     ee2:	d9d4      	bls.n	e8e <uart_re1+0x26>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:265
+                break;
+            }
+    	}
+
+    }//end for
+    if(t >= 0xFBBB) 
+     ee4:	697a      	ldr	r2, [r7, #20]
+     ee6:	4b0a      	ldr	r3, [pc, #40]	; (f10 <uart_re1+0xa8>)
+     ee8:	429a      	cmp	r2, r3
+     eea:	d906      	bls.n	efa <uart_re1+0x92>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:267
+    {
+        dat = 0xFF; 
+     eec:	1c3b      	adds	r3, r7, #0
+     eee:	3313      	adds	r3, #19
+     ef0:	22ff      	movs	r2, #255	; 0xff
+     ef2:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:268
+        *fp = 1;    //未收到数据
+     ef4:	683b      	ldr	r3, [r7, #0]
+     ef6:	2201      	movs	r2, #1
+     ef8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:270
+    }
+    return dat;    //返回接收到的数据
+     efa:	1c3b      	adds	r3, r7, #0
+     efc:	3313      	adds	r3, #19
+     efe:	781b      	ldrb	r3, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:272
+    
+}
+     f00:	1c18      	adds	r0, r3, #0
+     f02:	46bd      	mov	sp, r7
+     f04:	b006      	add	sp, #24
+     f06:	bd80      	pop	{r7, pc}
+     f08:	4006a000 	.word	0x4006a000
+     f0c:	000013f8 	.word	0x000013f8
+     f10:	0000fbba 	.word	0x0000fbba
+
+00000f14 <uart_enable_re_int>:
+uart_enable_re_int():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:305
+//参数说明：uartNo: 串口号:UART_0、UART_1、UART_2 
+//函数返回：无
+//功能概要：开串口接收中断
+//============================================================================
+void uart_enable_re_int(uint_8 uartNo)
+{
+     f14:	b580      	push	{r7, lr}
+     f16:	b084      	sub	sp, #16
+     f18:	af00      	add	r7, sp, #0
+     f1a:	1c02      	adds	r2, r0, #0
+     f1c:	1dfb      	adds	r3, r7, #7
+     f1e:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:306
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;
+     f20:	4b13      	ldr	r3, [pc, #76]	; (f70 <uart_enable_re_int+0x5c>)
+     f22:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:307
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];
+     f24:	1dfb      	adds	r3, r7, #7
+     f26:	781b      	ldrb	r3, [r3, #0]
+     f28:	1e5a      	subs	r2, r3, #1
+     f2a:	4b12      	ldr	r3, [pc, #72]	; (f74 <uart_enable_re_int+0x60>)
+     f2c:	0092      	lsls	r2, r2, #2
+     f2e:	58d3      	ldr	r3, [r2, r3]
+     f30:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:308
+    if(0==uartNo)   
+     f32:	1dfb      	adds	r3, r7, #7
+     f34:	781b      	ldrb	r3, [r3, #0]
+     f36:	2b00      	cmp	r3, #0
+     f38:	d108      	bne.n	f4c <uart_enable_re_int+0x38>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:309
+      uartch1->C2 |= UART_C2_RIE_MASK;        //开放UART接收中断
+     f3a:	68fb      	ldr	r3, [r7, #12]
+     f3c:	78db      	ldrb	r3, [r3, #3]
+     f3e:	b2db      	uxtb	r3, r3
+     f40:	2220      	movs	r2, #32
+     f42:	4313      	orrs	r3, r2
+     f44:	b2da      	uxtb	r2, r3
+     f46:	68fb      	ldr	r3, [r7, #12]
+     f48:	70da      	strb	r2, [r3, #3]
+     f4a:	e007      	b.n	f5c <uart_enable_re_int+0x48>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:311
+    else 
+      uartch2->C2 |= UART_C2_RIE_MASK;        //开放UART接收中断
+     f4c:	68bb      	ldr	r3, [r7, #8]
+     f4e:	78db      	ldrb	r3, [r3, #3]
+     f50:	b2db      	uxtb	r3, r3
+     f52:	2220      	movs	r2, #32
+     f54:	4313      	orrs	r3, r2
+     f56:	b2da      	uxtb	r2, r3
+     f58:	68bb      	ldr	r3, [r7, #8]
+     f5a:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:312
+    enable_irq(table_irq_uart[uartNo]);   //开中断控制器IRQ中断
+     f5c:	1dfb      	adds	r3, r7, #7
+     f5e:	781b      	ldrb	r3, [r3, #0]
+     f60:	4a05      	ldr	r2, [pc, #20]	; (f78 <uart_enable_re_int+0x64>)
+     f62:	5cd3      	ldrb	r3, [r2, r3]
+     f64:	1c18      	adds	r0, r3, #0
+     f66:	f7ff fd55 	bl	a14 <enable_irq>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/uart/uart.c:313
+}
+     f6a:	46bd      	mov	sp, r7
+     f6c:	b004      	add	sp, #16
+     f6e:	bd80      	pop	{r7, pc}
+     f70:	4006a000 	.word	0x4006a000
+     f74:	000013f8 	.word	0x000013f8
+     f78:	20000410 	.word	0x20000410
+
+00000f7c <gpio_port_pin_resolution>:
+gpio_port_pin_resolution():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:27
+//		   pin:引脚号（0~31，实际取值由芯片的物理引脚决定）
+//功能概要：将传进参数port_pin进行解析，得出具体端口号与引脚号（例：PORTB|(5)
+//         解析为PORTB与5，并将其分别赋值给port与pin）。
+//===========================================================================
+static void gpio_port_pin_resolution(uint_16 port_pin,uint_8* port,uint_8* pin)
+{
+     f7c:	b580      	push	{r7, lr}
+     f7e:	b084      	sub	sp, #16
+     f80:	af00      	add	r7, sp, #0
+     f82:	60b9      	str	r1, [r7, #8]
+     f84:	607a      	str	r2, [r7, #4]
+     f86:	1c3b      	adds	r3, r7, #0
+     f88:	330e      	adds	r3, #14
+     f8a:	1c02      	adds	r2, r0, #0
+     f8c:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:28
+	*port = port_pin>>8;
+     f8e:	1c3b      	adds	r3, r7, #0
+     f90:	330e      	adds	r3, #14
+     f92:	881b      	ldrh	r3, [r3, #0]
+     f94:	0a1b      	lsrs	r3, r3, #8
+     f96:	b29b      	uxth	r3, r3
+     f98:	b2da      	uxtb	r2, r3
+     f9a:	68bb      	ldr	r3, [r7, #8]
+     f9c:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:29
+	* pin = port_pin;
+     f9e:	1c3b      	adds	r3, r7, #0
+     fa0:	330e      	adds	r3, #14
+     fa2:	881b      	ldrh	r3, [r3, #0]
+     fa4:	b2da      	uxtb	r2, r3
+     fa6:	687b      	ldr	r3, [r7, #4]
+     fa8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:30
+}
+     faa:	46bd      	mov	sp, r7
+     fac:	b004      	add	sp, #16
+     fae:	bd80      	pop	{r7, pc}
+
+00000fb0 <gpio_init>:
+gpio_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:43
+//          state：端口引脚初始状态（0=低电平，1=高电平）
+//功能概要：初始化指定端口引脚作为GPIO引脚功能，并定义为输入或输出，若是输出，
+//          还指定初始状态是低电平或高电平
+//===========================================================================
+void gpio_init(uint_16 port_pin, uint_8 dir, uint_8 state)
+{
+     fb0:	b580      	push	{r7, lr}
+     fb2:	b086      	sub	sp, #24
+     fb4:	af00      	add	r7, sp, #0
+     fb6:	1dbb      	adds	r3, r7, #6
+     fb8:	8018      	strh	r0, [r3, #0]
+     fba:	1d7b      	adds	r3, r7, #5
+     fbc:	7019      	strb	r1, [r3, #0]
+     fbe:	1d3b      	adds	r3, r7, #4
+     fc0:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:49
+	//局部变量声明
+	PORT_MemMapPtr port_ptr;    //声明port_ptr为PORT结构体类型指针 
+	GPIO_MemMapPtr gpio_ptr;    //声明port_ptr为GPIO结构体类型指针
+	uint_8 port;
+	uint_8 pin;
+	gpio_port_pin_resolution(port_pin , &port , &pin);
+     fc2:	1dbb      	adds	r3, r7, #6
+     fc4:	8819      	ldrh	r1, [r3, #0]
+     fc6:	1c3a      	adds	r2, r7, #0
+     fc8:	320f      	adds	r2, #15
+     fca:	1c3b      	adds	r3, r7, #0
+     fcc:	330e      	adds	r3, #14
+     fce:	1c08      	adds	r0, r1, #0
+     fd0:	1c11      	adds	r1, r2, #0
+     fd2:	1c1a      	adds	r2, r3, #0
+     fd4:	f7ff ffd2 	bl	f7c <gpio_port_pin_resolution>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:53
+	
+	
+	//根据带入参数port，给局部变量port_ptr、gpio_ptr赋值（获得两个基地址）
+	port_ptr = PORT_ARR[port];  //获得PORT模块相应口基地址
+     fd8:	1c3b      	adds	r3, r7, #0
+     fda:	330f      	adds	r3, #15
+     fdc:	781b      	ldrb	r3, [r3, #0]
+     fde:	1c1a      	adds	r2, r3, #0
+     fe0:	4b2a      	ldr	r3, [pc, #168]	; (108c <gpio_init+0xdc>)
+     fe2:	0092      	lsls	r2, r2, #2
+     fe4:	58d3      	ldr	r3, [r2, r3]
+     fe6:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:54
+	gpio_ptr = GPIO_ARR[port];  //获得GPIO模块相应口基地址
+     fe8:	1c3b      	adds	r3, r7, #0
+     fea:	330f      	adds	r3, #15
+     fec:	781b      	ldrb	r3, [r3, #0]
+     fee:	1c1a      	adds	r2, r3, #0
+     ff0:	4b27      	ldr	r3, [pc, #156]	; (1090 <gpio_init+0xe0>)
+     ff2:	0092      	lsls	r2, r2, #2
+     ff4:	58d3      	ldr	r3, [r2, r3]
+     ff6:	613b      	str	r3, [r7, #16]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:58
+	
+	//根据带入参数pin,指定该引脚功能为GPIO功能（即令引脚控制寄存器的MUX=0b001）
+
+    port_ptr->PCR[pin] &= ~PORT_PCR_MUX_MASK;
+     ff8:	1c3b      	adds	r3, r7, #0
+     ffa:	330e      	adds	r3, #14
+     ffc:	781b      	ldrb	r3, [r3, #0]
+     ffe:	1c1a      	adds	r2, r3, #0
+    1000:	1c3b      	adds	r3, r7, #0
+    1002:	330e      	adds	r3, #14
+    1004:	781b      	ldrb	r3, [r3, #0]
+    1006:	1c19      	adds	r1, r3, #0
+    1008:	697b      	ldr	r3, [r7, #20]
+    100a:	0089      	lsls	r1, r1, #2
+    100c:	58c9      	ldr	r1, [r1, r3]
+    100e:	4b21      	ldr	r3, [pc, #132]	; (1094 <gpio_init+0xe4>)
+    1010:	4019      	ands	r1, r3
+    1012:	697b      	ldr	r3, [r7, #20]
+    1014:	0092      	lsls	r2, r2, #2
+    1016:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:59
+    port_ptr->PCR[pin] |= PORT_PCR_MUX(1);
+    1018:	1c3b      	adds	r3, r7, #0
+    101a:	330e      	adds	r3, #14
+    101c:	781b      	ldrb	r3, [r3, #0]
+    101e:	1c1a      	adds	r2, r3, #0
+    1020:	1c3b      	adds	r3, r7, #0
+    1022:	330e      	adds	r3, #14
+    1024:	781b      	ldrb	r3, [r3, #0]
+    1026:	1c19      	adds	r1, r3, #0
+    1028:	697b      	ldr	r3, [r7, #20]
+    102a:	0089      	lsls	r1, r1, #2
+    102c:	58cb      	ldr	r3, [r1, r3]
+    102e:	2180      	movs	r1, #128	; 0x80
+    1030:	0049      	lsls	r1, r1, #1
+    1032:	4319      	orrs	r1, r3
+    1034:	697b      	ldr	r3, [r7, #20]
+    1036:	0092      	lsls	r2, r2, #2
+    1038:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:62
+    
+    //根据带入参数dir，决定引脚为输出还是输入
+    if (1 == dir)   //希望为输出
+    103a:	1d7b      	adds	r3, r7, #5
+    103c:	781b      	ldrb	r3, [r3, #0]
+    103e:	2b01      	cmp	r3, #1
+    1040:	d114      	bne.n	106c <gpio_init+0xbc>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:64
+       {
+         BSET(pin,gpio_ptr->PDDR);     //数据方向寄存器的pin位=1，定义为输出
+    1042:	693b      	ldr	r3, [r7, #16]
+    1044:	695a      	ldr	r2, [r3, #20]
+    1046:	1c3b      	adds	r3, r7, #0
+    1048:	330e      	adds	r3, #14
+    104a:	781b      	ldrb	r3, [r3, #0]
+    104c:	2101      	movs	r1, #1
+    104e:	1c08      	adds	r0, r1, #0
+    1050:	4098      	lsls	r0, r3
+    1052:	1c03      	adds	r3, r0, #0
+    1054:	431a      	orrs	r2, r3
+    1056:	693b      	ldr	r3, [r7, #16]
+    1058:	615a      	str	r2, [r3, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:65
+         gpio_set(port_pin, state);   //调用gpio_set函数，设定引脚初始状态
+    105a:	1dbb      	adds	r3, r7, #6
+    105c:	881a      	ldrh	r2, [r3, #0]
+    105e:	1d3b      	adds	r3, r7, #4
+    1060:	781b      	ldrb	r3, [r3, #0]
+    1062:	1c10      	adds	r0, r2, #0
+    1064:	1c19      	adds	r1, r3, #0
+    1066:	f000 f817 	bl	1098 <gpio_set>
+    106a:	e00c      	b.n	1086 <gpio_init+0xd6>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:68
+       }
+       else         //希望为输入
+        BCLR(pin,gpio_ptr->PDDR);  //数据方向寄存器的pin位=0，定义为输入
+    106c:	693b      	ldr	r3, [r7, #16]
+    106e:	695b      	ldr	r3, [r3, #20]
+    1070:	1c3a      	adds	r2, r7, #0
+    1072:	320e      	adds	r2, #14
+    1074:	7812      	ldrb	r2, [r2, #0]
+    1076:	2101      	movs	r1, #1
+    1078:	1c08      	adds	r0, r1, #0
+    107a:	4090      	lsls	r0, r2
+    107c:	1c02      	adds	r2, r0, #0
+    107e:	43d2      	mvns	r2, r2
+    1080:	401a      	ands	r2, r3
+    1082:	693b      	ldr	r3, [r7, #16]
+    1084:	615a      	str	r2, [r3, #20]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:69
+}
+    1086:	46bd      	mov	sp, r7
+    1088:	b006      	add	sp, #24
+    108a:	bd80      	pop	{r7, pc}
+    108c:	00001400 	.word	0x00001400
+    1090:	00001414 	.word	0x00001414
+    1094:	fffff8ff 	.word	0xfffff8ff
+
+00001098 <gpio_set>:
+gpio_set():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:79
+//参数说明：port_pin：端口号|引脚号（例：PORTB|(5) 表示为B口5号脚）
+//         state：引脚初始状态（0=低电平，1=高电平）
+//功能概要：设定引脚状态为低电平或高电平
+//===========================================================================
+void gpio_set(uint_16 port_pin, uint_8 state)
+{
+    1098:	b580      	push	{r7, lr}
+    109a:	b084      	sub	sp, #16
+    109c:	af00      	add	r7, sp, #0
+    109e:	1c0a      	adds	r2, r1, #0
+    10a0:	1dbb      	adds	r3, r7, #6
+    10a2:	1c01      	adds	r1, r0, #0
+    10a4:	8019      	strh	r1, [r3, #0]
+    10a6:	1d7b      	adds	r3, r7, #5
+    10a8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:83
+	GPIO_MemMapPtr gpio_ptr;    //声明port_ptr为GPIO结构体类型指针
+	uint_8 port;
+	uint_8 pin;
+	gpio_port_pin_resolution(port_pin , &port , &pin);
+    10aa:	1dbb      	adds	r3, r7, #6
+    10ac:	8819      	ldrh	r1, [r3, #0]
+    10ae:	1c3a      	adds	r2, r7, #0
+    10b0:	320b      	adds	r2, #11
+    10b2:	1c3b      	adds	r3, r7, #0
+    10b4:	330a      	adds	r3, #10
+    10b6:	1c08      	adds	r0, r1, #0
+    10b8:	1c11      	adds	r1, r2, #0
+    10ba:	1c1a      	adds	r2, r3, #0
+    10bc:	f7ff ff5e 	bl	f7c <gpio_port_pin_resolution>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:86
+	
+	//根据带入参数port，给局部变量gpio_ptr赋值（GPIO基地址）
+	gpio_ptr = GPIO_ARR[port]; 
+    10c0:	1c3b      	adds	r3, r7, #0
+    10c2:	330b      	adds	r3, #11
+    10c4:	781b      	ldrb	r3, [r3, #0]
+    10c6:	1c1a      	adds	r2, r3, #0
+    10c8:	4b12      	ldr	r3, [pc, #72]	; (1114 <gpio_set+0x7c>)
+    10ca:	0092      	lsls	r2, r2, #2
+    10cc:	58d3      	ldr	r3, [r2, r3]
+    10ce:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:89
+	
+	//根据带入参数state，决定引脚为输出1还是0
+	if (1==state)
+    10d0:	1d7b      	adds	r3, r7, #5
+    10d2:	781b      	ldrb	r3, [r3, #0]
+    10d4:	2b01      	cmp	r3, #1
+    10d6:	d10c      	bne.n	10f2 <gpio_set+0x5a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:90
+	    {BSET(pin,gpio_ptr->PDOR);}
+    10d8:	68fb      	ldr	r3, [r7, #12]
+    10da:	681a      	ldr	r2, [r3, #0]
+    10dc:	1c3b      	adds	r3, r7, #0
+    10de:	330a      	adds	r3, #10
+    10e0:	781b      	ldrb	r3, [r3, #0]
+    10e2:	2101      	movs	r1, #1
+    10e4:	1c08      	adds	r0, r1, #0
+    10e6:	4098      	lsls	r0, r3
+    10e8:	1c03      	adds	r3, r0, #0
+    10ea:	431a      	orrs	r2, r3
+    10ec:	68fb      	ldr	r3, [r7, #12]
+    10ee:	601a      	str	r2, [r3, #0]
+    10f0:	e00c      	b.n	110c <gpio_set+0x74>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:92
+	else
+	    {BCLR(pin,gpio_ptr->PDOR);}
+    10f2:	68fb      	ldr	r3, [r7, #12]
+    10f4:	681b      	ldr	r3, [r3, #0]
+    10f6:	1c3a      	adds	r2, r7, #0
+    10f8:	320a      	adds	r2, #10
+    10fa:	7812      	ldrb	r2, [r2, #0]
+    10fc:	2101      	movs	r1, #1
+    10fe:	1c08      	adds	r0, r1, #0
+    1100:	4090      	lsls	r0, r2
+    1102:	1c02      	adds	r2, r0, #0
+    1104:	43d2      	mvns	r2, r2
+    1106:	401a      	ands	r2, r3
+    1108:	68fb      	ldr	r3, [r7, #12]
+    110a:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../05_Driver/gpio/gpio.c:93
+}
+    110c:	46bd      	mov	sp, r7
+    110e:	b004      	add	sp, #16
+    1110:	bd80      	pop	{r7, pc}
+    1112:	46c0      	nop			; (mov r8, r8)
+    1114:	00001414 	.word	0x00001414
+
+00001118 <startup>:
+startup():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:22
+#define WDOG_ENABLE() {SIM_COPC |= SIM_COPC_COPT_MASK;} //使能看门狗
+
+
+// 系统上电启动程序
+ void startup(void)
+{
+    1118:	b580      	push	{r7, lr}
+    111a:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:23
+	 WDOG_DISABLE();       //禁用看门狗
+    111c:	4a08      	ldr	r2, [pc, #32]	; (1140 <startup+0x28>)
+    111e:	2388      	movs	r3, #136	; 0x88
+    1120:	015b      	lsls	r3, r3, #5
+    1122:	2100      	movs	r1, #0
+    1124:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:25
+        //WDOG_ENABLE();        使能看门狗  
+	vector_init();          //复制中断向量表至RAM
+    1126:	f000 f80d 	bl	1144 <vector_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:26
+	m_zero_fill_bss ();     //清零未初始化BSS数据段
+    112a:	f000 f835 	bl	1198 <m_zero_fill_bss>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:27
+	m_data_seg_init ();     //将ROM中的初始化数据拷贝到RAM中
+    112e:	f000 f851 	bl	11d4 <m_data_seg_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:28
+	sys_init();             //初始化系统时钟
+    1132:	f000 f885 	bl	1240 <sys_init>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:29
+	sys_pin_enable_port();  //使能端口时钟
+    1136:	f000 f871 	bl	121c <sys_pin_enable_port>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:30
+	main();                 //进入主函数
+    113a:	f7ff fc11 	bl	960 <main>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:31 (discriminator 1)
+	while(1);               //永久循环（主函数内永久循环，含有执行不到该语句）          
+    113e:	e7fe      	b.n	113e <startup+0x26>
+    1140:	40047000 	.word	0x40047000
+
+00001144 <vector_init>:
+vector_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:38
+
+//-------------------------------------------------------------------------------
+
+//拷贝中断向量表
+void vector_init(void)
+{
+    1144:	b580      	push	{r7, lr}
+    1146:	b082      	sub	sp, #8
+    1148:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:43
+	extern char __VECTOR_RAM[];
+	extern char __vector_table[];
+	uint_32 n;
+	
+	if (__VECTOR_RAM != __vector_table)
+    114a:	4a0e      	ldr	r2, [pc, #56]	; (1184 <vector_init+0x40>)
+    114c:	4b0e      	ldr	r3, [pc, #56]	; (1188 <vector_init+0x44>)
+    114e:	429a      	cmp	r2, r3
+    1150:	d011      	beq.n	1176 <vector_init+0x32>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:45
+	{
+	    for (n = 0; n < 0x410; n++)
+    1152:	2300      	movs	r3, #0
+    1154:	607b      	str	r3, [r7, #4]
+    1156:	e00a      	b.n	116e <vector_init+0x2a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:46 (discriminator 2)
+	        __VECTOR_RAM[n] = __vector_table[n];
+    1158:	4a0b      	ldr	r2, [pc, #44]	; (1188 <vector_init+0x44>)
+    115a:	687b      	ldr	r3, [r7, #4]
+    115c:	18d3      	adds	r3, r2, r3
+    115e:	781a      	ldrb	r2, [r3, #0]
+    1160:	4908      	ldr	r1, [pc, #32]	; (1184 <vector_init+0x40>)
+    1162:	687b      	ldr	r3, [r7, #4]
+    1164:	18cb      	adds	r3, r1, r3
+    1166:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:45 (discriminator 2)
+	extern char __vector_table[];
+	uint_32 n;
+	
+	if (__VECTOR_RAM != __vector_table)
+	{
+	    for (n = 0; n < 0x410; n++)
+    1168:	687b      	ldr	r3, [r7, #4]
+    116a:	3301      	adds	r3, #1
+    116c:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:45 (discriminator 1)
+    116e:	687a      	ldr	r2, [r7, #4]
+    1170:	4b06      	ldr	r3, [pc, #24]	; (118c <vector_init+0x48>)
+    1172:	429a      	cmp	r2, r3
+    1174:	d9f0      	bls.n	1158 <vector_init+0x14>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:49
+	        __VECTOR_RAM[n] = __vector_table[n];
+	}
+	//Point the VTOR to the new copy of the vector table 
+      SCB_VTOR=(uint_32)__VECTOR_RAM;
+    1176:	4a06      	ldr	r2, [pc, #24]	; (1190 <vector_init+0x4c>)
+    1178:	4902      	ldr	r1, [pc, #8]	; (1184 <vector_init+0x40>)
+    117a:	4b06      	ldr	r3, [pc, #24]	; (1194 <vector_init+0x50>)
+    117c:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:50
+}
+    117e:	46bd      	mov	sp, r7
+    1180:	b002      	add	sp, #8
+    1182:	bd80      	pop	{r7, pc}
+    1184:	1ffff000 	.word	0x1ffff000
+    1188:	00000000 	.word	0x00000000
+    118c:	0000040f 	.word	0x0000040f
+    1190:	e000e000 	.word	0xe000e000
+    1194:	00000d08 	.word	0x00000d08
+
+00001198 <m_zero_fill_bss>:
+m_zero_fill_bss():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:54
+
+// 初始化BSS段
+void m_zero_fill_bss(void)
+{
+    1198:	b580      	push	{r7, lr}
+    119a:	b084      	sub	sp, #16
+    119c:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:58
+	extern char __START_BSS[];
+    extern char __END_BSS[];
+
+    uint_8 *bss_start = (uint_8 *)__START_BSS;
+    119e:	4b0b      	ldr	r3, [pc, #44]	; (11cc <m_zero_fill_bss+0x34>)
+    11a0:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:59
+    uint_8 *bss_end   = (uint_8 *)__END_BSS;
+    11a2:	4b0b      	ldr	r3, [pc, #44]	; (11d0 <m_zero_fill_bss+0x38>)
+    11a4:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:60
+    uint_32 n = bss_end - bss_start;
+    11a6:	687a      	ldr	r2, [r7, #4]
+    11a8:	68fb      	ldr	r3, [r7, #12]
+    11aa:	1ad3      	subs	r3, r2, r3
+    11ac:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:62
+    
+    while (n--)
+    11ae:	e004      	b.n	11ba <m_zero_fill_bss+0x22>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:63
+    	*bss_start++ = 0;
+    11b0:	68fb      	ldr	r3, [r7, #12]
+    11b2:	1c5a      	adds	r2, r3, #1
+    11b4:	60fa      	str	r2, [r7, #12]
+    11b6:	2200      	movs	r2, #0
+    11b8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:62 (discriminator 1)
+
+    uint_8 *bss_start = (uint_8 *)__START_BSS;
+    uint_8 *bss_end   = (uint_8 *)__END_BSS;
+    uint_32 n = bss_end - bss_start;
+    
+    while (n--)
+    11ba:	68bb      	ldr	r3, [r7, #8]
+    11bc:	1e5a      	subs	r2, r3, #1
+    11be:	60ba      	str	r2, [r7, #8]
+    11c0:	2b00      	cmp	r3, #0
+    11c2:	d1f5      	bne.n	11b0 <m_zero_fill_bss+0x18>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:64
+    	*bss_start++ = 0;
+}
+    11c4:	46bd      	mov	sp, r7
+    11c6:	b004      	add	sp, #16
+    11c8:	bd80      	pop	{r7, pc}
+    11ca:	46c0      	nop			; (mov r8, r8)
+    11cc:	20000414 	.word	0x20000414
+    11d0:	20000418 	.word	0x20000418
+
+000011d4 <m_data_seg_init>:
+m_data_seg_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:68
+
+//复制ROM数据至RAM
+void m_data_seg_init(void)
+{
+    11d4:	b580      	push	{r7, lr}
+    11d6:	b084      	sub	sp, #16
+    11d8:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:73
+	extern char __START_DATA[];
+	extern char __END_DATA[];
+	extern char __START_DATA_ROM[];
+	
+	uint_8 *data_start = (uint_8 *)__START_DATA;
+    11da:	4b0d      	ldr	r3, [pc, #52]	; (1210 <m_data_seg_init+0x3c>)
+    11dc:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:74
+	uint_8 *data_end   = (uint_8 *)__END_DATA;
+    11de:	4b0d      	ldr	r3, [pc, #52]	; (1214 <m_data_seg_init+0x40>)
+    11e0:	603b      	str	r3, [r7, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:75
+	uint_8 *data_rom_start = (uint_8 *)__START_DATA_ROM;
+    11e2:	4b0d      	ldr	r3, [pc, #52]	; (1218 <m_data_seg_init+0x44>)
+    11e4:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:76
+	uint_32 n = data_end - data_start;
+    11e6:	683a      	ldr	r2, [r7, #0]
+    11e8:	68fb      	ldr	r3, [r7, #12]
+    11ea:	1ad3      	subs	r3, r2, r3
+    11ec:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:78
+	
+	while (n--)
+    11ee:	e007      	b.n	1200 <m_data_seg_init+0x2c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:79
+	    *data_start++ = *data_rom_start++;
+    11f0:	68fb      	ldr	r3, [r7, #12]
+    11f2:	1c5a      	adds	r2, r3, #1
+    11f4:	60fa      	str	r2, [r7, #12]
+    11f6:	68ba      	ldr	r2, [r7, #8]
+    11f8:	1c51      	adds	r1, r2, #1
+    11fa:	60b9      	str	r1, [r7, #8]
+    11fc:	7812      	ldrb	r2, [r2, #0]
+    11fe:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:78 (discriminator 1)
+	uint_8 *data_start = (uint_8 *)__START_DATA;
+	uint_8 *data_end   = (uint_8 *)__END_DATA;
+	uint_8 *data_rom_start = (uint_8 *)__START_DATA_ROM;
+	uint_32 n = data_end - data_start;
+	
+	while (n--)
+    1200:	687b      	ldr	r3, [r7, #4]
+    1202:	1e5a      	subs	r2, r3, #1
+    1204:	607a      	str	r2, [r7, #4]
+    1206:	2b00      	cmp	r3, #0
+    1208:	d1f2      	bne.n	11f0 <m_data_seg_init+0x1c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:80
+	    *data_start++ = *data_rom_start++;
+}
+    120a:	46bd      	mov	sp, r7
+    120c:	b004      	add	sp, #16
+    120e:	bd80      	pop	{r7, pc}
+    1210:	20000410 	.word	0x20000410
+    1214:	20000414 	.word	0x20000414
+    1218:	00001428 	.word	0x00001428
+
+0000121c <sys_pin_enable_port>:
+sys_pin_enable_port():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:84
+
+//使能端口时钟
+void sys_pin_enable_port(void)
+{
+    121c:	b580      	push	{r7, lr}
+    121e:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:85
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK
+    1220:	4a05      	ldr	r2, [pc, #20]	; (1238 <sys_pin_enable_port+0x1c>)
+    1222:	4905      	ldr	r1, [pc, #20]	; (1238 <sys_pin_enable_port+0x1c>)
+    1224:	4b05      	ldr	r3, [pc, #20]	; (123c <sys_pin_enable_port+0x20>)
+    1226:	58cb      	ldr	r3, [r1, r3]
+    1228:	21f8      	movs	r1, #248	; 0xf8
+    122a:	0189      	lsls	r1, r1, #6
+    122c:	4319      	orrs	r1, r3
+    122e:	4b03      	ldr	r3, [pc, #12]	; (123c <sys_pin_enable_port+0x20>)
+    1230:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/startup.c:90
+			  | SIM_SCGC5_PORTB_MASK
+			  | SIM_SCGC5_PORTC_MASK
+			  | SIM_SCGC5_PORTD_MASK
+			  | SIM_SCGC5_PORTE_MASK; 
+}
+    1232:	46bd      	mov	sp, r7
+    1234:	bd80      	pop	{r7, pc}
+    1236:	46c0      	nop			; (mov r8, r8)
+    1238:	40047000 	.word	0x40047000
+    123c:	00001038 	.word	0x00001038
+
+00001240 <sys_init>:
+sys_init():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:12
+//功能概要：(1)KL25的EXTAL(40)、XTAL(41)接8Mhz外部晶振，产生PLL/FLL输出时钟频
+//             率48MHz,内核时钟48MHz，总线时钟24MHz，内部参考时钟4MHz。
+//          (2)对于这些频率，sys_init.h有相应的宏常量定义可以供编程时使用
+//===========================================================================
+void sys_init(void)  
+{
+    1240:	b580      	push	{r7, lr}
+    1242:	b082      	sub	sp, #8
+    1244:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:13
+    uint_32 i = 0;
+    1246:	2300      	movs	r3, #0
+    1248:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:14
+    uint_8 temp_reg = 0;
+    124a:	1cfb      	adds	r3, r7, #3
+    124c:	2200      	movs	r2, #0
+    124e:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:21
+ //1.首先从FEI模式过渡到FBE模式
+    
+    //C2= 0x1C，因为我们的核心板上采用了外部晶振为8Mhz，属于高频率范围，
+    //C2[RANGE]设置为0b01；C2[HGO]设为1以配置晶振来进行高增益操作；因为
+    //正在使用的外部参考时钟源是晶振，所以C2[EREFS]设置为1。
+    MCG_C2 = (MCG_C2_RANGE0(1) | MCG_C2_EREFS0_MASK);
+    1250:	4b54      	ldr	r3, [pc, #336]	; (13a4 <sys_init+0x164>)
+    1252:	2214      	movs	r2, #20
+    1254:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:26
+    //C1 = 0x90 ，C1[CLKS]设置为2’b10，以便选择作为系统时钟源的外部参考时钟。
+    //C1[FRDIV]设置为3'b011，对应256分频,因为8MHz/256=31.25kHz在由FLL要求的
+    //31.25kHz至39.0625 kHz频率范围内。C1[IREFS]清除为0，选择外部参考时钟和
+    //外部晶振。
+    MCG_C1 = (MCG_C1_CLKS(2) | MCG_C1_FRDIV(3));
+    1256:	4b53      	ldr	r3, [pc, #332]	; (13a4 <sys_init+0x164>)
+    1258:	2298      	movs	r2, #152	; 0x98
+    125a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:28
+    //需要等到S[OSCINIT]被置位外部晶振才能使用
+    for (i = 0 ; i < 20000 ; i++)
+    125c:	2300      	movs	r3, #0
+    125e:	607b      	str	r3, [r7, #4]
+    1260:	e00a      	b.n	1278 <sys_init+0x38>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:31
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    1262:	4b50      	ldr	r3, [pc, #320]	; (13a4 <sys_init+0x164>)
+    1264:	799b      	ldrb	r3, [r3, #6]
+    1266:	b2db      	uxtb	r3, r3
+    1268:	1c1a      	adds	r2, r3, #0
+    126a:	2302      	movs	r3, #2
+    126c:	4013      	ands	r3, r2
+    126e:	d000      	beq.n	1272 <sys_init+0x32>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:31 (discriminator 1)
+    1270:	e006      	b.n	1280 <sys_init+0x40>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:28
+    //C1[FRDIV]设置为3'b011，对应256分频,因为8MHz/256=31.25kHz在由FLL要求的
+    //31.25kHz至39.0625 kHz频率范围内。C1[IREFS]清除为0，选择外部参考时钟和
+    //外部晶振。
+    MCG_C1 = (MCG_C1_CLKS(2) | MCG_C1_FRDIV(3));
+    //需要等到S[OSCINIT]被置位外部晶振才能使用
+    for (i = 0 ; i < 20000 ; i++)
+    1272:	687b      	ldr	r3, [r7, #4]
+    1274:	3301      	adds	r3, #1
+    1276:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:28 (discriminator 1)
+    1278:	687a      	ldr	r2, [r7, #4]
+    127a:	4b4b      	ldr	r3, [pc, #300]	; (13a8 <sys_init+0x168>)
+    127c:	429a      	cmp	r2, r3
+    127e:	d9f0      	bls.n	1262 <sys_init+0x22>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:34
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    }
+    //等待参考时钟状态位清0
+    for (i = 0 ; i < 2000 ; i++)
+    1280:	2300      	movs	r3, #0
+    1282:	607b      	str	r3, [r7, #4]
+    1284:	e00a      	b.n	129c <sys_init+0x5c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:37
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    1286:	4b47      	ldr	r3, [pc, #284]	; (13a4 <sys_init+0x164>)
+    1288:	799b      	ldrb	r3, [r3, #6]
+    128a:	b2db      	uxtb	r3, r3
+    128c:	1c1a      	adds	r2, r3, #0
+    128e:	2310      	movs	r3, #16
+    1290:	4013      	ands	r3, r2
+    1292:	d100      	bne.n	1296 <sys_init+0x56>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:37 (discriminator 1)
+    1294:	e006      	b.n	12a4 <sys_init+0x64>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:34
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    }
+    //等待参考时钟状态位清0
+    for (i = 0 ; i < 2000 ; i++)
+    1296:	687b      	ldr	r3, [r7, #4]
+    1298:	3301      	adds	r3, #1
+    129a:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:34 (discriminator 1)
+    129c:	687a      	ldr	r2, [r7, #4]
+    129e:	4b43      	ldr	r3, [pc, #268]	; (13ac <sys_init+0x16c>)
+    12a0:	429a      	cmp	r2, r3
+    12a2:	d9f0      	bls.n	1286 <sys_init+0x46>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:40
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    }
+    //等待时钟状态位以显示时钟源为外部参考时钟
+    for (i = 0 ; i < 2000 ; i++)
+    12a4:	2300      	movs	r3, #0
+    12a6:	607b      	str	r3, [r7, #4]
+    12a8:	e00c      	b.n	12c4 <sys_init+0x84>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:43
+    {
+        //如果CLKST显示外部时钟被选择，在循环结束之前就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x2) break;
+    12aa:	4b3e      	ldr	r3, [pc, #248]	; (13a4 <sys_init+0x164>)
+    12ac:	799b      	ldrb	r3, [r3, #6]
+    12ae:	b2db      	uxtb	r3, r3
+    12b0:	1c1a      	adds	r2, r3, #0
+    12b2:	230c      	movs	r3, #12
+    12b4:	4013      	ands	r3, r2
+    12b6:	089b      	lsrs	r3, r3, #2
+    12b8:	2b02      	cmp	r3, #2
+    12ba:	d100      	bne.n	12be <sys_init+0x7e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:43 (discriminator 1)
+    12bc:	e006      	b.n	12cc <sys_init+0x8c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:40
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    }
+    //等待时钟状态位以显示时钟源为外部参考时钟
+    for (i = 0 ; i < 2000 ; i++)
+    12be:	687b      	ldr	r3, [r7, #4]
+    12c0:	3301      	adds	r3, #1
+    12c2:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:40 (discriminator 1)
+    12c4:	687a      	ldr	r2, [r7, #4]
+    12c6:	4b39      	ldr	r3, [pc, #228]	; (13ac <sys_init+0x16c>)
+    12c8:	429a      	cmp	r2, r3
+    12ca:	d9ee      	bls.n	12aa <sys_init+0x6a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:46
+    {
+        //如果CLKST显示外部时钟被选择，在循环结束之前就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x2) break;
+    }
+ //2.现在处于FBE状态，使能时钟监视器，由FBE直接转换为PBE模式
+    MCG_C6 |= MCG_C6_CME0_MASK;
+    12cc:	4b35      	ldr	r3, [pc, #212]	; (13a4 <sys_init+0x164>)
+    12ce:	4a35      	ldr	r2, [pc, #212]	; (13a4 <sys_init+0x164>)
+    12d0:	7952      	ldrb	r2, [r2, #5]
+    12d2:	b2d2      	uxtb	r2, r2
+    12d4:	2120      	movs	r1, #32
+    12d6:	430a      	orrs	r2, r1
+    12d8:	b2d2      	uxtb	r2, r2
+    12da:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:48
+    //配置PLL为2分频
+    MCG_C5 |= MCG_C5_PRDIV0(1); 
+    12dc:	4b31      	ldr	r3, [pc, #196]	; (13a4 <sys_init+0x164>)
+    12de:	4a31      	ldr	r2, [pc, #196]	; (13a4 <sys_init+0x164>)
+    12e0:	7912      	ldrb	r2, [r2, #4]
+    12e2:	b2d2      	uxtb	r2, r2
+    12e4:	2101      	movs	r1, #1
+    12e6:	430a      	orrs	r2, r1
+    12e8:	b2d2      	uxtb	r2, r2
+    12ea:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:50
+    //配置MCG_C6 以设置PLL倍频因子并且时能PLL，PLLS位被置位来时能PLL，MCGOUT时钟源仍然是外部参考时钟          
+    temp_reg = MCG_C6; //存储当前C6的值（因为CME0位之前被置位了）
+    12ec:	4a2d      	ldr	r2, [pc, #180]	; (13a4 <sys_init+0x164>)
+    12ee:	1cfb      	adds	r3, r7, #3
+    12f0:	7952      	ldrb	r2, [r2, #5]
+    12f2:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:51
+    temp_reg &= ~MCG_C6_VDIV0_MASK; //将VDIV清0
+    12f4:	1cfb      	adds	r3, r7, #3
+    12f6:	1cfa      	adds	r2, r7, #3
+    12f8:	7812      	ldrb	r2, [r2, #0]
+    12fa:	211f      	movs	r1, #31
+    12fc:	438a      	bics	r2, r1
+    12fe:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:52
+    temp_reg |= MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0); // 重新写值到VDIV 并且时能PLL
+    1300:	1cfb      	adds	r3, r7, #3
+    1302:	1cfa      	adds	r2, r7, #3
+    1304:	7812      	ldrb	r2, [r2, #0]
+    1306:	2140      	movs	r1, #64	; 0x40
+    1308:	430a      	orrs	r2, r1
+    130a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:53
+    MCG_C6 = temp_reg; // 更新MCG_C6的值
+    130c:	4b25      	ldr	r3, [pc, #148]	; (13a4 <sys_init+0x164>)
+    130e:	1cfa      	adds	r2, r7, #3
+    1310:	7812      	ldrb	r2, [r2, #0]
+    1312:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:55
+    // 等待PLLST状态位被置
+    for (i = 0 ; i < 2000 ; i++)
+    1314:	2300      	movs	r3, #0
+    1316:	607b      	str	r3, [r7, #4]
+    1318:	e00a      	b.n	1330 <sys_init+0xf0>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:58
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    131a:	4b22      	ldr	r3, [pc, #136]	; (13a4 <sys_init+0x164>)
+    131c:	799b      	ldrb	r3, [r3, #6]
+    131e:	b2db      	uxtb	r3, r3
+    1320:	1c1a      	adds	r2, r3, #0
+    1322:	2320      	movs	r3, #32
+    1324:	4013      	ands	r3, r2
+    1326:	d000      	beq.n	132a <sys_init+0xea>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:58 (discriminator 1)
+    1328:	e006      	b.n	1338 <sys_init+0xf8>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:55
+    temp_reg = MCG_C6; //存储当前C6的值（因为CME0位之前被置位了）
+    temp_reg &= ~MCG_C6_VDIV0_MASK; //将VDIV清0
+    temp_reg |= MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0); // 重新写值到VDIV 并且时能PLL
+    MCG_C6 = temp_reg; // 更新MCG_C6的值
+    // 等待PLLST状态位被置
+    for (i = 0 ; i < 2000 ; i++)
+    132a:	687b      	ldr	r3, [r7, #4]
+    132c:	3301      	adds	r3, #1
+    132e:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:55 (discriminator 1)
+    1330:	687a      	ldr	r2, [r7, #4]
+    1332:	4b1e      	ldr	r3, [pc, #120]	; (13ac <sys_init+0x16c>)
+    1334:	429a      	cmp	r2, r3
+    1336:	d9f0      	bls.n	131a <sys_init+0xda>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:61
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    }
+    //等待LOCK位被置
+    for (i = 0 ; i < 4000 ; i++)
+    1338:	2300      	movs	r3, #0
+    133a:	607b      	str	r3, [r7, #4]
+    133c:	e00a      	b.n	1354 <sys_init+0x114>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:64
+    {
+        //如果LOCK在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_LOCK0_MASK) break;
+    133e:	4b19      	ldr	r3, [pc, #100]	; (13a4 <sys_init+0x164>)
+    1340:	799b      	ldrb	r3, [r3, #6]
+    1342:	b2db      	uxtb	r3, r3
+    1344:	1c1a      	adds	r2, r3, #0
+    1346:	2340      	movs	r3, #64	; 0x40
+    1348:	4013      	ands	r3, r2
+    134a:	d000      	beq.n	134e <sys_init+0x10e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:64 (discriminator 1)
+    134c:	e006      	b.n	135c <sys_init+0x11c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:61
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    }
+    //等待LOCK位被置
+    for (i = 0 ; i < 4000 ; i++)
+    134e:	687b      	ldr	r3, [r7, #4]
+    1350:	3301      	adds	r3, #1
+    1352:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:61 (discriminator 1)
+    1354:	687a      	ldr	r2, [r7, #4]
+    1356:	4b16      	ldr	r3, [pc, #88]	; (13b0 <sys_init+0x170>)
+    1358:	429a      	cmp	r2, r3
+    135a:	d9f0      	bls.n	133e <sys_init+0xfe>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:69
+        if (MCG_S & MCG_S_LOCK0_MASK) break;
+    }
+  //3.现在处于PBE模式。最后，PBE模式转换成PEE模式
+    // 设置核心时钟分频器2分频
+    //设置总线时钟分频器2分频 (总线时钟的时钟源是核心时钟)
+    SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(1) | SIM_CLKDIV1_OUTDIV4(1) );
+    135c:	4a15      	ldr	r2, [pc, #84]	; (13b4 <sys_init+0x174>)
+    135e:	4b16      	ldr	r3, [pc, #88]	; (13b8 <sys_init+0x178>)
+    1360:	4916      	ldr	r1, [pc, #88]	; (13bc <sys_init+0x17c>)
+    1362:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:71
+    //清CLKS来打开CLKS多路复用器来选择PLL作为MCGCLKOUT
+    MCG_C1 &= ~MCG_C1_CLKS_MASK;
+    1364:	4b0f      	ldr	r3, [pc, #60]	; (13a4 <sys_init+0x164>)
+    1366:	4a0f      	ldr	r2, [pc, #60]	; (13a4 <sys_init+0x164>)
+    1368:	7812      	ldrb	r2, [r2, #0]
+    136a:	b2d1      	uxtb	r1, r2
+    136c:	223f      	movs	r2, #63	; 0x3f
+    136e:	400a      	ands	r2, r1
+    1370:	b2d2      	uxtb	r2, r2
+    1372:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:73
+    // 等待时钟状态位更新
+    for (i = 0 ; i < 2000 ; i++)
+    1374:	2300      	movs	r3, #0
+    1376:	607b      	str	r3, [r7, #4]
+    1378:	e00c      	b.n	1394 <sys_init+0x154>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:76
+    {
+        //如果CLKST在循环结束之前等于3就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x3) break;
+    137a:	4b0a      	ldr	r3, [pc, #40]	; (13a4 <sys_init+0x164>)
+    137c:	799b      	ldrb	r3, [r3, #6]
+    137e:	b2db      	uxtb	r3, r3
+    1380:	1c1a      	adds	r2, r3, #0
+    1382:	230c      	movs	r3, #12
+    1384:	4013      	ands	r3, r2
+    1386:	089b      	lsrs	r3, r3, #2
+    1388:	2b03      	cmp	r3, #3
+    138a:	d100      	bne.n	138e <sys_init+0x14e>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:76 (discriminator 1)
+    138c:	e006      	b.n	139c <sys_init+0x15c>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:73
+    //设置总线时钟分频器2分频 (总线时钟的时钟源是核心时钟)
+    SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(1) | SIM_CLKDIV1_OUTDIV4(1) );
+    //清CLKS来打开CLKS多路复用器来选择PLL作为MCGCLKOUT
+    MCG_C1 &= ~MCG_C1_CLKS_MASK;
+    // 等待时钟状态位更新
+    for (i = 0 ; i < 2000 ; i++)
+    138e:	687b      	ldr	r3, [r7, #4]
+    1390:	3301      	adds	r3, #1
+    1392:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:73 (discriminator 1)
+    1394:	687a      	ldr	r2, [r7, #4]
+    1396:	4b05      	ldr	r3, [pc, #20]	; (13ac <sys_init+0x16c>)
+    1398:	429a      	cmp	r2, r3
+    139a:	d9ee      	bls.n	137a <sys_init+0x13a>
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/sysinit.c:79
+    {
+        //如果CLKST在循环结束之前等于3就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x3) break;
+    }
+  //4.现在处于PEE模式
+}
+    139c:	46bd      	mov	sp, r7
+    139e:	b002      	add	sp, #8
+    13a0:	bd80      	pop	{r7, pc}
+    13a2:	46c0      	nop			; (mov r8, r8)
+    13a4:	40064000 	.word	0x40064000
+    13a8:	00004e1f 	.word	0x00004e1f
+    13ac:	000007cf 	.word	0x000007cf
+    13b0:	00000f9f 	.word	0x00000f9f
+    13b4:	40047000 	.word	0x40047000
+    13b8:	00001044 	.word	0x00001044
+    13bc:	10010000 	.word	0x10010000
+
+000013c0 <NOS_isrDummy>:
+NOS_isrDummy():
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/vectors.c:67
+	VECTOR_046,         // 0x2E  0x000000B8 - ivINT_PORT                        
+	VECTOR_047          // 0x2F  0x000000BC - ivINT_PORT                        
+};
+
+void NOS_isrDummy(void)
+{
+    13c0:	b580      	push	{r7, lr}
+    13c2:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\kaoshi\29\KL25_UART\Debug/../03_MCU/vectors.c:68
+}
+    13c4:	46bd      	mov	sp, r7
+    13c6:	bd80      	pop	{r7, pc}
+$d():
+    13c8:	6c6c6548 	.word	0x6c6c6548
+    13cc:	6155206f 	.word	0x6155206f
+    13d0:	305f7472 	.word	0x305f7472
+    13d4:	000a0d21 	.word	0x000a0d21
+    13d8:	6c6c6548 	.word	0x6c6c6548
+    13dc:	6155206f 	.word	0x6155206f
+    13e0:	315f7472 	.word	0x315f7472
+    13e4:	000a0d21 	.word	0x000a0d21
+    13e8:	6c6c6548 	.word	0x6c6c6548
+    13ec:	6155206f 	.word	0x6155206f
+    13f0:	325f7472 	.word	0x325f7472
+    13f4:	000a0d21 	.word	0x000a0d21
+
+000013f8 <UART_ARR>:
+    13f8:	4006b000 4006c000                       ...@...@
+
+00001400 <PORT_ARR>:
+    1400:	40049000 4004a000 4004b000 4004c000     ...@...@...@...@
+    1410:	4004d000                                ...@
+
+00001414 <GPIO_ARR>:
+    1414:	400ff000 400ff040 400ff080 400ff0c0     ...@@..@...@...@
+    1424:	400ff100                                ...@

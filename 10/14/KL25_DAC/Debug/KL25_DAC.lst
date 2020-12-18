@@ -1,0 +1,2785 @@
+
+KL25_DAC.elf:     file format elf32-littlearm
+KL25_DAC.elf
+architecture: arm, flags 0x00000012:
+EXEC_P, HAS_SYMS
+start address 0x00001225
+
+Program Header:
+    LOAD off    0x000000d4 vaddr 0x00000000 paddr 0x00000000 align 2**2
+         filesz 0x000000c0 memsz 0x000000c0 flags rw-
+    LOAD off    0x00000194 vaddr 0x00000800 paddr 0x00000800 align 2**2
+         filesz 0x00000d18 memsz 0x00000d18 flags r-x
+    LOAD off    0x00000eac vaddr 0x20000410 paddr 0x00001518 align 2**2
+         filesz 0x00000004 memsz 0x00000004 flags rw-
+    LOAD off    0x00000eb0 vaddr 0x1ffff410 paddr 0x0000151c align 2**0
+         filesz 0x00000024 memsz 0x00000024 flags rw-
+    LOAD off    0x00000ed4 vaddr 0x20000414 paddr 0x0000151c align 2**2
+         filesz 0x00000000 memsz 0x00000410 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .interrupts   000000c0  00000000  00000000  000000d4  2**2  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000d18  00000800  00000800  00000194  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000004  20000410  00001518  00000eac  2**2  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000010  20000414  0000151c  00000ed4  2**2  ALLOC
+  4 ._user_heap_stack 00000400  20000424  0000152c  00000ed4  2**0  ALLOC
+  5 .romp         00000024  1ffff410  0000151c  00000eb0  2**0  CONTENTS, ALLOC, LOAD, DATA
+  6 .ARM.attributes 00000032  00000000  00000000  00000ed4  2**0  CONTENTS, READONLY
+  7 .debug_info   0000200e  00000000  00000000  00000f06  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000009ba  00000000  00000000  00002f14  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_aranges 00000220  00000000  00000000  000038ce  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_ranges 00000180  00000000  00000000  00003aee  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_macro  00006bb7  00000000  00000000  00003c6e  2**0  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_line   00001f5c  00000000  00000000  0000a825  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00021e65  00000000  00000000  0000c781  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .comment      0000002a  00000000  00000000  0002e5e6  2**0  CONTENTS, READONLY
+ 15 .debug_frame  00000544  00000000  00000000  0002e610  2**2  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+00000000 l    d  .interrupts	00000000 .interrupts
+00000800 l    d  .text	00000000 .text
+20000410 l    d  .data	00000000 .data
+20000414 l    d  .bss	00000000 .bss
+20000424 l    d  ._user_heap_stack	00000000 ._user_heap_stack
+1ffff410 l    d  .romp	00000000 .romp
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 vectors.c
+00000000 l    df *ABS*	00000000 _udivsi3.o
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 isr.c
+20000414 l     O .bss	00000004 i.4726
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 common.c
+00000000 l    df *ABS*	00000000 light.c
+00000000 l    df *ABS*	00000000 uart.c
+000014e8 l     O .text	00000008 UART_ARR
+00000a8c l     F .text	00000058 MCGIRCLK_OutEnable
+20000410 l     O .data	00000003 table_irq_uart
+00000000 l    df *ABS*	00000000 gpio.c
+000014f0 l     O .text	00000014 PORT_ARR
+00001504 l     O .text	00000014 GPIO_ARR
+00000f68 l     F .text	00000034 gpio_port_pin_resolution
+00000000 l    df *ABS*	00000000 dac.c
+00000000 l    df *ABS*	00000000 startup.c
+00001250 l     F .text	00000054 vector_init
+000012a4 l     F .text	0000003c m_zero_fill_bss
+000012e0 l     F .text	00000048 m_data_seg_init
+00001328 l     F .text	00000024 sys_pin_enable_port
+00000000 l    df *ABS*	00000000 sysinit.c
+00000000 l    df *ABS*	00000000 
+00000400 l       *ABS*	00000000 __stack_size
+20000410 l       .data	00000000 _sdata
+1ffff410 l       .data	00000000 ___m_data_1FFFF000_RAMStart
+00001518 l       .data	00000000 ___ROM_AT
+00000000 l       *ABS*	00000000 __heap_size
+20003000 l       *ABS*	00000000 __SP_INIT
+1ffff410 l       .data	00000000 ___m_data_1FFFF000_RAMEnd
+20003000 l       *ABS*	00000000 _estack
+20000414 l       .data	00000000 _edata
+20000410 g       .data	00000000 __START_DATA
+20000424 g       ._user_heap_stack	00000000 __heap_addr
+00000a60 g     F .text	0000002a light_init
+00001518 g       .data	00000000 __exidx_end
+0000118c g     F .text	00000028 dac_convert
+00000f00 g     F .text	00000068 uart_enable_re_int
+00001518 g       .text	00000000 _etext
+00001224 g     F .text	0000002c startup
+000008a0 g     F .text	000000f0 isr_uart1_re
+00000a00 g     F .text	00000060 enable_irq
+0000134c g     F .text	00000180 sys_init
+00001518 g       .data	00000000 __DTOR_END__
+00000800 g     F .text	00000088 .hidden __udivsi3
+20000414 g       .bss	00000000 __START_BSS
+20000414 g       .bss	00000000 __bss_start__
+00001518 g       .data	00000000 __exidx_start
+20003000 g       *ABS*	00000000 __BOOT_STACK_ADDRESS
+20000418 g     O .bss	00000008 my
+000014cc g     F .text	00000008 NOS_isrDummy
+1ffff000 g       *ABS*	00000000 __VECTOR_RAM
+00000de4 g     F .text	0000006e uart_send_string
+00001518 g       .data	00000000 __CTOR_LIST__
+00000ae4 g     F .text	0000026c uart_init
+20000424 g       .bss	00000000 __bss_end__
+00000000 g       .interrupts	00000000 __vector_table
+00000000 g       *ABS*	00000000 ___m_data_1FFFF000_ROMSize
+0000089c  w    F .text	00000002 .hidden __aeabi_ldiv0
+00000e54 g     F .text	000000ac uart_re1
+000010d0 g     F .text	000000bc dac_init
+00000990 g     F .text	00000070 main
+00000800 g     F .text	00000000 .hidden __aeabi_uidiv
+00001518 g       .text	00000000 __START_DATA_ROM
+20000420 g     O .bss	00000002 VReference
+00001518 g       .data	00000000 __CTOR_END__
+000011b4 g     F .text	00000070 dac_set_buffer
+00001518 g       .data	00000000 __DTOR_LIST__
+20000424 g       .bss	00000000 __END_BSS
+0000151c g       .data	00000000 _romp_at
+0000151c g       .data	00000000 ___m_data_1FFFF000_ROMStart
+0000151c g       .data	00000000 __S_romp
+00000888 g     F .text	00000012 .hidden __aeabi_uidivmod
+0000089c  w    F .text	00000002 .hidden __aeabi_idiv0
+00000d50 g     F .text	00000094 uart_send1
+20000414 g       .data	00000000 __END_DATA
+00001050 g     F .text	00000080 gpio_set
+00000000 g     O .interrupts	000000c0 rom_vector
+00000f9c g     F .text	000000b4 gpio_init
+00000004 g       *ABS*	00000000 ___data_size
+
+
+
+Disassembly of section .text:
+
+00000800 <__aeabi_uidiv>:
+__udivsi3():
+     800:	2900      	cmp	r1, #0
+     802:	d034      	beq.n	86e <__aeabi_uidiv+0x6e>
+     804:	2301      	movs	r3, #1
+     806:	2200      	movs	r2, #0
+     808:	b410      	push	{r4}
+     80a:	4288      	cmp	r0, r1
+     80c:	d32c      	bcc.n	868 <__aeabi_uidiv+0x68>
+     80e:	2401      	movs	r4, #1
+     810:	0724      	lsls	r4, r4, #28
+     812:	42a1      	cmp	r1, r4
+     814:	d204      	bcs.n	820 <__aeabi_uidiv+0x20>
+     816:	4281      	cmp	r1, r0
+     818:	d202      	bcs.n	820 <__aeabi_uidiv+0x20>
+     81a:	0109      	lsls	r1, r1, #4
+     81c:	011b      	lsls	r3, r3, #4
+     81e:	e7f8      	b.n	812 <__aeabi_uidiv+0x12>
+     820:	00e4      	lsls	r4, r4, #3
+     822:	42a1      	cmp	r1, r4
+     824:	d204      	bcs.n	830 <__aeabi_uidiv+0x30>
+     826:	4281      	cmp	r1, r0
+     828:	d202      	bcs.n	830 <__aeabi_uidiv+0x30>
+     82a:	0049      	lsls	r1, r1, #1
+     82c:	005b      	lsls	r3, r3, #1
+     82e:	e7f8      	b.n	822 <__aeabi_uidiv+0x22>
+     830:	4288      	cmp	r0, r1
+     832:	d301      	bcc.n	838 <__aeabi_uidiv+0x38>
+     834:	1a40      	subs	r0, r0, r1
+     836:	431a      	orrs	r2, r3
+     838:	084c      	lsrs	r4, r1, #1
+     83a:	42a0      	cmp	r0, r4
+     83c:	d302      	bcc.n	844 <__aeabi_uidiv+0x44>
+     83e:	1b00      	subs	r0, r0, r4
+     840:	085c      	lsrs	r4, r3, #1
+     842:	4322      	orrs	r2, r4
+     844:	088c      	lsrs	r4, r1, #2
+     846:	42a0      	cmp	r0, r4
+     848:	d302      	bcc.n	850 <__aeabi_uidiv+0x50>
+     84a:	1b00      	subs	r0, r0, r4
+     84c:	089c      	lsrs	r4, r3, #2
+     84e:	4322      	orrs	r2, r4
+     850:	08cc      	lsrs	r4, r1, #3
+     852:	42a0      	cmp	r0, r4
+     854:	d302      	bcc.n	85c <__aeabi_uidiv+0x5c>
+     856:	1b00      	subs	r0, r0, r4
+     858:	08dc      	lsrs	r4, r3, #3
+     85a:	4322      	orrs	r2, r4
+     85c:	2800      	cmp	r0, #0
+     85e:	d003      	beq.n	868 <__aeabi_uidiv+0x68>
+     860:	091b      	lsrs	r3, r3, #4
+     862:	d001      	beq.n	868 <__aeabi_uidiv+0x68>
+     864:	0909      	lsrs	r1, r1, #4
+     866:	e7e3      	b.n	830 <__aeabi_uidiv+0x30>
+     868:	1c10      	adds	r0, r2, #0
+     86a:	bc10      	pop	{r4}
+     86c:	4770      	bx	lr
+     86e:	2800      	cmp	r0, #0
+     870:	d001      	beq.n	876 <__aeabi_uidiv+0x76>
+     872:	2000      	movs	r0, #0
+     874:	43c0      	mvns	r0, r0
+     876:	b407      	push	{r0, r1, r2}
+     878:	4802      	ldr	r0, [pc, #8]	; (884 <__aeabi_uidiv+0x84>)
+     87a:	a102      	add	r1, pc, #8	; (adr r1, 884 <__aeabi_uidiv+0x84>)
+     87c:	1840      	adds	r0, r0, r1
+     87e:	9002      	str	r0, [sp, #8]
+     880:	bd03      	pop	{r0, r1, pc}
+     882:	46c0      	nop			; (mov r8, r8)
+     884:	00000019 	.word	0x00000019
+
+00000888 <__aeabi_uidivmod>:
+__aeabi_uidivmod():
+     888:	2900      	cmp	r1, #0
+     88a:	d0f0      	beq.n	86e <__aeabi_uidiv+0x6e>
+     88c:	b503      	push	{r0, r1, lr}
+     88e:	f7ff ffb9 	bl	804 <__aeabi_uidiv+0x4>
+     892:	bc0e      	pop	{r1, r2, r3}
+     894:	4342      	muls	r2, r0
+     896:	1a89      	subs	r1, r1, r2
+     898:	4718      	bx	r3
+     89a:	46c0      	nop			; (mov r8, r8)
+
+0000089c <__aeabi_idiv0>:
+__aeabi_ldiv0():
+     89c:	4770      	bx	lr
+     89e:	46c0      	nop			; (mov r8, r8)
+
+000008a0 <isr_uart1_re>:
+isr_uart1_re():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:12
+#include "includes.h"
+
+//========================测试===============================
+//串口1接收中断服务例程
+void isr_uart1_re(void)
+{
+     8a0:	b580      	push	{r7, lr}
+     8a2:	b082      	sub	sp, #8
+     8a4:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:14
+    uint_16 ch;
+    uint_8 flag = 1;
+     8a6:	1d7b      	adds	r3, r7, #5
+     8a8:	2201      	movs	r2, #1
+     8aa:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:17
+    static int i=0;
+    
+    DISABLE_INTERRUPTS;
+     8ac:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:19
+    
+    ch = uart_re1(UART_TEST, &flag);
+     8ae:	1d7b      	adds	r3, r7, #5
+     8b0:	2001      	movs	r0, #1
+     8b2:	1c19      	adds	r1, r3, #0
+     8b4:	f000 face 	bl	e54 <uart_re1>
+     8b8:	1c03      	adds	r3, r0, #0
+     8ba:	1c1a      	adds	r2, r3, #0
+     8bc:	1dbb      	adds	r3, r7, #6
+     8be:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:21
+
+	if(i==0)
+     8c0:	4b30      	ldr	r3, [pc, #192]	; (984 <isr_uart1_re+0xe4>)
+     8c2:	681b      	ldr	r3, [r3, #0]
+     8c4:	2b00      	cmp	r3, #0
+     8c6:	d106      	bne.n	8d6 <isr_uart1_re+0x36>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:22
+		my[0]=ch-'0';
+     8c8:	1dbb      	adds	r3, r7, #6
+     8ca:	881b      	ldrh	r3, [r3, #0]
+     8cc:	3b30      	subs	r3, #48	; 0x30
+     8ce:	b29a      	uxth	r2, r3
+     8d0:	4b2d      	ldr	r3, [pc, #180]	; (988 <isr_uart1_re+0xe8>)
+     8d2:	801a      	strh	r2, [r3, #0]
+     8d4:	e01b      	b.n	90e <isr_uart1_re+0x6e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:23
+	else if(i==1)
+     8d6:	4b2b      	ldr	r3, [pc, #172]	; (984 <isr_uart1_re+0xe4>)
+     8d8:	681b      	ldr	r3, [r3, #0]
+     8da:	2b01      	cmp	r3, #1
+     8dc:	d106      	bne.n	8ec <isr_uart1_re+0x4c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:24
+		my[1]=ch-'0';
+     8de:	1dbb      	adds	r3, r7, #6
+     8e0:	881b      	ldrh	r3, [r3, #0]
+     8e2:	3b30      	subs	r3, #48	; 0x30
+     8e4:	b29a      	uxth	r2, r3
+     8e6:	4b28      	ldr	r3, [pc, #160]	; (988 <isr_uart1_re+0xe8>)
+     8e8:	805a      	strh	r2, [r3, #2]
+     8ea:	e010      	b.n	90e <isr_uart1_re+0x6e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:25
+	else if(i==2)
+     8ec:	4b25      	ldr	r3, [pc, #148]	; (984 <isr_uart1_re+0xe4>)
+     8ee:	681b      	ldr	r3, [r3, #0]
+     8f0:	2b02      	cmp	r3, #2
+     8f2:	d106      	bne.n	902 <isr_uart1_re+0x62>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:26
+		my[2]=ch-'0';
+     8f4:	1dbb      	adds	r3, r7, #6
+     8f6:	881b      	ldrh	r3, [r3, #0]
+     8f8:	3b30      	subs	r3, #48	; 0x30
+     8fa:	b29a      	uxth	r2, r3
+     8fc:	4b22      	ldr	r3, [pc, #136]	; (988 <isr_uart1_re+0xe8>)
+     8fe:	809a      	strh	r2, [r3, #4]
+     900:	e005      	b.n	90e <isr_uart1_re+0x6e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:28
+	else
+		my[3]=ch-'0';
+     902:	1dbb      	adds	r3, r7, #6
+     904:	881b      	ldrh	r3, [r3, #0]
+     906:	3b30      	subs	r3, #48	; 0x30
+     908:	b29a      	uxth	r2, r3
+     90a:	4b1f      	ldr	r3, [pc, #124]	; (988 <isr_uart1_re+0xe8>)
+     90c:	80da      	strh	r2, [r3, #6]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:29
+	if(i==3)
+     90e:	4b1d      	ldr	r3, [pc, #116]	; (984 <isr_uart1_re+0xe4>)
+     910:	681b      	ldr	r3, [r3, #0]
+     912:	2b03      	cmp	r3, #3
+     914:	d11b      	bne.n	94e <isr_uart1_re+0xae>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:30
+		VReference=1000*my[0]+100*my[1]+10*my[2]+my[3];
+     916:	4b1c      	ldr	r3, [pc, #112]	; (988 <isr_uart1_re+0xe8>)
+     918:	881b      	ldrh	r3, [r3, #0]
+     91a:	22fa      	movs	r2, #250	; 0xfa
+     91c:	0092      	lsls	r2, r2, #2
+     91e:	4353      	muls	r3, r2
+     920:	b29a      	uxth	r2, r3
+     922:	4b19      	ldr	r3, [pc, #100]	; (988 <isr_uart1_re+0xe8>)
+     924:	885b      	ldrh	r3, [r3, #2]
+     926:	2164      	movs	r1, #100	; 0x64
+     928:	434b      	muls	r3, r1
+     92a:	b29b      	uxth	r3, r3
+     92c:	18d3      	adds	r3, r2, r3
+     92e:	b29a      	uxth	r2, r3
+     930:	4b15      	ldr	r3, [pc, #84]	; (988 <isr_uart1_re+0xe8>)
+     932:	889b      	ldrh	r3, [r3, #4]
+     934:	1c19      	adds	r1, r3, #0
+     936:	0089      	lsls	r1, r1, #2
+     938:	18cb      	adds	r3, r1, r3
+     93a:	005b      	lsls	r3, r3, #1
+     93c:	b29b      	uxth	r3, r3
+     93e:	18d3      	adds	r3, r2, r3
+     940:	b29a      	uxth	r2, r3
+     942:	4b11      	ldr	r3, [pc, #68]	; (988 <isr_uart1_re+0xe8>)
+     944:	88db      	ldrh	r3, [r3, #6]
+     946:	18d3      	adds	r3, r2, r3
+     948:	b29a      	uxth	r2, r3
+     94a:	4b10      	ldr	r3, [pc, #64]	; (98c <isr_uart1_re+0xec>)
+     94c:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:31
+	i++;
+     94e:	4b0d      	ldr	r3, [pc, #52]	; (984 <isr_uart1_re+0xe4>)
+     950:	681b      	ldr	r3, [r3, #0]
+     952:	1c5a      	adds	r2, r3, #1
+     954:	4b0b      	ldr	r3, [pc, #44]	; (984 <isr_uart1_re+0xe4>)
+     956:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:32
+	if(i==4)
+     958:	4b0a      	ldr	r3, [pc, #40]	; (984 <isr_uart1_re+0xe4>)
+     95a:	681b      	ldr	r3, [r3, #0]
+     95c:	2b04      	cmp	r3, #4
+     95e:	d102      	bne.n	966 <isr_uart1_re+0xc6>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:33
+		i=0;
+     960:	4b08      	ldr	r3, [pc, #32]	; (984 <isr_uart1_re+0xe4>)
+     962:	2200      	movs	r2, #0
+     964:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:34
+    if (0 == flag)
+     966:	1d7b      	adds	r3, r7, #5
+     968:	781b      	ldrb	r3, [r3, #0]
+     96a:	2b00      	cmp	r3, #0
+     96c:	d106      	bne.n	97c <isr_uart1_re+0xdc>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:36
+    {
+        uart_send1(UART_TEST, ch);
+     96e:	1dbb      	adds	r3, r7, #6
+     970:	881b      	ldrh	r3, [r3, #0]
+     972:	b2db      	uxtb	r3, r3
+     974:	2001      	movs	r0, #1
+     976:	1c19      	adds	r1, r3, #0
+     978:	f000 f9ea 	bl	d50 <uart_send1>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:40
+
+    }
+    
+    ENABLE_INTERRUPTS;
+     97c:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/isr.c:41
+}
+     97e:	46bd      	mov	sp, r7
+     980:	b002      	add	sp, #8
+     982:	bd80      	pop	{r7, pc}
+     984:	20000414 	.word	0x20000414
+     988:	20000418 	.word	0x20000418
+     98c:	20000420 	.word	0x20000420
+
+00000990 <main>:
+main():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:6
+//说明见工程文件夹下的Doc文件夹内Readme.txt文件
+//============================================================================
+#include "includes.h"    //包含总头文件
+
+int main(void)
+{
+     990:	b580      	push	{r7, lr}
+     992:	b082      	sub	sp, #8
+     994:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:9
+	//1. 声明主函数使用的变量
+	uint_32  mRuncount;     //主循环计数器
+	VReference = 0;
+     996:	4b17      	ldr	r3, [pc, #92]	; (9f4 <main+0x64>)
+     998:	2200      	movs	r2, #0
+     99a:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:11
+	//2. 关总中断
+	DISABLE_INTERRUPTS;
+     99c:	b672      	cpsid	i
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:13
+	//3. 初始化外设模块
+	light_init(RUN_LIGHT_BLUE,LIGHT_OFF);     //初始化蓝色RUN灯
+     99e:	230a      	movs	r3, #10
+     9a0:	33ff      	adds	r3, #255	; 0xff
+     9a2:	1c18      	adds	r0, r3, #0
+     9a4:	2101      	movs	r1, #1
+     9a6:	f000 f85b 	bl	a60 <light_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:14
+    uart_init (UART_TEST,BUSCLK,9600);                  //串口1初始化, 总线时钟24000Khz,波特率9600
+     9aa:	2396      	movs	r3, #150	; 0x96
+     9ac:	019b      	lsls	r3, r3, #6
+     9ae:	2001      	movs	r0, #1
+     9b0:	2102      	movs	r1, #2
+     9b2:	1c1a      	adds	r2, r3, #0
+     9b4:	f000 f896 	bl	ae4 <uart_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:15
+    uart_send_string(UART_TEST, "This is DAC Test!\r\n"); //打印测试信息
+     9b8:	4b0f      	ldr	r3, [pc, #60]	; (9f8 <main+0x68>)
+     9ba:	2001      	movs	r0, #1
+     9bc:	1c19      	adds	r1, r3, #0
+     9be:	f000 fa11 	bl	de4 <uart_send_string>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:16
+    dac_init(1);                                        //DAC初始化，选择参考电压VDDA=3.3V
+     9c2:	2001      	movs	r0, #1
+     9c4:	f000 fb84 	bl	10d0 <dac_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:18
+	//4. 给有关变量赋初值
+	mRuncount=0;            //主循环计数器
+     9c8:	2300      	movs	r3, #0
+     9ca:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:20
+	//5. 使能模块中断
+    uart_enable_re_int(UART_TEST); //使能串口1接收中断
+     9cc:	2001      	movs	r0, #1
+     9ce:	f000 fa97 	bl	f00 <uart_enable_re_int>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:22
+	//6. 开总中断
+	ENABLE_INTERRUPTS;
+     9d2:	b662      	cpsie	i
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:28
+
+    //进入主循环
+    //主循环开始==================================================================
+	for(;;)
+	{
+		mRuncount++;
+     9d4:	687b      	ldr	r3, [r7, #4]
+     9d6:	3301      	adds	r3, #1
+     9d8:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:29
+		if (mRuncount > RUN_COUNTER_MAX)
+     9da:	687a      	ldr	r2, [r7, #4]
+     9dc:	4b07      	ldr	r3, [pc, #28]	; (9fc <main+0x6c>)
+     9de:	429a      	cmp	r2, r3
+     9e0:	d907      	bls.n	9f2 <main+0x62>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:31
+		{
+			mRuncount = 0;
+     9e2:	2300      	movs	r3, #0
+     9e4:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:36
+			//指示灯的亮、暗状态切换
+		    //light_change(RUN_LIGHT_BLUE);  //蓝色运行指示灯（RUN_LIGHT_BLUE）状态变化
+
+			//DAC数字量转换		
+			dac_convert(VReference);
+     9e6:	4b03      	ldr	r3, [pc, #12]	; (9f4 <main+0x64>)
+     9e8:	881b      	ldrh	r3, [r3, #0]
+     9ea:	1c18      	adds	r0, r3, #0
+     9ec:	f000 fbce 	bl	118c <dac_convert>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../08_Source/main.c:41
+			//VReference -= 50;
+			//if(VReference <= 0) VReference = 4000;
+		} // end_if		
+		//以下加入用户程序--------------------------------------------------------
+	}//主循环end_for
+     9f0:	e7f0      	b.n	9d4 <main+0x44>
+     9f2:	e7ef      	b.n	9d4 <main+0x44>
+     9f4:	20000420 	.word	0x20000420
+     9f8:	000014d4 	.word	0x000014d4
+     9fc:	000f4240 	.word	0x000f4240
+
+00000a00 <enable_irq>:
+enable_irq():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:65
+//函数返回：无  
+//参数说明：irq：irq号
+//功能概要：使能irq中断 
+//============================================================================
+void enable_irq (uint_16 irq)
+{
+     a00:	b590      	push	{r4, r7, lr}
+     a02:	b083      	sub	sp, #12
+     a04:	af00      	add	r7, sp, #0
+     a06:	1c02      	adds	r2, r0, #0
+     a08:	1dbb      	adds	r3, r7, #6
+     a0a:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:67
+    //确定irq号为有效的irq号
+    if (irq > 32)	irq=32;
+     a0c:	1dbb      	adds	r3, r7, #6
+     a0e:	881b      	ldrh	r3, [r3, #0]
+     a10:	2b20      	cmp	r3, #32
+     a12:	d902      	bls.n	a1a <enable_irq+0x1a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:67 (discriminator 1)
+     a14:	1dbb      	adds	r3, r7, #6
+     a16:	2220      	movs	r2, #32
+     a18:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:69
+    
+    NVIC_ICPR |= (1<<(irq%32));
+     a1a:	4a10      	ldr	r2, [pc, #64]	; (a5c <enable_irq+0x5c>)
+     a1c:	490f      	ldr	r1, [pc, #60]	; (a5c <enable_irq+0x5c>)
+     a1e:	23c0      	movs	r3, #192	; 0xc0
+     a20:	005b      	lsls	r3, r3, #1
+     a22:	58c9      	ldr	r1, [r1, r3]
+     a24:	1dbb      	adds	r3, r7, #6
+     a26:	8818      	ldrh	r0, [r3, #0]
+     a28:	231f      	movs	r3, #31
+     a2a:	4003      	ands	r3, r0
+     a2c:	2001      	movs	r0, #1
+     a2e:	1c04      	adds	r4, r0, #0
+     a30:	409c      	lsls	r4, r3
+     a32:	1c23      	adds	r3, r4, #0
+     a34:	4319      	orrs	r1, r3
+     a36:	23c0      	movs	r3, #192	; 0xc0
+     a38:	005b      	lsls	r3, r3, #1
+     a3a:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:70
+    NVIC_ISER |= (1<<(irq%32));
+     a3c:	4b07      	ldr	r3, [pc, #28]	; (a5c <enable_irq+0x5c>)
+     a3e:	4a07      	ldr	r2, [pc, #28]	; (a5c <enable_irq+0x5c>)
+     a40:	6811      	ldr	r1, [r2, #0]
+     a42:	1dba      	adds	r2, r7, #6
+     a44:	8810      	ldrh	r0, [r2, #0]
+     a46:	221f      	movs	r2, #31
+     a48:	4002      	ands	r2, r0
+     a4a:	2001      	movs	r0, #1
+     a4c:	1c04      	adds	r4, r0, #0
+     a4e:	4094      	lsls	r4, r2
+     a50:	1c22      	adds	r2, r4, #0
+     a52:	430a      	orrs	r2, r1
+     a54:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../07_Soft_Component/common/common.c:72
+
+}
+     a56:	46bd      	mov	sp, r7
+     a58:	b003      	add	sp, #12
+     a5a:	bd90      	pop	{r4, r7, pc}
+     a5c:	e000e100 	.word	0xe000e100
+
+00000a60 <light_init>:
+light_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../06_App_Component/light/light.c:18
+//       state：设定小灯状态。由light.h中宏定义。
+//函数返回：无
+//功能概要：指示灯驱动初始化。
+//===========================================================================
+void light_init(uint_16 port_pin, uint_8 state)
+{
+     a60:	b580      	push	{r7, lr}
+     a62:	b082      	sub	sp, #8
+     a64:	af00      	add	r7, sp, #0
+     a66:	1c0a      	adds	r2, r1, #0
+     a68:	1dbb      	adds	r3, r7, #6
+     a6a:	1c01      	adds	r1, r0, #0
+     a6c:	8019      	strh	r1, [r3, #0]
+     a6e:	1d7b      	adds	r3, r7, #5
+     a70:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../06_App_Component/light/light.c:19
+    gpio_init(port_pin, 1, state);
+     a72:	1dbb      	adds	r3, r7, #6
+     a74:	881a      	ldrh	r2, [r3, #0]
+     a76:	1d7b      	adds	r3, r7, #5
+     a78:	781b      	ldrb	r3, [r3, #0]
+     a7a:	1c10      	adds	r0, r2, #0
+     a7c:	2101      	movs	r1, #1
+     a7e:	1c1a      	adds	r2, r3, #0
+     a80:	f000 fa8c 	bl	f9c <gpio_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../06_App_Component/light/light.c:20
+}
+     a84:	46bd      	mov	sp, r7
+     a86:	b002      	add	sp, #8
+     a88:	bd80      	pop	{r7, pc}
+     a8a:	46c0      	nop			; (mov r8, r8)
+
+00000a8c <MCGIRCLK_OutEnable>:
+MCGIRCLK_OutEnable():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:18
+static void MCGIRCLK_OutEnable(void);
+
+//============================================================================
+//启用MCGIRCLK时钟，输出时钟频率在31.25Khz ~ 4Mhz
+void MCGIRCLK_OutEnable(void)
+{
+     a8c:	b580      	push	{r7, lr}
+     a8e:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:20
+
+	MCG_C1 |= MCG_C1_IRCLKEN_MASK|MCG_C1_IREFSTEN_MASK;
+     a90:	4b13      	ldr	r3, [pc, #76]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     a92:	4a13      	ldr	r2, [pc, #76]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     a94:	7812      	ldrb	r2, [r2, #0]
+     a96:	b2d2      	uxtb	r2, r2
+     a98:	2103      	movs	r1, #3
+     a9a:	430a      	orrs	r2, r1
+     a9c:	b2d2      	uxtb	r2, r2
+     a9e:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:21
+	MCG_SC |= MCG_SC_FCRDIV(0x0);  //内部4M快速参考时钟分频因子，
+     aa0:	4b0f      	ldr	r3, [pc, #60]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     aa2:	4a0f      	ldr	r2, [pc, #60]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     aa4:	7a12      	ldrb	r2, [r2, #8]
+     aa6:	b2d2      	uxtb	r2, r2
+     aa8:	721a      	strb	r2, [r3, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:23
+	                              //可将时钟分频在31.25Khz ~ 4Mhz
+	MCG_C4 |= MCG_C4_FCTRIM(0xA);
+     aaa:	4b0d      	ldr	r3, [pc, #52]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     aac:	4a0c      	ldr	r2, [pc, #48]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     aae:	78d2      	ldrb	r2, [r2, #3]
+     ab0:	b2d2      	uxtb	r2, r2
+     ab2:	2114      	movs	r1, #20
+     ab4:	430a      	orrs	r2, r1
+     ab6:	b2d2      	uxtb	r2, r2
+     ab8:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:24
+	MCG_C2 |= MCG_C2_IRCS_MASK;
+     aba:	4b09      	ldr	r3, [pc, #36]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     abc:	4a08      	ldr	r2, [pc, #32]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     abe:	7852      	ldrb	r2, [r2, #1]
+     ac0:	b2d2      	uxtb	r2, r2
+     ac2:	2101      	movs	r1, #1
+     ac4:	430a      	orrs	r2, r1
+     ac6:	b2d2      	uxtb	r2, r2
+     ac8:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:25
+	while (!(MCG_S & MCG_S_IRCST_MASK));
+     aca:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:25 (discriminator 1)
+     acc:	4b04      	ldr	r3, [pc, #16]	; (ae0 <MCGIRCLK_OutEnable+0x54>)
+     ace:	799b      	ldrb	r3, [r3, #6]
+     ad0:	b2db      	uxtb	r3, r3
+     ad2:	1c1a      	adds	r2, r3, #0
+     ad4:	2301      	movs	r3, #1
+     ad6:	4013      	ands	r3, r2
+     ad8:	d0f8      	beq.n	acc <MCGIRCLK_OutEnable+0x40>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:26
+}
+     ada:	46bd      	mov	sp, r7
+     adc:	bd80      	pop	{r7, pc}
+     ade:	46c0      	nop			; (mov r8, r8)
+     ae0:	40064000 	.word	0x40064000
+
+00000ae4 <uart_init>:
+uart_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:41
+//函数返回：无
+//说明： 当参数为UART_0时，sel_clk只能选择MCGIRCLK或MCGPLL，若选择内部时钟MCGIRCLK,
+//波特率需小于19200； 当参数为UART_1或是UART_2时，sel_clk只能选择BUSCLK
+//============================================================================
+ void  uart_init (uint_8 uartNo,uint_32 sel_clk,uint_32 baud_rate) 
+ {	  
+     ae4:	b590      	push	{r4, r7, lr}
+     ae6:	b089      	sub	sp, #36	; 0x24
+     ae8:	af00      	add	r7, sp, #0
+     aea:	60b9      	str	r1, [r7, #8]
+     aec:	607a      	str	r2, [r7, #4]
+     aee:	1c3b      	adds	r3, r7, #0
+     af0:	330f      	adds	r3, #15
+     af2:	1c02      	adds	r2, r0, #0
+     af4:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:46
+	//局部变量声明
+	register uint_16 sbr;
+	uint_8 temp;  
+	uint_32 clk_Khz;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;//声明uartch1为UARTLP_MemMapPtr结构体类型指针 
+     af6:	4b8d      	ldr	r3, [pc, #564]	; (d2c <uart_init+0x248>)
+     af8:	61bb      	str	r3, [r7, #24]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:48
+    UART_MemMapPtr uartch2;     //声明uartch2为UART_MemMapPtr结构体类型指针 
+    uartch2 = UART_ARR[uartNo-1]; //获得UART1、2模块相应口基地址
+     afa:	1c3b      	adds	r3, r7, #0
+     afc:	330f      	adds	r3, #15
+     afe:	781b      	ldrb	r3, [r3, #0]
+     b00:	1e5a      	subs	r2, r3, #1
+     b02:	4b8b      	ldr	r3, [pc, #556]	; (d30 <uart_init+0x24c>)
+     b04:	0092      	lsls	r2, r2, #2
+     b06:	58d3      	ldr	r3, [r2, r3]
+     b08:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:52
+	
+	//根据带入参数uartNo，给局部变量uartch1赋值
+	
+	if(uartNo==0)
+     b0a:	1c3b      	adds	r3, r7, #0
+     b0c:	330f      	adds	r3, #15
+     b0e:	781b      	ldrb	r3, [r3, #0]
+     b10:	2b00      	cmp	r3, #0
+     b12:	d000      	beq.n	b16 <uart_init+0x32>
+     b14:	e099      	b.n	c4a <uart_init+0x166>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:54
+	{
+		switch(sel_clk)
+     b16:	68bb      	ldr	r3, [r7, #8]
+     b18:	2b00      	cmp	r3, #0
+     b1a:	d002      	beq.n	b22 <uart_init+0x3e>
+     b1c:	2b01      	cmp	r3, #1
+     b1e:	d00c      	beq.n	b3a <uart_init+0x56>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:68
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1);   //UART0选择MCGFLLCLK_khz=48000Khz时钟源
+			SIM_SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK;    
+			break;
+		   
+		default:
+			break;
+     b20:	e01e      	b.n	b60 <uart_init+0x7c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:58
+	{
+		switch(sel_clk)
+		{
+		case MCGIRCLK:
+			//启用并选择UART0时钟源MCGIRCLK
+			MCGIRCLK_OutEnable();      //启用内部快速时钟	
+     b22:	f7ff ffb3 	bl	a8c <MCGIRCLK_OutEnable>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:59
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(0x3);  //UART0选择MCGIRCLK=4000Khz时钟源
+     b26:	4a83      	ldr	r2, [pc, #524]	; (d34 <uart_init+0x250>)
+     b28:	4982      	ldr	r1, [pc, #520]	; (d34 <uart_init+0x250>)
+     b2a:	4b83      	ldr	r3, [pc, #524]	; (d38 <uart_init+0x254>)
+     b2c:	58cb      	ldr	r3, [r1, r3]
+     b2e:	21c0      	movs	r1, #192	; 0xc0
+     b30:	0509      	lsls	r1, r1, #20
+     b32:	4319      	orrs	r1, r3
+     b34:	4b80      	ldr	r3, [pc, #512]	; (d38 <uart_init+0x254>)
+     b36:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:60
+			break;
+     b38:	e012      	b.n	b60 <uart_init+0x7c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:63
+	   
+		case MCGPLL:
+			SIM_SOPT2 |= SIM_SOPT2_UART0SRC(1);   //UART0选择MCGFLLCLK_khz=48000Khz时钟源
+     b3a:	4a7e      	ldr	r2, [pc, #504]	; (d34 <uart_init+0x250>)
+     b3c:	497d      	ldr	r1, [pc, #500]	; (d34 <uart_init+0x250>)
+     b3e:	4b7e      	ldr	r3, [pc, #504]	; (d38 <uart_init+0x254>)
+     b40:	58cb      	ldr	r3, [r1, r3]
+     b42:	2180      	movs	r1, #128	; 0x80
+     b44:	04c9      	lsls	r1, r1, #19
+     b46:	4319      	orrs	r1, r3
+     b48:	4b7b      	ldr	r3, [pc, #492]	; (d38 <uart_init+0x254>)
+     b4a:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:64
+			SIM_SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK;    
+     b4c:	4a79      	ldr	r2, [pc, #484]	; (d34 <uart_init+0x250>)
+     b4e:	4979      	ldr	r1, [pc, #484]	; (d34 <uart_init+0x250>)
+     b50:	4b79      	ldr	r3, [pc, #484]	; (d38 <uart_init+0x254>)
+     b52:	58cb      	ldr	r3, [r1, r3]
+     b54:	2180      	movs	r1, #128	; 0x80
+     b56:	0249      	lsls	r1, r1, #9
+     b58:	4319      	orrs	r1, r3
+     b5a:	4b77      	ldr	r3, [pc, #476]	; (d38 <uart_init+0x254>)
+     b5c:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:65
+			break;
+     b5e:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:72
+		default:
+			break;
+		}
+		
+		//引脚复用为串口功能并启用串口模块时钟  	   
+		PORTA_PCR14 = PORT_PCR_MUX(0x3);      //使能UART0_TXD
+     b60:	4b76      	ldr	r3, [pc, #472]	; (d3c <uart_init+0x258>)
+     b62:	22c0      	movs	r2, #192	; 0xc0
+     b64:	0092      	lsls	r2, r2, #2
+     b66:	639a      	str	r2, [r3, #56]	; 0x38
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:73
+		PORTA_PCR15 = PORT_PCR_MUX(0x3);      //使能UART0_RXD	
+     b68:	4b74      	ldr	r3, [pc, #464]	; (d3c <uart_init+0x258>)
+     b6a:	22c0      	movs	r2, #192	; 0xc0
+     b6c:	0092      	lsls	r2, r2, #2
+     b6e:	63da      	str	r2, [r3, #60]	; 0x3c
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:74
+		SIM_SCGC4 |= SIM_SCGC4_UART0_MASK;    //启动串口0时钟
+     b70:	4a70      	ldr	r2, [pc, #448]	; (d34 <uart_init+0x250>)
+     b72:	4970      	ldr	r1, [pc, #448]	; (d34 <uart_init+0x250>)
+     b74:	4b72      	ldr	r3, [pc, #456]	; (d40 <uart_init+0x25c>)
+     b76:	58cb      	ldr	r3, [r1, r3]
+     b78:	2180      	movs	r1, #128	; 0x80
+     b7a:	00c9      	lsls	r1, r1, #3
+     b7c:	4319      	orrs	r1, r3
+     b7e:	4b70      	ldr	r3, [pc, #448]	; (d40 <uart_init+0x25c>)
+     b80:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:77
+		
+		//暂时关闭串口0发送与接收功能  
+		uartch1->C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK); 
+     b82:	69bb      	ldr	r3, [r7, #24]
+     b84:	78db      	ldrb	r3, [r3, #3]
+     b86:	b2db      	uxtb	r3, r3
+     b88:	220c      	movs	r2, #12
+     b8a:	4393      	bics	r3, r2
+     b8c:	b2da      	uxtb	r2, r3
+     b8e:	69bb      	ldr	r3, [r7, #24]
+     b90:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:80
+	
+		//根据时钟源选择时钟频率
+		if(MCGIRCLK == sel_clk)
+     b92:	68bb      	ldr	r3, [r7, #8]
+     b94:	2b00      	cmp	r3, #0
+     b96:	d103      	bne.n	ba0 <uart_init+0xbc>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:81
+			clk_Khz = MCGIR_CLK_KHZ;
+     b98:	23fa      	movs	r3, #250	; 0xfa
+     b9a:	011b      	lsls	r3, r3, #4
+     b9c:	61fb      	str	r3, [r7, #28]
+     b9e:	e004      	b.n	baa <uart_init+0xc6>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:82
+		else if (MCGPLL == sel_clk)
+     ba0:	68bb      	ldr	r3, [r7, #8]
+     ba2:	2b01      	cmp	r3, #1
+     ba4:	d101      	bne.n	baa <uart_init+0xc6>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:83
+			clk_Khz = MCGPLL_CLK_KHZ;
+     ba6:	4b67      	ldr	r3, [pc, #412]	; (d44 <uart_init+0x260>)
+     ba8:	61fb      	str	r3, [r7, #28]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:86 (discriminator 1)
+   
+		//配置串口工作模式:8位无校验模式
+		sbr = (uint_16)((clk_Khz*1000)/(baud_rate * 16));
+     baa:	69fb      	ldr	r3, [r7, #28]
+     bac:	22fa      	movs	r2, #250	; 0xfa
+     bae:	0092      	lsls	r2, r2, #2
+     bb0:	435a      	muls	r2, r3
+     bb2:	687b      	ldr	r3, [r7, #4]
+     bb4:	011b      	lsls	r3, r3, #4
+     bb6:	1c10      	adds	r0, r2, #0
+     bb8:	1c19      	adds	r1, r3, #0
+     bba:	f7ff fe21 	bl	800 <__aeabi_uidiv>
+     bbe:	1c03      	adds	r3, r0, #0
+     bc0:	b29c      	uxth	r4, r3
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:87 (discriminator 1)
+		temp = UART_BDH_REG(uartch1) & ~(UART_BDH_SBR(0x1F));
+     bc2:	69bb      	ldr	r3, [r7, #24]
+     bc4:	781b      	ldrb	r3, [r3, #0]
+     bc6:	b2da      	uxtb	r2, r3
+     bc8:	1c3b      	adds	r3, r7, #0
+     bca:	3313      	adds	r3, #19
+     bcc:	211f      	movs	r1, #31
+     bce:	438a      	bics	r2, r1
+     bd0:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:88 (discriminator 1)
+		UART_BDH_REG(uartch1) = temp |  UART_BDH_SBR(((sbr & 0x1F00) >> 8));
+     bd2:	1c22      	adds	r2, r4, #0
+     bd4:	23f8      	movs	r3, #248	; 0xf8
+     bd6:	015b      	lsls	r3, r3, #5
+     bd8:	4013      	ands	r3, r2
+     bda:	121b      	asrs	r3, r3, #8
+     bdc:	b2da      	uxtb	r2, r3
+     bde:	231f      	movs	r3, #31
+     be0:	4013      	ands	r3, r2
+     be2:	b2da      	uxtb	r2, r3
+     be4:	1c3b      	adds	r3, r7, #0
+     be6:	3313      	adds	r3, #19
+     be8:	781b      	ldrb	r3, [r3, #0]
+     bea:	4313      	orrs	r3, r2
+     bec:	b2da      	uxtb	r2, r3
+     bee:	69bb      	ldr	r3, [r7, #24]
+     bf0:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:89 (discriminator 1)
+		UART_BDL_REG(uartch1) = (uint_8)(sbr & UART_BDL_SBR_MASK);
+     bf2:	b2e2      	uxtb	r2, r4
+     bf4:	69bb      	ldr	r3, [r7, #24]
+     bf6:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:92 (discriminator 1)
+
+		//初始化控制寄存器、清标志位
+		UART0_C4 = 0x0F;
+     bf8:	4b4c      	ldr	r3, [pc, #304]	; (d2c <uart_init+0x248>)
+     bfa:	220f      	movs	r2, #15
+     bfc:	729a      	strb	r2, [r3, #10]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:93 (discriminator 1)
+		UART0_C1 = 0x00;
+     bfe:	4b4b      	ldr	r3, [pc, #300]	; (d2c <uart_init+0x248>)
+     c00:	2200      	movs	r2, #0
+     c02:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:94 (discriminator 1)
+		UART0_C3 = 0x00;
+     c04:	4b49      	ldr	r3, [pc, #292]	; (d2c <uart_init+0x248>)
+     c06:	2200      	movs	r2, #0
+     c08:	719a      	strb	r2, [r3, #6]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:95 (discriminator 1)
+		UART0_MA1 = 0x00;
+     c0a:	4b48      	ldr	r3, [pc, #288]	; (d2c <uart_init+0x248>)
+     c0c:	2200      	movs	r2, #0
+     c0e:	721a      	strb	r2, [r3, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:96 (discriminator 1)
+		UART0_MA2 = 0x00;
+     c10:	4b46      	ldr	r3, [pc, #280]	; (d2c <uart_init+0x248>)
+     c12:	2200      	movs	r2, #0
+     c14:	725a      	strb	r2, [r3, #9]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:97 (discriminator 1)
+		UART0_S1 |= 0x1F;
+     c16:	4b45      	ldr	r3, [pc, #276]	; (d2c <uart_init+0x248>)
+     c18:	4a44      	ldr	r2, [pc, #272]	; (d2c <uart_init+0x248>)
+     c1a:	7912      	ldrb	r2, [r2, #4]
+     c1c:	b2d2      	uxtb	r2, r2
+     c1e:	211f      	movs	r1, #31
+     c20:	430a      	orrs	r2, r1
+     c22:	b2d2      	uxtb	r2, r2
+     c24:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:98 (discriminator 1)
+		UART0_S2 |= 0xC0;    
+     c26:	4b41      	ldr	r3, [pc, #260]	; (d2c <uart_init+0x248>)
+     c28:	4a40      	ldr	r2, [pc, #256]	; (d2c <uart_init+0x248>)
+     c2a:	7952      	ldrb	r2, [r2, #5]
+     c2c:	b2d2      	uxtb	r2, r2
+     c2e:	2140      	movs	r1, #64	; 0x40
+     c30:	4249      	negs	r1, r1
+     c32:	430a      	orrs	r2, r1
+     c34:	b2d2      	uxtb	r2, r2
+     c36:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:101 (discriminator 1)
+	   	
+		//启动发送接收
+		uartch1->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);    
+     c38:	69bb      	ldr	r3, [r7, #24]
+     c3a:	78db      	ldrb	r3, [r3, #3]
+     c3c:	b2db      	uxtb	r3, r3
+     c3e:	220c      	movs	r2, #12
+     c40:	4313      	orrs	r3, r2
+     c42:	b2da      	uxtb	r2, r3
+     c44:	69bb      	ldr	r3, [r7, #24]
+     c46:	70da      	strb	r2, [r3, #3]
+     c48:	e06d      	b.n	d26 <uart_init+0x242>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:105
+	}
+	else
+	{
+		 switch (uartNo)
+     c4a:	1c3b      	adds	r3, r7, #0
+     c4c:	330f      	adds	r3, #15
+     c4e:	781b      	ldrb	r3, [r3, #0]
+     c50:	2b01      	cmp	r3, #1
+     c52:	d002      	beq.n	c5a <uart_init+0x176>
+     c54:	2b02      	cmp	r3, #2
+     c56:	d012      	beq.n	c7e <uart_init+0x19a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:118
+		           PORTE_PCR22 = PORT_PCR_MUX(0x4); //使能UART2_TXD
+		           PORTE_PCR23 = PORT_PCR_MUX(0x4); //使能UART2_RXD
+		           SIM_SCGC4 |= SIM_SCGC4_UART2_MASK;//启动串口2时钟
+		           break;
+		       default:
+		    	   break;  //传参错误，返回
+     c58:	e023      	b.n	ca2 <uart_init+0x1be>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:108
+	else
+	{
+		 switch (uartNo)
+		       {
+		       case UART_1:
+		           PORTE_PCR0 = PORT_PCR_MUX(0x3);    //使能UART1_TXD
+     c5a:	4b3b      	ldr	r3, [pc, #236]	; (d48 <uart_init+0x264>)
+     c5c:	22c0      	movs	r2, #192	; 0xc0
+     c5e:	0092      	lsls	r2, r2, #2
+     c60:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:109
+		           PORTE_PCR1 = PORT_PCR_MUX(0x3);    //使能UART1_RXD
+     c62:	4b39      	ldr	r3, [pc, #228]	; (d48 <uart_init+0x264>)
+     c64:	22c0      	movs	r2, #192	; 0xc0
+     c66:	0092      	lsls	r2, r2, #2
+     c68:	605a      	str	r2, [r3, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:110
+		           SIM_SCGC4 |= SIM_SCGC4_UART1_MASK; //启动串口1时钟
+     c6a:	4a32      	ldr	r2, [pc, #200]	; (d34 <uart_init+0x250>)
+     c6c:	4931      	ldr	r1, [pc, #196]	; (d34 <uart_init+0x250>)
+     c6e:	4b34      	ldr	r3, [pc, #208]	; (d40 <uart_init+0x25c>)
+     c70:	58cb      	ldr	r3, [r1, r3]
+     c72:	2180      	movs	r1, #128	; 0x80
+     c74:	0109      	lsls	r1, r1, #4
+     c76:	4319      	orrs	r1, r3
+     c78:	4b31      	ldr	r3, [pc, #196]	; (d40 <uart_init+0x25c>)
+     c7a:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:111
+		           break;
+     c7c:	e011      	b.n	ca2 <uart_init+0x1be>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:113
+		       case UART_2:
+		           PORTE_PCR22 = PORT_PCR_MUX(0x4); //使能UART2_TXD
+     c7e:	4b32      	ldr	r3, [pc, #200]	; (d48 <uart_init+0x264>)
+     c80:	2280      	movs	r2, #128	; 0x80
+     c82:	00d2      	lsls	r2, r2, #3
+     c84:	659a      	str	r2, [r3, #88]	; 0x58
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:114
+		           PORTE_PCR23 = PORT_PCR_MUX(0x4); //使能UART2_RXD
+     c86:	4b30      	ldr	r3, [pc, #192]	; (d48 <uart_init+0x264>)
+     c88:	2280      	movs	r2, #128	; 0x80
+     c8a:	00d2      	lsls	r2, r2, #3
+     c8c:	65da      	str	r2, [r3, #92]	; 0x5c
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:115
+		           SIM_SCGC4 |= SIM_SCGC4_UART2_MASK;//启动串口2时钟
+     c8e:	4a29      	ldr	r2, [pc, #164]	; (d34 <uart_init+0x250>)
+     c90:	4928      	ldr	r1, [pc, #160]	; (d34 <uart_init+0x250>)
+     c92:	4b2b      	ldr	r3, [pc, #172]	; (d40 <uart_init+0x25c>)
+     c94:	58cb      	ldr	r3, [r1, r3]
+     c96:	2180      	movs	r1, #128	; 0x80
+     c98:	0149      	lsls	r1, r1, #5
+     c9a:	4319      	orrs	r1, r3
+     c9c:	4b28      	ldr	r3, [pc, #160]	; (d40 <uart_init+0x25c>)
+     c9e:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:116
+		           break;
+     ca0:	46c0      	nop			; (mov r8, r8)
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:122
+		       default:
+		    	   break;  //传参错误，返回
+		       }
+		       
+		 //暂时关闭串口1、2发送与接收功能  
+		uartch2->C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK);
+     ca2:	697b      	ldr	r3, [r7, #20]
+     ca4:	78db      	ldrb	r3, [r3, #3]
+     ca6:	b2db      	uxtb	r3, r3
+     ca8:	220c      	movs	r2, #12
+     caa:	4393      	bics	r3, r2
+     cac:	b2da      	uxtb	r2, r3
+     cae:	697b      	ldr	r3, [r7, #20]
+     cb0:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:126
+		   	  
+		//配置波特率,KL25串口1、2时钟频率只能使用 Bus clock = 24M 总线时钟
+		//配置串口工作模式,8位无校验模式
+		uartch2->C1 = 0;          
+     cb2:	697b      	ldr	r3, [r7, #20]
+     cb4:	2200      	movs	r2, #0
+     cb6:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:127
+		sbr = (uint_16)((BUS_CLK_KHZ*1000)/(baud_rate * 16));
+     cb8:	687b      	ldr	r3, [r7, #4]
+     cba:	011b      	lsls	r3, r3, #4
+     cbc:	4823      	ldr	r0, [pc, #140]	; (d4c <uart_init+0x268>)
+     cbe:	1c19      	adds	r1, r3, #0
+     cc0:	f7ff fd9e 	bl	800 <__aeabi_uidiv>
+     cc4:	1c03      	adds	r3, r0, #0
+     cc6:	b29c      	uxth	r4, r3
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:128
+		temp = UART_BDH_REG(uartch2) & ~(UART_BDH_SBR(0x1F));
+     cc8:	697b      	ldr	r3, [r7, #20]
+     cca:	781b      	ldrb	r3, [r3, #0]
+     ccc:	b2da      	uxtb	r2, r3
+     cce:	1c3b      	adds	r3, r7, #0
+     cd0:	3313      	adds	r3, #19
+     cd2:	211f      	movs	r1, #31
+     cd4:	438a      	bics	r2, r1
+     cd6:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:129
+		UART_BDH_REG(uartch2) = temp |  UART_BDH_SBR(((sbr & 0x1F00) >> 8));
+     cd8:	1c22      	adds	r2, r4, #0
+     cda:	23f8      	movs	r3, #248	; 0xf8
+     cdc:	015b      	lsls	r3, r3, #5
+     cde:	4013      	ands	r3, r2
+     ce0:	121b      	asrs	r3, r3, #8
+     ce2:	b2da      	uxtb	r2, r3
+     ce4:	231f      	movs	r3, #31
+     ce6:	4013      	ands	r3, r2
+     ce8:	b2da      	uxtb	r2, r3
+     cea:	1c3b      	adds	r3, r7, #0
+     cec:	3313      	adds	r3, #19
+     cee:	781b      	ldrb	r3, [r3, #0]
+     cf0:	4313      	orrs	r3, r2
+     cf2:	b2da      	uxtb	r2, r3
+     cf4:	697b      	ldr	r3, [r7, #20]
+     cf6:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:130
+		UART_BDL_REG(uartch2) = (uint_8)(sbr & UART_BDL_SBR_MASK);
+     cf8:	b2e2      	uxtb	r2, r4
+     cfa:	697b      	ldr	r3, [r7, #20]
+     cfc:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:133
+		           
+		//初始化控制寄存器、清标志位
+		uartch2->C1 = 0x00;
+     cfe:	697b      	ldr	r3, [r7, #20]
+     d00:	2200      	movs	r2, #0
+     d02:	709a      	strb	r2, [r3, #2]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:134
+		uartch2->C3 = 0x00;
+     d04:	697b      	ldr	r3, [r7, #20]
+     d06:	2200      	movs	r2, #0
+     d08:	719a      	strb	r2, [r3, #6]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:135
+		uartch2->S1 = 0x1F;
+     d0a:	697b      	ldr	r3, [r7, #20]
+     d0c:	221f      	movs	r2, #31
+     d0e:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:136
+		uartch2->S2 = 0x00;   	               
+     d10:	697b      	ldr	r3, [r7, #20]
+     d12:	2200      	movs	r2, #0
+     d14:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:138
+		//启动发送接收
+		uartch2->C2 |= (UART_C2_TE_MASK | UART_C2_RE_MASK);                           	
+     d16:	697b      	ldr	r3, [r7, #20]
+     d18:	78db      	ldrb	r3, [r3, #3]
+     d1a:	b2db      	uxtb	r3, r3
+     d1c:	220c      	movs	r2, #12
+     d1e:	4313      	orrs	r3, r2
+     d20:	b2da      	uxtb	r2, r3
+     d22:	697b      	ldr	r3, [r7, #20]
+     d24:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:140
+	}
+ }
+     d26:	46bd      	mov	sp, r7
+     d28:	b009      	add	sp, #36	; 0x24
+     d2a:	bd90      	pop	{r4, r7, pc}
+     d2c:	4006a000 	.word	0x4006a000
+     d30:	000014e8 	.word	0x000014e8
+     d34:	40047000 	.word	0x40047000
+     d38:	00001004 	.word	0x00001004
+     d3c:	40049000 	.word	0x40049000
+     d40:	00001034 	.word	0x00001034
+     d44:	0000bb80 	.word	0x0000bb80
+     d48:	4004d000 	.word	0x4004d000
+     d4c:	016e3600 	.word	0x016e3600
+
+00000d50 <uart_send1>:
+uart_send1():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:149
+//          ch:要发送的字节
+//函数返回：函数执行状态：0=正常；非0=异常。
+//功能概要：串行发送1个字节
+ //============================================================================
+uint_8 uart_send1(uint_8 uartNo, uint_8 ch)
+{
+     d50:	b580      	push	{r7, lr}
+     d52:	b086      	sub	sp, #24
+     d54:	af00      	add	r7, sp, #0
+     d56:	1c0a      	adds	r2, r1, #0
+     d58:	1dfb      	adds	r3, r7, #7
+     d5a:	1c01      	adds	r1, r0, #0
+     d5c:	7019      	strb	r1, [r3, #0]
+     d5e:	1dbb      	adds	r3, r7, #6
+     d60:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:151
+    uint_32 t;       
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR; //获取UART0基地址
+     d62:	4b1d      	ldr	r3, [pc, #116]	; (dd8 <uart_send1+0x88>)
+     d64:	613b      	str	r3, [r7, #16]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:152
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1]; //获取UART1或者2基地址
+     d66:	1dfb      	adds	r3, r7, #7
+     d68:	781b      	ldrb	r3, [r3, #0]
+     d6a:	1e5a      	subs	r2, r3, #1
+     d6c:	4b1b      	ldr	r3, [pc, #108]	; (ddc <uart_send1+0x8c>)
+     d6e:	0092      	lsls	r2, r2, #2
+     d70:	58d3      	ldr	r3, [r2, r3]
+     d72:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:154
+    
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     d74:	2300      	movs	r3, #0
+     d76:	617b      	str	r3, [r7, #20]
+     d78:	e01e      	b.n	db8 <uart_send1+0x68>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:157
+    {
+        
+    	if(0==uartNo)     //判断使用的哪个串口
+     d7a:	1dfb      	adds	r3, r7, #7
+     d7c:	781b      	ldrb	r3, [r3, #0]
+     d7e:	2b00      	cmp	r3, #0
+     d80:	d10b      	bne.n	d9a <uart_send1+0x4a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:159
+    	{
+			if ( (uartch1->S1) & UART_S1_TDRE_MASK )//判断发送缓冲区是否为空
+     d82:	693b      	ldr	r3, [r7, #16]
+     d84:	791b      	ldrb	r3, [r3, #4]
+     d86:	b2db      	uxtb	r3, r3
+     d88:	b2db      	uxtb	r3, r3
+     d8a:	b25b      	sxtb	r3, r3
+     d8c:	2b00      	cmp	r3, #0
+     d8e:	da10      	bge.n	db2 <uart_send1+0x62>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:161
+			{
+				uartch1->D = ch;   //获取数据并发送
+     d90:	693b      	ldr	r3, [r7, #16]
+     d92:	1dba      	adds	r2, r7, #6
+     d94:	7812      	ldrb	r2, [r2, #0]
+     d96:	71da      	strb	r2, [r3, #7]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:162
+				break;             //跳出循环
+     d98:	e012      	b.n	dc0 <uart_send1+0x70>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:167
+			}
+    	}
+    	else
+    	{
+			if ( (uartch2->S1) & UART_S1_TDRE_MASK )//判断发送缓冲区是否为空
+     d9a:	68fb      	ldr	r3, [r7, #12]
+     d9c:	791b      	ldrb	r3, [r3, #4]
+     d9e:	b2db      	uxtb	r3, r3
+     da0:	b2db      	uxtb	r3, r3
+     da2:	b25b      	sxtb	r3, r3
+     da4:	2b00      	cmp	r3, #0
+     da6:	da04      	bge.n	db2 <uart_send1+0x62>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:169
+			{
+				uartch2->D = ch;   //获取数据并发送
+     da8:	68fb      	ldr	r3, [r7, #12]
+     daa:	1dba      	adds	r2, r7, #6
+     dac:	7812      	ldrb	r2, [r2, #0]
+     dae:	71da      	strb	r2, [r3, #7]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:170
+				break;             //跳出循环
+     db0:	e006      	b.n	dc0 <uart_send1+0x70>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:154
+{
+    uint_32 t;       
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR; //获取UART0基地址
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1]; //获取UART1或者2基地址
+    
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     db2:	697b      	ldr	r3, [r7, #20]
+     db4:	3301      	adds	r3, #1
+     db6:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:154 (discriminator 1)
+     db8:	697a      	ldr	r2, [r7, #20]
+     dba:	4b09      	ldr	r3, [pc, #36]	; (de0 <uart_send1+0x90>)
+     dbc:	429a      	cmp	r2, r3
+     dbe:	d9dc      	bls.n	d7a <uart_send1+0x2a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:175
+				break;             //跳出循环
+			}
+    	}
+        
+    }//end for
+    if (t >= 0xFBBB)
+     dc0:	697a      	ldr	r2, [r7, #20]
+     dc2:	4b07      	ldr	r3, [pc, #28]	; (de0 <uart_send1+0x90>)
+     dc4:	429a      	cmp	r2, r3
+     dc6:	d901      	bls.n	dcc <uart_send1+0x7c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:176
+        return 1; //发送超时，发送失败
+     dc8:	2301      	movs	r3, #1
+     dca:	e000      	b.n	dce <uart_send1+0x7e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:178
+    else
+        return 0; //成功发送
+     dcc:	2300      	movs	r3, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:180
+        
+}
+     dce:	1c18      	adds	r0, r3, #0
+     dd0:	46bd      	mov	sp, r7
+     dd2:	b006      	add	sp, #24
+     dd4:	bd80      	pop	{r7, pc}
+     dd6:	46c0      	nop			; (mov r8, r8)
+     dd8:	4006a000 	.word	0x4006a000
+     ddc:	000014e8 	.word	0x000014e8
+     de0:	0000fbba 	.word	0x0000fbba
+
+00000de4 <uart_send_string>:
+uart_send_string():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:214
+//          buff:要发送的字符串的首地址
+//函数返回： 函数执行状态：0=正常；非0=异常。
+//功能概要：从指定UART端口发送一个以'\0'结束的字符串
+//============================================================================
+uint_8 uart_send_string(uint_8 uartNo, void *buff)
+{
+     de4:	b580      	push	{r7, lr}
+     de6:	b084      	sub	sp, #16
+     de8:	af00      	add	r7, sp, #0
+     dea:	1c02      	adds	r2, r0, #0
+     dec:	6039      	str	r1, [r7, #0]
+     dee:	1dfb      	adds	r3, r7, #7
+     df0:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:215
+    uint_16 i = 0;
+     df2:	1c3b      	adds	r3, r7, #0
+     df4:	330e      	adds	r3, #14
+     df6:	2200      	movs	r2, #0
+     df8:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:216
+    uint_8 *buff_ptr = (uint_8 *)buff;    //定义指针指向要发送字符串首地址
+     dfa:	683b      	ldr	r3, [r7, #0]
+     dfc:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:217
+    for(i = 0; buff_ptr[i] != '\0'; i++)  //遍历字符串里的字符
+     dfe:	1c3b      	adds	r3, r7, #0
+     e00:	330e      	adds	r3, #14
+     e02:	2200      	movs	r2, #0
+     e04:	801a      	strh	r2, [r3, #0]
+     e06:	e017      	b.n	e38 <uart_send_string+0x54>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:219
+    {
+        if (uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
+     e08:	1c3b      	adds	r3, r7, #0
+     e0a:	330e      	adds	r3, #14
+     e0c:	881b      	ldrh	r3, [r3, #0]
+     e0e:	68ba      	ldr	r2, [r7, #8]
+     e10:	18d3      	adds	r3, r2, r3
+     e12:	781b      	ldrb	r3, [r3, #0]
+     e14:	1dfa      	adds	r2, r7, #7
+     e16:	7812      	ldrb	r2, [r2, #0]
+     e18:	1c10      	adds	r0, r2, #0
+     e1a:	1c19      	adds	r1, r3, #0
+     e1c:	f7ff ff98 	bl	d50 <uart_send1>
+     e20:	1c03      	adds	r3, r0, #0
+     e22:	2b00      	cmp	r3, #0
+     e24:	d001      	beq.n	e2a <uart_send_string+0x46>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:220
+            return 1;  //发送失败
+     e26:	2301      	movs	r3, #1
+     e28:	e00f      	b.n	e4a <uart_send_string+0x66>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:217
+//============================================================================
+uint_8 uart_send_string(uint_8 uartNo, void *buff)
+{
+    uint_16 i = 0;
+    uint_8 *buff_ptr = (uint_8 *)buff;    //定义指针指向要发送字符串首地址
+    for(i = 0; buff_ptr[i] != '\0'; i++)  //遍历字符串里的字符
+     e2a:	1c3b      	adds	r3, r7, #0
+     e2c:	330e      	adds	r3, #14
+     e2e:	881a      	ldrh	r2, [r3, #0]
+     e30:	1c3b      	adds	r3, r7, #0
+     e32:	330e      	adds	r3, #14
+     e34:	3201      	adds	r2, #1
+     e36:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:217 (discriminator 1)
+     e38:	1c3b      	adds	r3, r7, #0
+     e3a:	330e      	adds	r3, #14
+     e3c:	881b      	ldrh	r3, [r3, #0]
+     e3e:	68ba      	ldr	r2, [r7, #8]
+     e40:	18d3      	adds	r3, r2, r3
+     e42:	781b      	ldrb	r3, [r3, #0]
+     e44:	2b00      	cmp	r3, #0
+     e46:	d1df      	bne.n	e08 <uart_send_string+0x24>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:222
+    {
+        if (uart_send1(uartNo,buff_ptr[i]))//发送指针对应的字符
+            return 1;  //发送失败
+    }
+    return 0;         //发送成功
+     e48:	2300      	movs	r3, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:223
+}
+     e4a:	1c18      	adds	r0, r3, #0
+     e4c:	46bd      	mov	sp, r7
+     e4e:	b004      	add	sp, #16
+     e50:	bd80      	pop	{r7, pc}
+     e52:	46c0      	nop			; (mov r8, r8)
+
+00000e54 <uart_re1>:
+uart_re1():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:233
+//          fp:接收成功标志的指针:*fp=0，成功接收；*fp=1，接收失败
+//函数返回：接收返回字节
+//功能概要：串行接收1个字节
+//============================================================================
+uint_8 uart_re1 (uint_8 uartNo,uint_8 *fp)
+{
+     e54:	b580      	push	{r7, lr}
+     e56:	b086      	sub	sp, #24
+     e58:	af00      	add	r7, sp, #0
+     e5a:	1c02      	adds	r2, r0, #0
+     e5c:	6039      	str	r1, [r7, #0]
+     e5e:	1dfb      	adds	r3, r7, #7
+     e60:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:236
+    uint_32 t;
+    uint_8  dat;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;    //获取UART0基地址
+     e62:	4b24      	ldr	r3, [pc, #144]	; (ef4 <uart_re1+0xa0>)
+     e64:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:237
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];//获取UART1或者2基地址
+     e66:	1dfb      	adds	r3, r7, #7
+     e68:	781b      	ldrb	r3, [r3, #0]
+     e6a:	1e5a      	subs	r2, r3, #1
+     e6c:	4b22      	ldr	r3, [pc, #136]	; (ef8 <uart_re1+0xa4>)
+     e6e:	0092      	lsls	r2, r2, #2
+     e70:	58d3      	ldr	r3, [r2, r3]
+     e72:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:239
+
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     e74:	2300      	movs	r3, #0
+     e76:	617b      	str	r3, [r7, #20]
+     e78:	e026      	b.n	ec8 <uart_re1+0x74>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:241
+    {
+    	if(0==uartNo)  //判断使用的哪个串口
+     e7a:	1dfb      	adds	r3, r7, #7
+     e7c:	781b      	ldrb	r3, [r3, #0]
+     e7e:	2b00      	cmp	r3, #0
+     e80:	d10f      	bne.n	ea2 <uart_re1+0x4e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:244
+    	{
+            //判断接收缓冲区是否满
+            if ((uartch1->S1) & UART_S1_RDRF_MASK )
+     e82:	68fb      	ldr	r3, [r7, #12]
+     e84:	791b      	ldrb	r3, [r3, #4]
+     e86:	b2db      	uxtb	r3, r3
+     e88:	1c1a      	adds	r2, r3, #0
+     e8a:	2320      	movs	r3, #32
+     e8c:	4013      	ands	r3, r2
+     e8e:	d018      	beq.n	ec2 <uart_re1+0x6e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:246
+            {
+                dat = uartch1->D; //获取数据 
+     e90:	1c3b      	adds	r3, r7, #0
+     e92:	3313      	adds	r3, #19
+     e94:	68fa      	ldr	r2, [r7, #12]
+     e96:	79d2      	ldrb	r2, [r2, #7]
+     e98:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:247
+                *fp= 0;  //接受成功
+     e9a:	683b      	ldr	r3, [r7, #0]
+     e9c:	2200      	movs	r2, #0
+     e9e:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:248
+                break;
+     ea0:	e016      	b.n	ed0 <uart_re1+0x7c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:254
+            }
+    	}
+    	else
+    	{
+            //判断接收缓冲区是否满
+            if ((uartch2->S1) & UART_S1_RDRF_MASK )
+     ea2:	68bb      	ldr	r3, [r7, #8]
+     ea4:	791b      	ldrb	r3, [r3, #4]
+     ea6:	b2db      	uxtb	r3, r3
+     ea8:	1c1a      	adds	r2, r3, #0
+     eaa:	2320      	movs	r3, #32
+     eac:	4013      	ands	r3, r2
+     eae:	d008      	beq.n	ec2 <uart_re1+0x6e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:256
+            {
+                dat = uartch2->D; //获取数据 
+     eb0:	1c3b      	adds	r3, r7, #0
+     eb2:	3313      	adds	r3, #19
+     eb4:	68ba      	ldr	r2, [r7, #8]
+     eb6:	79d2      	ldrb	r2, [r2, #7]
+     eb8:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:257
+                *fp= 0;  //接受成功
+     eba:	683b      	ldr	r3, [r7, #0]
+     ebc:	2200      	movs	r2, #0
+     ebe:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:258
+                break;
+     ec0:	e006      	b.n	ed0 <uart_re1+0x7c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:239
+    uint_32 t;
+    uint_8  dat;
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;    //获取UART0基地址
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];//获取UART1或者2基地址
+
+    for (t = 0; t < 0xFBBB; t++)//查询指定次数
+     ec2:	697b      	ldr	r3, [r7, #20]
+     ec4:	3301      	adds	r3, #1
+     ec6:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:239 (discriminator 1)
+     ec8:	697a      	ldr	r2, [r7, #20]
+     eca:	4b0c      	ldr	r3, [pc, #48]	; (efc <uart_re1+0xa8>)
+     ecc:	429a      	cmp	r2, r3
+     ece:	d9d4      	bls.n	e7a <uart_re1+0x26>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:263
+                break;
+            }
+    	}
+
+    }//end for
+    if(t >= 0xFBBB) 
+     ed0:	697a      	ldr	r2, [r7, #20]
+     ed2:	4b0a      	ldr	r3, [pc, #40]	; (efc <uart_re1+0xa8>)
+     ed4:	429a      	cmp	r2, r3
+     ed6:	d906      	bls.n	ee6 <uart_re1+0x92>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:265
+    {
+        dat = 0xFF; 
+     ed8:	1c3b      	adds	r3, r7, #0
+     eda:	3313      	adds	r3, #19
+     edc:	22ff      	movs	r2, #255	; 0xff
+     ede:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:266
+        *fp = 1;    //未收到数据
+     ee0:	683b      	ldr	r3, [r7, #0]
+     ee2:	2201      	movs	r2, #1
+     ee4:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:268
+    }
+    return dat;    //返回接收到的数据
+     ee6:	1c3b      	adds	r3, r7, #0
+     ee8:	3313      	adds	r3, #19
+     eea:	781b      	ldrb	r3, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:270
+    
+}
+     eec:	1c18      	adds	r0, r3, #0
+     eee:	46bd      	mov	sp, r7
+     ef0:	b006      	add	sp, #24
+     ef2:	bd80      	pop	{r7, pc}
+     ef4:	4006a000 	.word	0x4006a000
+     ef8:	000014e8 	.word	0x000014e8
+     efc:	0000fbba 	.word	0x0000fbba
+
+00000f00 <uart_enable_re_int>:
+uart_enable_re_int():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:306
+//参数说明：uartNo: 串口号:UART_0、UART_1、UART_2 
+//函数返回：无
+//功能概要：开串口接收中断
+//============================================================================
+void uart_enable_re_int(uint_8 uartNo)
+{
+     f00:	b580      	push	{r7, lr}
+     f02:	b084      	sub	sp, #16
+     f04:	af00      	add	r7, sp, #0
+     f06:	1c02      	adds	r2, r0, #0
+     f08:	1dfb      	adds	r3, r7, #7
+     f0a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:307
+	UARTLP_MemMapPtr uartch1=UART0_BASE_PTR;
+     f0c:	4b13      	ldr	r3, [pc, #76]	; (f5c <uart_enable_re_int+0x5c>)
+     f0e:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:308
+    UART_MemMapPtr uartch2 = UART_ARR[uartNo-1];
+     f10:	1dfb      	adds	r3, r7, #7
+     f12:	781b      	ldrb	r3, [r3, #0]
+     f14:	1e5a      	subs	r2, r3, #1
+     f16:	4b12      	ldr	r3, [pc, #72]	; (f60 <uart_enable_re_int+0x60>)
+     f18:	0092      	lsls	r2, r2, #2
+     f1a:	58d3      	ldr	r3, [r2, r3]
+     f1c:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:309
+    if(0==uartNo)   
+     f1e:	1dfb      	adds	r3, r7, #7
+     f20:	781b      	ldrb	r3, [r3, #0]
+     f22:	2b00      	cmp	r3, #0
+     f24:	d108      	bne.n	f38 <uart_enable_re_int+0x38>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:310
+      uartch1->C2 |= UART_C2_RIE_MASK;        //开放UART接收中断
+     f26:	68fb      	ldr	r3, [r7, #12]
+     f28:	78db      	ldrb	r3, [r3, #3]
+     f2a:	b2db      	uxtb	r3, r3
+     f2c:	2220      	movs	r2, #32
+     f2e:	4313      	orrs	r3, r2
+     f30:	b2da      	uxtb	r2, r3
+     f32:	68fb      	ldr	r3, [r7, #12]
+     f34:	70da      	strb	r2, [r3, #3]
+     f36:	e007      	b.n	f48 <uart_enable_re_int+0x48>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:312
+    else 
+      uartch2->C2 |= UART_C2_RIE_MASK;        //开放UART接收中断
+     f38:	68bb      	ldr	r3, [r7, #8]
+     f3a:	78db      	ldrb	r3, [r3, #3]
+     f3c:	b2db      	uxtb	r3, r3
+     f3e:	2220      	movs	r2, #32
+     f40:	4313      	orrs	r3, r2
+     f42:	b2da      	uxtb	r2, r3
+     f44:	68bb      	ldr	r3, [r7, #8]
+     f46:	70da      	strb	r2, [r3, #3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:313
+    enable_irq(table_irq_uart[uartNo]);   //开中断控制器IRQ中断
+     f48:	1dfb      	adds	r3, r7, #7
+     f4a:	781b      	ldrb	r3, [r3, #0]
+     f4c:	4a05      	ldr	r2, [pc, #20]	; (f64 <uart_enable_re_int+0x64>)
+     f4e:	5cd3      	ldrb	r3, [r2, r3]
+     f50:	1c18      	adds	r0, r3, #0
+     f52:	f7ff fd55 	bl	a00 <enable_irq>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/uart/uart.c:314
+}
+     f56:	46bd      	mov	sp, r7
+     f58:	b004      	add	sp, #16
+     f5a:	bd80      	pop	{r7, pc}
+     f5c:	4006a000 	.word	0x4006a000
+     f60:	000014e8 	.word	0x000014e8
+     f64:	20000410 	.word	0x20000410
+
+00000f68 <gpio_port_pin_resolution>:
+gpio_port_pin_resolution():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:31
+//		   pin:引脚号（0~31，实际取值由芯片的物理引脚决定）
+//功能概要：将传进参数port_pin进行解析，得出具体端口号与引脚号（如：PORTB|(5)
+//         解析为PORTB与5，并将其分别赋值给port与pin）。
+//===========================================================================
+void gpio_port_pin_resolution(uint_16 port_pin,uint_8* port,uint_8* pin)
+{
+     f68:	b580      	push	{r7, lr}
+     f6a:	b084      	sub	sp, #16
+     f6c:	af00      	add	r7, sp, #0
+     f6e:	60b9      	str	r1, [r7, #8]
+     f70:	607a      	str	r2, [r7, #4]
+     f72:	1c3b      	adds	r3, r7, #0
+     f74:	330e      	adds	r3, #14
+     f76:	1c02      	adds	r2, r0, #0
+     f78:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:32
+	*port = port_pin>>8;
+     f7a:	1c3b      	adds	r3, r7, #0
+     f7c:	330e      	adds	r3, #14
+     f7e:	881b      	ldrh	r3, [r3, #0]
+     f80:	0a1b      	lsrs	r3, r3, #8
+     f82:	b29b      	uxth	r3, r3
+     f84:	b2da      	uxtb	r2, r3
+     f86:	68bb      	ldr	r3, [r7, #8]
+     f88:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:33
+	* pin = port_pin;
+     f8a:	1c3b      	adds	r3, r7, #0
+     f8c:	330e      	adds	r3, #14
+     f8e:	881b      	ldrh	r3, [r3, #0]
+     f90:	b2da      	uxtb	r2, r3
+     f92:	687b      	ldr	r3, [r7, #4]
+     f94:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:34
+}
+     f96:	46bd      	mov	sp, r7
+     f98:	b004      	add	sp, #16
+     f9a:	bd80      	pop	{r7, pc}
+
+00000f9c <gpio_init>:
+gpio_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:46
+//         state：引脚初始状态（0=低电平，1=高电平）
+//功能概要：初始化端口指定引脚作为GPIO引脚的功能，并定义为输入或输出，若是输出，
+//         还指定初始状态是低电平或高电平
+//===========================================================================
+void gpio_init(uint_16 port_pin, uint_8 dir, uint_8 state)
+{
+     f9c:	b580      	push	{r7, lr}
+     f9e:	b086      	sub	sp, #24
+     fa0:	af00      	add	r7, sp, #0
+     fa2:	1dbb      	adds	r3, r7, #6
+     fa4:	8018      	strh	r0, [r3, #0]
+     fa6:	1d7b      	adds	r3, r7, #5
+     fa8:	7019      	strb	r1, [r3, #0]
+     faa:	1d3b      	adds	r3, r7, #4
+     fac:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:52
+	//局部变量声明
+	PORT_MemMapPtr port_ptr;    //声明port_ptr为PORT结构体类型指针 
+	GPIO_MemMapPtr gpio_ptr;    //声明port_ptr为GPIO结构体类型指针
+	uint_8 port;
+	uint_8 pin;
+	gpio_port_pin_resolution(port_pin , &port , &pin);
+     fae:	1dbb      	adds	r3, r7, #6
+     fb0:	8819      	ldrh	r1, [r3, #0]
+     fb2:	1c3a      	adds	r2, r7, #0
+     fb4:	320f      	adds	r2, #15
+     fb6:	1c3b      	adds	r3, r7, #0
+     fb8:	330e      	adds	r3, #14
+     fba:	1c08      	adds	r0, r1, #0
+     fbc:	1c11      	adds	r1, r2, #0
+     fbe:	1c1a      	adds	r2, r3, #0
+     fc0:	f7ff ffd2 	bl	f68 <gpio_port_pin_resolution>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:56
+	
+	
+	//根据带入参数port，给局部变量port_ptr、gpio_ptr赋值（获得两个基地址）
+	port_ptr = PORT_ARR[port];  //获得PORT模块相应口基地址
+     fc4:	1c3b      	adds	r3, r7, #0
+     fc6:	330f      	adds	r3, #15
+     fc8:	781b      	ldrb	r3, [r3, #0]
+     fca:	1c1a      	adds	r2, r3, #0
+     fcc:	4b1e      	ldr	r3, [pc, #120]	; (1048 <gpio_init+0xac>)
+     fce:	0092      	lsls	r2, r2, #2
+     fd0:	58d3      	ldr	r3, [r2, r3]
+     fd2:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:57
+	gpio_ptr = GPIO_ARR[port];  //获得GPIO模块相应口基地址
+     fd4:	1c3b      	adds	r3, r7, #0
+     fd6:	330f      	adds	r3, #15
+     fd8:	781b      	ldrb	r3, [r3, #0]
+     fda:	1c1a      	adds	r2, r3, #0
+     fdc:	4b1b      	ldr	r3, [pc, #108]	; (104c <gpio_init+0xb0>)
+     fde:	0092      	lsls	r2, r2, #2
+     fe0:	58d3      	ldr	r3, [r2, r3]
+     fe2:	613b      	str	r3, [r7, #16]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:60
+	
+	//根据带入参数pin,指定该引脚功能为GPIO功能（即令引脚控制寄存器的MUX=0b001）
+    port_ptr->PCR[pin] = PORT_PCR_MUX(1);
+     fe4:	1c3b      	adds	r3, r7, #0
+     fe6:	330e      	adds	r3, #14
+     fe8:	781b      	ldrb	r3, [r3, #0]
+     fea:	1c1a      	adds	r2, r3, #0
+     fec:	697b      	ldr	r3, [r7, #20]
+     fee:	0092      	lsls	r2, r2, #2
+     ff0:	2180      	movs	r1, #128	; 0x80
+     ff2:	0049      	lsls	r1, r1, #1
+     ff4:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:63
+    
+    //根据带入参数dir，决定引脚为输出还是输入
+    if (1 == dir)   //希望为输出
+     ff6:	1d7b      	adds	r3, r7, #5
+     ff8:	781b      	ldrb	r3, [r3, #0]
+     ffa:	2b01      	cmp	r3, #1
+     ffc:	d114      	bne.n	1028 <gpio_init+0x8c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:65
+       {
+         BSET(pin,gpio_ptr->PDDR);     //数据方向寄存器的pin位=1，定义为输出
+     ffe:	693b      	ldr	r3, [r7, #16]
+    1000:	695a      	ldr	r2, [r3, #20]
+    1002:	1c3b      	adds	r3, r7, #0
+    1004:	330e      	adds	r3, #14
+    1006:	781b      	ldrb	r3, [r3, #0]
+    1008:	2101      	movs	r1, #1
+    100a:	1c08      	adds	r0, r1, #0
+    100c:	4098      	lsls	r0, r3
+    100e:	1c03      	adds	r3, r0, #0
+    1010:	431a      	orrs	r2, r3
+    1012:	693b      	ldr	r3, [r7, #16]
+    1014:	615a      	str	r2, [r3, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:66
+         gpio_set(port_pin, state);   //调用gpio_set函数，设定引脚初始状态
+    1016:	1dbb      	adds	r3, r7, #6
+    1018:	881a      	ldrh	r2, [r3, #0]
+    101a:	1d3b      	adds	r3, r7, #4
+    101c:	781b      	ldrb	r3, [r3, #0]
+    101e:	1c10      	adds	r0, r2, #0
+    1020:	1c19      	adds	r1, r3, #0
+    1022:	f000 f815 	bl	1050 <gpio_set>
+    1026:	e00c      	b.n	1042 <gpio_init+0xa6>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:69
+       }
+       else         //希望为输入
+        	BCLR(pin,gpio_ptr->PDDR);  //数据方向寄存器的pin位=0，定义为输入
+    1028:	693b      	ldr	r3, [r7, #16]
+    102a:	695b      	ldr	r3, [r3, #20]
+    102c:	1c3a      	adds	r2, r7, #0
+    102e:	320e      	adds	r2, #14
+    1030:	7812      	ldrb	r2, [r2, #0]
+    1032:	2101      	movs	r1, #1
+    1034:	1c08      	adds	r0, r1, #0
+    1036:	4090      	lsls	r0, r2
+    1038:	1c02      	adds	r2, r0, #0
+    103a:	43d2      	mvns	r2, r2
+    103c:	401a      	ands	r2, r3
+    103e:	693b      	ldr	r3, [r7, #16]
+    1040:	615a      	str	r2, [r3, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:70
+}
+    1042:	46bd      	mov	sp, r7
+    1044:	b006      	add	sp, #24
+    1046:	bd80      	pop	{r7, pc}
+    1048:	000014f0 	.word	0x000014f0
+    104c:	00001504 	.word	0x00001504
+
+00001050 <gpio_set>:
+gpio_set():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:80
+//参数说明：port_pin：端口号|引脚号（如：PORTB|(5) 表示为B口5号脚）
+//         state：引脚初始状态（0=低电平，1=高电平）
+//功能概要：设定引脚状态为低电平或高电平
+//===========================================================================
+void gpio_set(uint_16 port_pin, uint_8 state)
+{
+    1050:	b580      	push	{r7, lr}
+    1052:	b084      	sub	sp, #16
+    1054:	af00      	add	r7, sp, #0
+    1056:	1c0a      	adds	r2, r1, #0
+    1058:	1dbb      	adds	r3, r7, #6
+    105a:	1c01      	adds	r1, r0, #0
+    105c:	8019      	strh	r1, [r3, #0]
+    105e:	1d7b      	adds	r3, r7, #5
+    1060:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:84
+	GPIO_MemMapPtr gpio_ptr;    //声明port_ptr为GPIO结构体类型指针
+	uint_8 port;
+	uint_8 pin;
+	gpio_port_pin_resolution(port_pin , &port , &pin);
+    1062:	1dbb      	adds	r3, r7, #6
+    1064:	8819      	ldrh	r1, [r3, #0]
+    1066:	1c3a      	adds	r2, r7, #0
+    1068:	320b      	adds	r2, #11
+    106a:	1c3b      	adds	r3, r7, #0
+    106c:	330a      	adds	r3, #10
+    106e:	1c08      	adds	r0, r1, #0
+    1070:	1c11      	adds	r1, r2, #0
+    1072:	1c1a      	adds	r2, r3, #0
+    1074:	f7ff ff78 	bl	f68 <gpio_port_pin_resolution>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:87
+	
+	//根据带入参数port，给局部变量gpio_ptr赋值（GPIO基地址）
+	gpio_ptr = GPIO_ARR[port]; 
+    1078:	1c3b      	adds	r3, r7, #0
+    107a:	330b      	adds	r3, #11
+    107c:	781b      	ldrb	r3, [r3, #0]
+    107e:	1c1a      	adds	r2, r3, #0
+    1080:	4b12      	ldr	r3, [pc, #72]	; (10cc <gpio_set+0x7c>)
+    1082:	0092      	lsls	r2, r2, #2
+    1084:	58d3      	ldr	r3, [r2, r3]
+    1086:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:90
+	
+	//根据带入参数state，决定引脚为输出1还是0
+	if (1==state) {BSET(pin,gpio_ptr->PDOR);} else {BCLR(pin,gpio_ptr->PDOR);}
+    1088:	1d7b      	adds	r3, r7, #5
+    108a:	781b      	ldrb	r3, [r3, #0]
+    108c:	2b01      	cmp	r3, #1
+    108e:	d10c      	bne.n	10aa <gpio_set+0x5a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:90 (discriminator 1)
+    1090:	68fb      	ldr	r3, [r7, #12]
+    1092:	681a      	ldr	r2, [r3, #0]
+    1094:	1c3b      	adds	r3, r7, #0
+    1096:	330a      	adds	r3, #10
+    1098:	781b      	ldrb	r3, [r3, #0]
+    109a:	2101      	movs	r1, #1
+    109c:	1c08      	adds	r0, r1, #0
+    109e:	4098      	lsls	r0, r3
+    10a0:	1c03      	adds	r3, r0, #0
+    10a2:	431a      	orrs	r2, r3
+    10a4:	68fb      	ldr	r3, [r7, #12]
+    10a6:	601a      	str	r2, [r3, #0]
+    10a8:	e00c      	b.n	10c4 <gpio_set+0x74>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:90 (discriminator 2)
+    10aa:	68fb      	ldr	r3, [r7, #12]
+    10ac:	681b      	ldr	r3, [r3, #0]
+    10ae:	1c3a      	adds	r2, r7, #0
+    10b0:	320a      	adds	r2, #10
+    10b2:	7812      	ldrb	r2, [r2, #0]
+    10b4:	2101      	movs	r1, #1
+    10b6:	1c08      	adds	r0, r1, #0
+    10b8:	4090      	lsls	r0, r2
+    10ba:	1c02      	adds	r2, r0, #0
+    10bc:	43d2      	mvns	r2, r2
+    10be:	401a      	ands	r2, r3
+    10c0:	68fb      	ldr	r3, [r7, #12]
+    10c2:	601a      	str	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/gpio/gpio.c:91
+}
+    10c4:	46bd      	mov	sp, r7
+    10c6:	b004      	add	sp, #16
+    10c8:	bd80      	pop	{r7, pc}
+    10ca:	46c0      	nop			; (mov r8, r8)
+    10cc:	00001504 	.word	0x00001504
+
+000010d0 <dac_init>:
+dac_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:30
+//函数返回：无
+//参数说明：RefVoltage：参考电压选择 0=VREFH，1=VDDA 
+//功能概要：初始化DAC模块设定
+//============================================================================
+void dac_init(uint_8 RefVoltage)
+{
+    10d0:	b580      	push	{r7, lr}
+    10d2:	b082      	sub	sp, #8
+    10d4:	af00      	add	r7, sp, #0
+    10d6:	1c02      	adds	r2, r0, #0
+    10d8:	1dfb      	adds	r3, r7, #7
+    10da:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:31
+    SIM_SCGC6 |=SIM_SCGC6_DAC0_MASK;   //使能DAC0时钟
+    10dc:	4a28      	ldr	r2, [pc, #160]	; (1180 <dac_init+0xb0>)
+    10de:	4928      	ldr	r1, [pc, #160]	; (1180 <dac_init+0xb0>)
+    10e0:	4b28      	ldr	r3, [pc, #160]	; (1184 <dac_init+0xb4>)
+    10e2:	58cb      	ldr	r3, [r1, r3]
+    10e4:	2180      	movs	r1, #128	; 0x80
+    10e6:	0609      	lsls	r1, r1, #24
+    10e8:	4319      	orrs	r1, r3
+    10ea:	4b26      	ldr	r3, [pc, #152]	; (1184 <dac_init+0xb4>)
+    10ec:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:34
+    
+    //配置DAC0_C0寄存器
+    if( 1== RefVoltage)    
+    10ee:	1dfb      	adds	r3, r7, #7
+    10f0:	781b      	ldrb	r3, [r3, #0]
+    10f2:	2b01      	cmp	r3, #1
+    10f4:	d10a      	bne.n	110c <dac_init+0x3c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:35
+    	DAC0_C0 |=  DAC_C0_DACRFS_MASK;   //选择VDDA参考电压3.3V 
+    10f6:	4a24      	ldr	r2, [pc, #144]	; (1188 <dac_init+0xb8>)
+    10f8:	4923      	ldr	r1, [pc, #140]	; (1188 <dac_init+0xb8>)
+    10fa:	2321      	movs	r3, #33	; 0x21
+    10fc:	5ccb      	ldrb	r3, [r1, r3]
+    10fe:	b2db      	uxtb	r3, r3
+    1100:	2140      	movs	r1, #64	; 0x40
+    1102:	430b      	orrs	r3, r1
+    1104:	b2d9      	uxtb	r1, r3
+    1106:	2321      	movs	r3, #33	; 0x21
+    1108:	54d1      	strb	r1, [r2, r3]
+    110a:	e00d      	b.n	1128 <dac_init+0x58>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:36
+    else if( 0 == RefVoltage)    
+    110c:	1dfb      	adds	r3, r7, #7
+    110e:	781b      	ldrb	r3, [r3, #0]
+    1110:	2b00      	cmp	r3, #0
+    1112:	d109      	bne.n	1128 <dac_init+0x58>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:37
+    	DAC0_C0 &= ~DAC_C0_DACRFS_MASK;   //选择VREFH参考电压3.3V      
+    1114:	4a1c      	ldr	r2, [pc, #112]	; (1188 <dac_init+0xb8>)
+    1116:	491c      	ldr	r1, [pc, #112]	; (1188 <dac_init+0xb8>)
+    1118:	2321      	movs	r3, #33	; 0x21
+    111a:	5ccb      	ldrb	r3, [r1, r3]
+    111c:	b2db      	uxtb	r3, r3
+    111e:	2140      	movs	r1, #64	; 0x40
+    1120:	438b      	bics	r3, r1
+    1122:	b2d9      	uxtb	r1, r3
+    1124:	2321      	movs	r3, #33	; 0x21
+    1126:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:39
+
+    DAC0_C0 |= DAC_C0_DACTRGSEL_MASK;     //软件触发
+    1128:	4a17      	ldr	r2, [pc, #92]	; (1188 <dac_init+0xb8>)
+    112a:	4917      	ldr	r1, [pc, #92]	; (1188 <dac_init+0xb8>)
+    112c:	2321      	movs	r3, #33	; 0x21
+    112e:	5ccb      	ldrb	r3, [r1, r3]
+    1130:	b2db      	uxtb	r3, r3
+    1132:	2120      	movs	r1, #32
+    1134:	430b      	orrs	r3, r1
+    1136:	b2d9      	uxtb	r1, r3
+    1138:	2321      	movs	r3, #33	; 0x21
+    113a:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:41
+    //软件触发无效，高功耗模式，缓冲区置底中断禁止,缓冲区置顶中断禁止，
+    DAC0_C0 &= ~( DAC_C0_DACSWTRG_MASK | DAC_C0_LPEN_MASK | DAC_C0_DACBBIEN_MASK | DAC_C0_DACBTIEN_MASK);  
+    113c:	4a12      	ldr	r2, [pc, #72]	; (1188 <dac_init+0xb8>)
+    113e:	4912      	ldr	r1, [pc, #72]	; (1188 <dac_init+0xb8>)
+    1140:	2321      	movs	r3, #33	; 0x21
+    1142:	5ccb      	ldrb	r3, [r1, r3]
+    1144:	b2db      	uxtb	r3, r3
+    1146:	211b      	movs	r1, #27
+    1148:	438b      	bics	r3, r1
+    114a:	b2d9      	uxtb	r1, r3
+    114c:	2321      	movs	r3, #33	; 0x21
+    114e:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:45
+    
+   //配置DAC0_C1寄存器	  
+   //DMA禁用 ,正常工作模式
+    DAC0_C1 &= ~( DAC_C1_DMAEN_MASK | DAC_C1_DACBFEN_MASK | DAC_C1_DACBFMD_MASK );                               
+    1150:	4a0d      	ldr	r2, [pc, #52]	; (1188 <dac_init+0xb8>)
+    1152:	490d      	ldr	r1, [pc, #52]	; (1188 <dac_init+0xb8>)
+    1154:	2322      	movs	r3, #34	; 0x22
+    1156:	5ccb      	ldrb	r3, [r1, r3]
+    1158:	b2d9      	uxtb	r1, r3
+    115a:	237a      	movs	r3, #122	; 0x7a
+    115c:	400b      	ands	r3, r1
+    115e:	b2d9      	uxtb	r1, r3
+    1160:	2322      	movs	r3, #34	; 0x22
+    1162:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:47
+    //使能DAC0模块 
+    DAC0_C0 |= DAC_C0_DACEN_MASK;      
+    1164:	4a08      	ldr	r2, [pc, #32]	; (1188 <dac_init+0xb8>)
+    1166:	4908      	ldr	r1, [pc, #32]	; (1188 <dac_init+0xb8>)
+    1168:	2321      	movs	r3, #33	; 0x21
+    116a:	5ccb      	ldrb	r3, [r1, r3]
+    116c:	b2db      	uxtb	r3, r3
+    116e:	2180      	movs	r1, #128	; 0x80
+    1170:	4249      	negs	r1, r1
+    1172:	430b      	orrs	r3, r1
+    1174:	b2d9      	uxtb	r1, r3
+    1176:	2321      	movs	r3, #33	; 0x21
+    1178:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:48
+}
+    117a:	46bd      	mov	sp, r7
+    117c:	b002      	add	sp, #8
+    117e:	bd80      	pop	{r7, pc}
+    1180:	40047000 	.word	0x40047000
+    1184:	0000103c 	.word	0x0000103c
+    1188:	4003f000 	.word	0x4003f000
+
+0000118c <dac_convert>:
+dac_convert():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:56
+//函数名称：dac_convert
+//参数说明：data: 数字量 范围（0~4095）
+//功能概要：执行DAC转换
+//============================================================================   
+void dac_convert(uint_16 data)
+{
+    118c:	b580      	push	{r7, lr}
+    118e:	b082      	sub	sp, #8
+    1190:	af00      	add	r7, sp, #0
+    1192:	1c02      	adds	r2, r0, #0
+    1194:	1dbb      	adds	r3, r7, #6
+    1196:	801a      	strh	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:57
+    dac_set_buffer(DAC0_BASE_PTR, 0, data);
+    1198:	1dbb      	adds	r3, r7, #6
+    119a:	881b      	ldrh	r3, [r3, #0]
+    119c:	4a04      	ldr	r2, [pc, #16]	; (11b0 <dac_convert+0x24>)
+    119e:	1c10      	adds	r0, r2, #0
+    11a0:	2100      	movs	r1, #0
+    11a2:	1c1a      	adds	r2, r3, #0
+    11a4:	f000 f806 	bl	11b4 <dac_set_buffer>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:58
+}
+    11a8:	46bd      	mov	sp, r7
+    11aa:	b002      	add	sp, #8
+    11ac:	bd80      	pop	{r7, pc}
+    11ae:	46c0      	nop			; (mov r8, r8)
+    11b0:	4003f000 	.word	0x4003f000
+
+000011b4 <dac_set_buffer>:
+dac_set_buffer():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:70
+//       dacindex缓冲区号：0,1
+//       buffval缓冲区值:0~4095
+//功能概要：设置DACx缓冲区
+//============================================================================ 
+int dac_set_buffer( DAC_MemMapPtr dacx_base_ptr, uint_8 dacindex, int buffval)
+{
+    11b4:	b580      	push	{r7, lr}
+    11b6:	b086      	sub	sp, #24
+    11b8:	af00      	add	r7, sp, #0
+    11ba:	60f8      	str	r0, [r7, #12]
+    11bc:	607a      	str	r2, [r7, #4]
+    11be:	1c3b      	adds	r3, r7, #0
+    11c0:	330b      	adds	r3, #11
+    11c2:	1c0a      	adds	r2, r1, #0
+    11c4:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:71
+    int temp = 0; 
+    11c6:	2300      	movs	r3, #0
+    11c8:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:73
+    //设置缓冲区低字节
+    DAC_DATL_REG(dacx_base_ptr, dacindex)  =   (buffval&0x0ff); 
+    11ca:	1c3b      	adds	r3, r7, #0
+    11cc:	330b      	adds	r3, #11
+    11ce:	781a      	ldrb	r2, [r3, #0]
+    11d0:	687b      	ldr	r3, [r7, #4]
+    11d2:	b2d9      	uxtb	r1, r3
+    11d4:	68fb      	ldr	r3, [r7, #12]
+    11d6:	0052      	lsls	r2, r2, #1
+    11d8:	54d1      	strb	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:75
+    //设置缓冲区高字节
+    DAC_DATH_REG(dacx_base_ptr, dacindex)  =   (buffval&0xf00) >>8;                                
+    11da:	1c3b      	adds	r3, r7, #0
+    11dc:	330b      	adds	r3, #11
+    11de:	781b      	ldrb	r3, [r3, #0]
+    11e0:	6879      	ldr	r1, [r7, #4]
+    11e2:	22f0      	movs	r2, #240	; 0xf0
+    11e4:	0112      	lsls	r2, r2, #4
+    11e6:	400a      	ands	r2, r1
+    11e8:	1212      	asrs	r2, r2, #8
+    11ea:	b2d2      	uxtb	r2, r2
+    11ec:	68f9      	ldr	r1, [r7, #12]
+    11ee:	005b      	lsls	r3, r3, #1
+    11f0:	18cb      	adds	r3, r1, r3
+    11f2:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:76
+    temp =( DAC_DATL_REG(dacx_base_ptr, dacindex)|
+    11f4:	1c3b      	adds	r3, r7, #0
+    11f6:	330b      	adds	r3, #11
+    11f8:	781a      	ldrb	r2, [r3, #0]
+    11fa:	68fb      	ldr	r3, [r7, #12]
+    11fc:	0052      	lsls	r2, r2, #1
+    11fe:	5cd3      	ldrb	r3, [r2, r3]
+    1200:	b2db      	uxtb	r3, r3
+    1202:	1c1a      	adds	r2, r3, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:77
+    		( DAC_DATH_REG(dacx_base_ptr, dacindex)<<8));   
+    1204:	1c3b      	adds	r3, r7, #0
+    1206:	330b      	adds	r3, #11
+    1208:	781b      	ldrb	r3, [r3, #0]
+    120a:	68f9      	ldr	r1, [r7, #12]
+    120c:	005b      	lsls	r3, r3, #1
+    120e:	18cb      	adds	r3, r1, r3
+    1210:	785b      	ldrb	r3, [r3, #1]
+    1212:	b2db      	uxtb	r3, r3
+    1214:	021b      	lsls	r3, r3, #8
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:76
+    int temp = 0; 
+    //设置缓冲区低字节
+    DAC_DATL_REG(dacx_base_ptr, dacindex)  =   (buffval&0x0ff); 
+    //设置缓冲区高字节
+    DAC_DATH_REG(dacx_base_ptr, dacindex)  =   (buffval&0xf00) >>8;                                
+    temp =( DAC_DATL_REG(dacx_base_ptr, dacindex)|
+    1216:	4313      	orrs	r3, r2
+    1218:	617b      	str	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:78
+    		( DAC_DATH_REG(dacx_base_ptr, dacindex)<<8));   
+    return temp ;
+    121a:	697b      	ldr	r3, [r7, #20]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../05_Driver/dac/dac.c:79
+}
+    121c:	1c18      	adds	r0, r3, #0
+    121e:	46bd      	mov	sp, r7
+    1220:	b006      	add	sp, #24
+    1222:	bd80      	pop	{r7, pc}
+
+00001224 <startup>:
+startup():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:22
+#define WDOG_ENABLE() {SIM_COPC |= SIM_COPC_COPT_MASK;} //使能看门狗
+
+
+// 系统上电启动程序
+ void startup(void)
+{
+    1224:	b580      	push	{r7, lr}
+    1226:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:23
+	 WDOG_DISABLE();       //禁用看门狗
+    1228:	4a08      	ldr	r2, [pc, #32]	; (124c <startup+0x28>)
+    122a:	2388      	movs	r3, #136	; 0x88
+    122c:	015b      	lsls	r3, r3, #5
+    122e:	2100      	movs	r1, #0
+    1230:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:25
+        //WDOG_ENABLE();        使能看门狗  
+	vector_init();          //复制中断向量表至RAM
+    1232:	f000 f80d 	bl	1250 <vector_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:26
+	m_zero_fill_bss ();     //清零未初始化BSS数据段
+    1236:	f000 f835 	bl	12a4 <m_zero_fill_bss>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:27
+	m_data_seg_init ();     //将ROM中的初始化数据拷贝到RAM中
+    123a:	f000 f851 	bl	12e0 <m_data_seg_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:28
+	sys_init();             //初始化系统时钟
+    123e:	f000 f885 	bl	134c <sys_init>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:29
+	sys_pin_enable_port();  //使能端口时钟
+    1242:	f000 f871 	bl	1328 <sys_pin_enable_port>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:30
+	main();                 //进入主函数
+    1246:	f7ff fba3 	bl	990 <main>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:31 (discriminator 1)
+	while(1);               //永久循环（主函数内永久循环，含有执行不到该语句）          
+    124a:	e7fe      	b.n	124a <startup+0x26>
+    124c:	40047000 	.word	0x40047000
+
+00001250 <vector_init>:
+vector_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:38
+
+//-------------------------------------------------------------------------------
+
+//拷贝中断向量表
+void vector_init(void)
+{
+    1250:	b580      	push	{r7, lr}
+    1252:	b082      	sub	sp, #8
+    1254:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:43
+	extern char __VECTOR_RAM[];
+	extern char __vector_table[];
+	uint_32 n;
+	
+	if (__VECTOR_RAM != __vector_table)
+    1256:	4a0e      	ldr	r2, [pc, #56]	; (1290 <vector_init+0x40>)
+    1258:	4b0e      	ldr	r3, [pc, #56]	; (1294 <vector_init+0x44>)
+    125a:	429a      	cmp	r2, r3
+    125c:	d011      	beq.n	1282 <vector_init+0x32>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:45
+	{
+	    for (n = 0; n < 0x410; n++)
+    125e:	2300      	movs	r3, #0
+    1260:	607b      	str	r3, [r7, #4]
+    1262:	e00a      	b.n	127a <vector_init+0x2a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:46 (discriminator 2)
+	        __VECTOR_RAM[n] = __vector_table[n];
+    1264:	4a0b      	ldr	r2, [pc, #44]	; (1294 <vector_init+0x44>)
+    1266:	687b      	ldr	r3, [r7, #4]
+    1268:	18d3      	adds	r3, r2, r3
+    126a:	781a      	ldrb	r2, [r3, #0]
+    126c:	4908      	ldr	r1, [pc, #32]	; (1290 <vector_init+0x40>)
+    126e:	687b      	ldr	r3, [r7, #4]
+    1270:	18cb      	adds	r3, r1, r3
+    1272:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:45 (discriminator 2)
+	extern char __vector_table[];
+	uint_32 n;
+	
+	if (__VECTOR_RAM != __vector_table)
+	{
+	    for (n = 0; n < 0x410; n++)
+    1274:	687b      	ldr	r3, [r7, #4]
+    1276:	3301      	adds	r3, #1
+    1278:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:45 (discriminator 1)
+    127a:	687a      	ldr	r2, [r7, #4]
+    127c:	4b06      	ldr	r3, [pc, #24]	; (1298 <vector_init+0x48>)
+    127e:	429a      	cmp	r2, r3
+    1280:	d9f0      	bls.n	1264 <vector_init+0x14>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:49
+	        __VECTOR_RAM[n] = __vector_table[n];
+	}
+	//Point the VTOR to the new copy of the vector table 
+      SCB_VTOR=(uint_32)__VECTOR_RAM;
+    1282:	4a06      	ldr	r2, [pc, #24]	; (129c <vector_init+0x4c>)
+    1284:	4902      	ldr	r1, [pc, #8]	; (1290 <vector_init+0x40>)
+    1286:	4b06      	ldr	r3, [pc, #24]	; (12a0 <vector_init+0x50>)
+    1288:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:50
+}
+    128a:	46bd      	mov	sp, r7
+    128c:	b002      	add	sp, #8
+    128e:	bd80      	pop	{r7, pc}
+    1290:	1ffff000 	.word	0x1ffff000
+    1294:	00000000 	.word	0x00000000
+    1298:	0000040f 	.word	0x0000040f
+    129c:	e000e000 	.word	0xe000e000
+    12a0:	00000d08 	.word	0x00000d08
+
+000012a4 <m_zero_fill_bss>:
+m_zero_fill_bss():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:54
+
+// 初始化BSS段
+void m_zero_fill_bss(void)
+{
+    12a4:	b580      	push	{r7, lr}
+    12a6:	b084      	sub	sp, #16
+    12a8:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:58
+	extern char __START_BSS[];
+    extern char __END_BSS[];
+
+    uint_8 *bss_start = (uint_8 *)__START_BSS;
+    12aa:	4b0b      	ldr	r3, [pc, #44]	; (12d8 <m_zero_fill_bss+0x34>)
+    12ac:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:59
+    uint_8 *bss_end   = (uint_8 *)__END_BSS;
+    12ae:	4b0b      	ldr	r3, [pc, #44]	; (12dc <m_zero_fill_bss+0x38>)
+    12b0:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:60
+    uint_32 n = bss_end - bss_start;
+    12b2:	687a      	ldr	r2, [r7, #4]
+    12b4:	68fb      	ldr	r3, [r7, #12]
+    12b6:	1ad3      	subs	r3, r2, r3
+    12b8:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:62
+    
+    while (n--)
+    12ba:	e004      	b.n	12c6 <m_zero_fill_bss+0x22>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:63
+    	*bss_start++ = 0;
+    12bc:	68fb      	ldr	r3, [r7, #12]
+    12be:	1c5a      	adds	r2, r3, #1
+    12c0:	60fa      	str	r2, [r7, #12]
+    12c2:	2200      	movs	r2, #0
+    12c4:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:62 (discriminator 1)
+
+    uint_8 *bss_start = (uint_8 *)__START_BSS;
+    uint_8 *bss_end   = (uint_8 *)__END_BSS;
+    uint_32 n = bss_end - bss_start;
+    
+    while (n--)
+    12c6:	68bb      	ldr	r3, [r7, #8]
+    12c8:	1e5a      	subs	r2, r3, #1
+    12ca:	60ba      	str	r2, [r7, #8]
+    12cc:	2b00      	cmp	r3, #0
+    12ce:	d1f5      	bne.n	12bc <m_zero_fill_bss+0x18>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:64
+    	*bss_start++ = 0;
+}
+    12d0:	46bd      	mov	sp, r7
+    12d2:	b004      	add	sp, #16
+    12d4:	bd80      	pop	{r7, pc}
+    12d6:	46c0      	nop			; (mov r8, r8)
+    12d8:	20000414 	.word	0x20000414
+    12dc:	20000424 	.word	0x20000424
+
+000012e0 <m_data_seg_init>:
+m_data_seg_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:68
+
+//复制ROM数据至RAM
+void m_data_seg_init(void)
+{
+    12e0:	b580      	push	{r7, lr}
+    12e2:	b084      	sub	sp, #16
+    12e4:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:73
+	extern char __START_DATA[];
+	extern char __END_DATA[];
+	extern char __START_DATA_ROM[];
+	
+	uint_8 *data_start = (uint_8 *)__START_DATA;
+    12e6:	4b0d      	ldr	r3, [pc, #52]	; (131c <m_data_seg_init+0x3c>)
+    12e8:	60fb      	str	r3, [r7, #12]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:74
+	uint_8 *data_end   = (uint_8 *)__END_DATA;
+    12ea:	4b0d      	ldr	r3, [pc, #52]	; (1320 <m_data_seg_init+0x40>)
+    12ec:	603b      	str	r3, [r7, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:75
+	uint_8 *data_rom_start = (uint_8 *)__START_DATA_ROM;
+    12ee:	4b0d      	ldr	r3, [pc, #52]	; (1324 <m_data_seg_init+0x44>)
+    12f0:	60bb      	str	r3, [r7, #8]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:76
+	uint_32 n = data_end - data_start;
+    12f2:	683a      	ldr	r2, [r7, #0]
+    12f4:	68fb      	ldr	r3, [r7, #12]
+    12f6:	1ad3      	subs	r3, r2, r3
+    12f8:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:78
+	
+	while (n--)
+    12fa:	e007      	b.n	130c <m_data_seg_init+0x2c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:79
+	    *data_start++ = *data_rom_start++;
+    12fc:	68fb      	ldr	r3, [r7, #12]
+    12fe:	1c5a      	adds	r2, r3, #1
+    1300:	60fa      	str	r2, [r7, #12]
+    1302:	68ba      	ldr	r2, [r7, #8]
+    1304:	1c51      	adds	r1, r2, #1
+    1306:	60b9      	str	r1, [r7, #8]
+    1308:	7812      	ldrb	r2, [r2, #0]
+    130a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:78 (discriminator 1)
+	uint_8 *data_start = (uint_8 *)__START_DATA;
+	uint_8 *data_end   = (uint_8 *)__END_DATA;
+	uint_8 *data_rom_start = (uint_8 *)__START_DATA_ROM;
+	uint_32 n = data_end - data_start;
+	
+	while (n--)
+    130c:	687b      	ldr	r3, [r7, #4]
+    130e:	1e5a      	subs	r2, r3, #1
+    1310:	607a      	str	r2, [r7, #4]
+    1312:	2b00      	cmp	r3, #0
+    1314:	d1f2      	bne.n	12fc <m_data_seg_init+0x1c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:80
+	    *data_start++ = *data_rom_start++;
+}
+    1316:	46bd      	mov	sp, r7
+    1318:	b004      	add	sp, #16
+    131a:	bd80      	pop	{r7, pc}
+    131c:	20000410 	.word	0x20000410
+    1320:	20000414 	.word	0x20000414
+    1324:	00001518 	.word	0x00001518
+
+00001328 <sys_pin_enable_port>:
+sys_pin_enable_port():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:84
+
+//使能端口时钟
+void sys_pin_enable_port(void)
+{
+    1328:	b580      	push	{r7, lr}
+    132a:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:85
+	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK
+    132c:	4a05      	ldr	r2, [pc, #20]	; (1344 <sys_pin_enable_port+0x1c>)
+    132e:	4905      	ldr	r1, [pc, #20]	; (1344 <sys_pin_enable_port+0x1c>)
+    1330:	4b05      	ldr	r3, [pc, #20]	; (1348 <sys_pin_enable_port+0x20>)
+    1332:	58cb      	ldr	r3, [r1, r3]
+    1334:	21f8      	movs	r1, #248	; 0xf8
+    1336:	0189      	lsls	r1, r1, #6
+    1338:	4319      	orrs	r1, r3
+    133a:	4b03      	ldr	r3, [pc, #12]	; (1348 <sys_pin_enable_port+0x20>)
+    133c:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/startup.c:90
+			  | SIM_SCGC5_PORTB_MASK
+			  | SIM_SCGC5_PORTC_MASK
+			  | SIM_SCGC5_PORTD_MASK
+			  | SIM_SCGC5_PORTE_MASK; 
+}
+    133e:	46bd      	mov	sp, r7
+    1340:	bd80      	pop	{r7, pc}
+    1342:	46c0      	nop			; (mov r8, r8)
+    1344:	40047000 	.word	0x40047000
+    1348:	00001038 	.word	0x00001038
+
+0000134c <sys_init>:
+sys_init():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:12
+//功能概要：(1)KL25的EXTAL(40)、XTAL(41)接8Mhz外部晶振，产生PLL/FLL输出时钟频
+//             率48MHz,内核时钟48MHz，总线时钟24MHz，内部参考时钟4MHz。
+//          (2)对于这些频率，sys_init.h有相应的宏常量定义可以供编程时使用
+//===========================================================================
+void sys_init(void)  
+{
+    134c:	b580      	push	{r7, lr}
+    134e:	b082      	sub	sp, #8
+    1350:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:13
+    uint_32 i = 0;
+    1352:	2300      	movs	r3, #0
+    1354:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:14
+    uint_8 temp_reg = 0;
+    1356:	1cfb      	adds	r3, r7, #3
+    1358:	2200      	movs	r2, #0
+    135a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:21
+ //1.首先从FEI模式过渡到FBE模式
+    
+    //C2= 0x1C，因为我们的核心板上采用了外部晶振为8Mhz，属于高频率范围，
+    //C2[RANGE]设置为0b01；C2[HGO]设为1以配置晶振来进行高增益操作；因为
+    //正在使用的外部参考时钟源是晶振，所以C2[EREFS]设置为1。
+    MCG_C2 = (MCG_C2_RANGE0(1) | MCG_C2_EREFS0_MASK);
+    135c:	4b54      	ldr	r3, [pc, #336]	; (14b0 <sys_init+0x164>)
+    135e:	2214      	movs	r2, #20
+    1360:	705a      	strb	r2, [r3, #1]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:26
+    //C1 = 0x90 ，C1[CLKS]设置为2’b10，以便选择作为系统时钟源的外部参考时钟。
+    //C1[FRDIV]设置为3'b011，对应256分频,因为8MHz/256=31.25kHz在由FLL要求的
+    //31.25kHz至39.0625 kHz频率范围内。C1[IREFS]清除为0，选择外部参考时钟和
+    //外部晶振。
+    MCG_C1 = (MCG_C1_CLKS(2) | MCG_C1_FRDIV(3));
+    1362:	4b53      	ldr	r3, [pc, #332]	; (14b0 <sys_init+0x164>)
+    1364:	2298      	movs	r2, #152	; 0x98
+    1366:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:28
+    //需要等到S[OSCINIT]被置位外部晶振才能使用
+    for (i = 0 ; i < 20000 ; i++)
+    1368:	2300      	movs	r3, #0
+    136a:	607b      	str	r3, [r7, #4]
+    136c:	e00a      	b.n	1384 <sys_init+0x38>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:31
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    136e:	4b50      	ldr	r3, [pc, #320]	; (14b0 <sys_init+0x164>)
+    1370:	799b      	ldrb	r3, [r3, #6]
+    1372:	b2db      	uxtb	r3, r3
+    1374:	1c1a      	adds	r2, r3, #0
+    1376:	2302      	movs	r3, #2
+    1378:	4013      	ands	r3, r2
+    137a:	d000      	beq.n	137e <sys_init+0x32>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:31 (discriminator 1)
+    137c:	e006      	b.n	138c <sys_init+0x40>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:28
+    //C1[FRDIV]设置为3'b011，对应256分频,因为8MHz/256=31.25kHz在由FLL要求的
+    //31.25kHz至39.0625 kHz频率范围内。C1[IREFS]清除为0，选择外部参考时钟和
+    //外部晶振。
+    MCG_C1 = (MCG_C1_CLKS(2) | MCG_C1_FRDIV(3));
+    //需要等到S[OSCINIT]被置位外部晶振才能使用
+    for (i = 0 ; i < 20000 ; i++)
+    137e:	687b      	ldr	r3, [r7, #4]
+    1380:	3301      	adds	r3, #1
+    1382:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:28 (discriminator 1)
+    1384:	687a      	ldr	r2, [r7, #4]
+    1386:	4b4b      	ldr	r3, [pc, #300]	; (14b4 <sys_init+0x168>)
+    1388:	429a      	cmp	r2, r3
+    138a:	d9f0      	bls.n	136e <sys_init+0x22>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:34
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    }
+    //等待参考时钟状态位清0
+    for (i = 0 ; i < 2000 ; i++)
+    138c:	2300      	movs	r3, #0
+    138e:	607b      	str	r3, [r7, #4]
+    1390:	e00a      	b.n	13a8 <sys_init+0x5c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:37
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    1392:	4b47      	ldr	r3, [pc, #284]	; (14b0 <sys_init+0x164>)
+    1394:	799b      	ldrb	r3, [r3, #6]
+    1396:	b2db      	uxtb	r3, r3
+    1398:	1c1a      	adds	r2, r3, #0
+    139a:	2310      	movs	r3, #16
+    139c:	4013      	ands	r3, r2
+    139e:	d100      	bne.n	13a2 <sys_init+0x56>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:37 (discriminator 1)
+    13a0:	e006      	b.n	13b0 <sys_init+0x64>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:34
+    {
+        //如果S[OSCINIT]在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_OSCINIT0_MASK) break;
+    }
+    //等待参考时钟状态位清0
+    for (i = 0 ; i < 2000 ; i++)
+    13a2:	687b      	ldr	r3, [r7, #4]
+    13a4:	3301      	adds	r3, #1
+    13a6:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:34 (discriminator 1)
+    13a8:	687a      	ldr	r2, [r7, #4]
+    13aa:	4b43      	ldr	r3, [pc, #268]	; (14b8 <sys_init+0x16c>)
+    13ac:	429a      	cmp	r2, r3
+    13ae:	d9f0      	bls.n	1392 <sys_init+0x46>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:40
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    }
+    //等待时钟状态位以显示时钟源为外部参考时钟
+    for (i = 0 ; i < 2000 ; i++)
+    13b0:	2300      	movs	r3, #0
+    13b2:	607b      	str	r3, [r7, #4]
+    13b4:	e00c      	b.n	13d0 <sys_init+0x84>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:43
+    {
+        //如果CLKST显示外部时钟被选择，在循环结束之前就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x2) break;
+    13b6:	4b3e      	ldr	r3, [pc, #248]	; (14b0 <sys_init+0x164>)
+    13b8:	799b      	ldrb	r3, [r3, #6]
+    13ba:	b2db      	uxtb	r3, r3
+    13bc:	1c1a      	adds	r2, r3, #0
+    13be:	230c      	movs	r3, #12
+    13c0:	4013      	ands	r3, r2
+    13c2:	089b      	lsrs	r3, r3, #2
+    13c4:	2b02      	cmp	r3, #2
+    13c6:	d100      	bne.n	13ca <sys_init+0x7e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:43 (discriminator 1)
+    13c8:	e006      	b.n	13d8 <sys_init+0x8c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:40
+    {
+        //如果IREFST在循环结束之前被清0就跳出循环
+        if (!(MCG_S & MCG_S_IREFST_MASK)) break;
+    }
+    //等待时钟状态位以显示时钟源为外部参考时钟
+    for (i = 0 ; i < 2000 ; i++)
+    13ca:	687b      	ldr	r3, [r7, #4]
+    13cc:	3301      	adds	r3, #1
+    13ce:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:40 (discriminator 1)
+    13d0:	687a      	ldr	r2, [r7, #4]
+    13d2:	4b39      	ldr	r3, [pc, #228]	; (14b8 <sys_init+0x16c>)
+    13d4:	429a      	cmp	r2, r3
+    13d6:	d9ee      	bls.n	13b6 <sys_init+0x6a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:46
+    {
+        //如果CLKST显示外部时钟被选择，在循环结束之前就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x2) break;
+    }
+ //2.现在处于FBE状态，使能时钟监视器，由FBE直接转换为PBE模式
+    MCG_C6 |= MCG_C6_CME0_MASK;
+    13d8:	4b35      	ldr	r3, [pc, #212]	; (14b0 <sys_init+0x164>)
+    13da:	4a35      	ldr	r2, [pc, #212]	; (14b0 <sys_init+0x164>)
+    13dc:	7952      	ldrb	r2, [r2, #5]
+    13de:	b2d2      	uxtb	r2, r2
+    13e0:	2120      	movs	r1, #32
+    13e2:	430a      	orrs	r2, r1
+    13e4:	b2d2      	uxtb	r2, r2
+    13e6:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:48
+    //配置PLL为2分频
+    MCG_C5 |= MCG_C5_PRDIV0(1); 
+    13e8:	4b31      	ldr	r3, [pc, #196]	; (14b0 <sys_init+0x164>)
+    13ea:	4a31      	ldr	r2, [pc, #196]	; (14b0 <sys_init+0x164>)
+    13ec:	7912      	ldrb	r2, [r2, #4]
+    13ee:	b2d2      	uxtb	r2, r2
+    13f0:	2101      	movs	r1, #1
+    13f2:	430a      	orrs	r2, r1
+    13f4:	b2d2      	uxtb	r2, r2
+    13f6:	711a      	strb	r2, [r3, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:50
+    //配置MCG_C6 以设置PLL倍频因子并且时能PLL，PLLS位被置位来时能PLL，MCGOUT时钟源仍然是外部参考时钟          
+    temp_reg = MCG_C6; //存储当前C6的值（因为CME0位之前被置位了）
+    13f8:	4a2d      	ldr	r2, [pc, #180]	; (14b0 <sys_init+0x164>)
+    13fa:	1cfb      	adds	r3, r7, #3
+    13fc:	7952      	ldrb	r2, [r2, #5]
+    13fe:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:51
+    temp_reg &= ~MCG_C6_VDIV0_MASK; //将VDIV清0
+    1400:	1cfb      	adds	r3, r7, #3
+    1402:	1cfa      	adds	r2, r7, #3
+    1404:	7812      	ldrb	r2, [r2, #0]
+    1406:	211f      	movs	r1, #31
+    1408:	438a      	bics	r2, r1
+    140a:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:52
+    temp_reg |= MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0); // 重新写值到VDIV 并且时能PLL
+    140c:	1cfb      	adds	r3, r7, #3
+    140e:	1cfa      	adds	r2, r7, #3
+    1410:	7812      	ldrb	r2, [r2, #0]
+    1412:	2140      	movs	r1, #64	; 0x40
+    1414:	430a      	orrs	r2, r1
+    1416:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:53
+    MCG_C6 = temp_reg; // 更新MCG_C6的值
+    1418:	4b25      	ldr	r3, [pc, #148]	; (14b0 <sys_init+0x164>)
+    141a:	1cfa      	adds	r2, r7, #3
+    141c:	7812      	ldrb	r2, [r2, #0]
+    141e:	715a      	strb	r2, [r3, #5]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:55
+    // 等待PLLST状态位被置
+    for (i = 0 ; i < 2000 ; i++)
+    1420:	2300      	movs	r3, #0
+    1422:	607b      	str	r3, [r7, #4]
+    1424:	e00a      	b.n	143c <sys_init+0xf0>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:58
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    1426:	4b22      	ldr	r3, [pc, #136]	; (14b0 <sys_init+0x164>)
+    1428:	799b      	ldrb	r3, [r3, #6]
+    142a:	b2db      	uxtb	r3, r3
+    142c:	1c1a      	adds	r2, r3, #0
+    142e:	2320      	movs	r3, #32
+    1430:	4013      	ands	r3, r2
+    1432:	d000      	beq.n	1436 <sys_init+0xea>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:58 (discriminator 1)
+    1434:	e006      	b.n	1444 <sys_init+0xf8>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:55
+    temp_reg = MCG_C6; //存储当前C6的值（因为CME0位之前被置位了）
+    temp_reg &= ~MCG_C6_VDIV0_MASK; //将VDIV清0
+    temp_reg |= MCG_C6_PLLS_MASK | MCG_C6_VDIV0(0); // 重新写值到VDIV 并且时能PLL
+    MCG_C6 = temp_reg; // 更新MCG_C6的值
+    // 等待PLLST状态位被置
+    for (i = 0 ; i < 2000 ; i++)
+    1436:	687b      	ldr	r3, [r7, #4]
+    1438:	3301      	adds	r3, #1
+    143a:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:55 (discriminator 1)
+    143c:	687a      	ldr	r2, [r7, #4]
+    143e:	4b1e      	ldr	r3, [pc, #120]	; (14b8 <sys_init+0x16c>)
+    1440:	429a      	cmp	r2, r3
+    1442:	d9f0      	bls.n	1426 <sys_init+0xda>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:61
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    }
+    //等待LOCK位被置
+    for (i = 0 ; i < 4000 ; i++)
+    1444:	2300      	movs	r3, #0
+    1446:	607b      	str	r3, [r7, #4]
+    1448:	e00a      	b.n	1460 <sys_init+0x114>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:64
+    {
+        //如果LOCK在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_LOCK0_MASK) break;
+    144a:	4b19      	ldr	r3, [pc, #100]	; (14b0 <sys_init+0x164>)
+    144c:	799b      	ldrb	r3, [r3, #6]
+    144e:	b2db      	uxtb	r3, r3
+    1450:	1c1a      	adds	r2, r3, #0
+    1452:	2340      	movs	r3, #64	; 0x40
+    1454:	4013      	ands	r3, r2
+    1456:	d000      	beq.n	145a <sys_init+0x10e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:64 (discriminator 1)
+    1458:	e006      	b.n	1468 <sys_init+0x11c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:61
+    {
+        //如果PLLST在循环结束之前被置位就跳出循环
+        if (MCG_S & MCG_S_PLLST_MASK) break;
+    }
+    //等待LOCK位被置
+    for (i = 0 ; i < 4000 ; i++)
+    145a:	687b      	ldr	r3, [r7, #4]
+    145c:	3301      	adds	r3, #1
+    145e:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:61 (discriminator 1)
+    1460:	687a      	ldr	r2, [r7, #4]
+    1462:	4b16      	ldr	r3, [pc, #88]	; (14bc <sys_init+0x170>)
+    1464:	429a      	cmp	r2, r3
+    1466:	d9f0      	bls.n	144a <sys_init+0xfe>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:69
+        if (MCG_S & MCG_S_LOCK0_MASK) break;
+    }
+  //3.现在处于PBE模式。最后，PBE模式转换成PEE模式
+    // 设置核心时钟分频器2分频
+    //设置总线时钟分频器2分频 (总线时钟的时钟源是核心时钟)
+    SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(1) | SIM_CLKDIV1_OUTDIV4(1) );
+    1468:	4a15      	ldr	r2, [pc, #84]	; (14c0 <sys_init+0x174>)
+    146a:	4b16      	ldr	r3, [pc, #88]	; (14c4 <sys_init+0x178>)
+    146c:	4916      	ldr	r1, [pc, #88]	; (14c8 <sys_init+0x17c>)
+    146e:	50d1      	str	r1, [r2, r3]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:71
+    //清CLKS来打开CLKS多路复用器来选择PLL作为MCGCLKOUT
+    MCG_C1 &= ~MCG_C1_CLKS_MASK;
+    1470:	4b0f      	ldr	r3, [pc, #60]	; (14b0 <sys_init+0x164>)
+    1472:	4a0f      	ldr	r2, [pc, #60]	; (14b0 <sys_init+0x164>)
+    1474:	7812      	ldrb	r2, [r2, #0]
+    1476:	b2d1      	uxtb	r1, r2
+    1478:	223f      	movs	r2, #63	; 0x3f
+    147a:	400a      	ands	r2, r1
+    147c:	b2d2      	uxtb	r2, r2
+    147e:	701a      	strb	r2, [r3, #0]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:73
+    // 等待时钟状态位更新
+    for (i = 0 ; i < 2000 ; i++)
+    1480:	2300      	movs	r3, #0
+    1482:	607b      	str	r3, [r7, #4]
+    1484:	e00c      	b.n	14a0 <sys_init+0x154>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:76
+    {
+        //如果CLKST在循环结束之前等于3就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x3) break;
+    1486:	4b0a      	ldr	r3, [pc, #40]	; (14b0 <sys_init+0x164>)
+    1488:	799b      	ldrb	r3, [r3, #6]
+    148a:	b2db      	uxtb	r3, r3
+    148c:	1c1a      	adds	r2, r3, #0
+    148e:	230c      	movs	r3, #12
+    1490:	4013      	ands	r3, r2
+    1492:	089b      	lsrs	r3, r3, #2
+    1494:	2b03      	cmp	r3, #3
+    1496:	d100      	bne.n	149a <sys_init+0x14e>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:76 (discriminator 1)
+    1498:	e006      	b.n	14a8 <sys_init+0x15c>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:73
+    //设置总线时钟分频器2分频 (总线时钟的时钟源是核心时钟)
+    SIM_CLKDIV1 = (SIM_CLKDIV1_OUTDIV1(1) | SIM_CLKDIV1_OUTDIV4(1) );
+    //清CLKS来打开CLKS多路复用器来选择PLL作为MCGCLKOUT
+    MCG_C1 &= ~MCG_C1_CLKS_MASK;
+    // 等待时钟状态位更新
+    for (i = 0 ; i < 2000 ; i++)
+    149a:	687b      	ldr	r3, [r7, #4]
+    149c:	3301      	adds	r3, #1
+    149e:	607b      	str	r3, [r7, #4]
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:73 (discriminator 1)
+    14a0:	687a      	ldr	r2, [r7, #4]
+    14a2:	4b05      	ldr	r3, [pc, #20]	; (14b8 <sys_init+0x16c>)
+    14a4:	429a      	cmp	r2, r3
+    14a6:	d9ee      	bls.n	1486 <sys_init+0x13a>
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/sysinit.c:79
+    {
+        //如果CLKST在循环结束之前等于3就跳出循环
+        if (((MCG_S & MCG_S_CLKST_MASK) >> MCG_S_CLKST_SHIFT) == 0x3) break;
+    }
+  //4.现在处于PEE模式
+}
+    14a8:	46bd      	mov	sp, r7
+    14aa:	b002      	add	sp, #8
+    14ac:	bd80      	pop	{r7, pc}
+    14ae:	46c0      	nop			; (mov r8, r8)
+    14b0:	40064000 	.word	0x40064000
+    14b4:	00004e1f 	.word	0x00004e1f
+    14b8:	000007cf 	.word	0x000007cf
+    14bc:	00000f9f 	.word	0x00000f9f
+    14c0:	40047000 	.word	0x40047000
+    14c4:	00001044 	.word	0x00001044
+    14c8:	10010000 	.word	0x10010000
+
+000014cc <NOS_isrDummy>:
+NOS_isrDummy():
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/vectors.c:67
+	VECTOR_046,         // 0x2E  0x000000B8 - ivINT_PORT                        
+	VECTOR_047          // 0x2F  0x000000BC - ivINT_PORT                        
+};
+
+void NOS_isrDummy(void)
+{
+    14cc:	b580      	push	{r7, lr}
+    14ce:	af00      	add	r7, sp, #0
+C:\Users\Administrator\Desktop\qianrushi\jifanganzhuang\SD-FSL-KL25-CD(V3.3)KDS-20141009\KL25-Program\ch10-ADC-DAC-CMP(KDS)\KL25_DAC\Debug/../03_MCU/vectors.c:68
+}
+    14d0:	46bd      	mov	sp, r7
+    14d2:	bd80      	pop	{r7, pc}
+$d():
+    14d4:	73696854 	.word	0x73696854
+    14d8:	20736920 	.word	0x20736920
+    14dc:	20434144 	.word	0x20434144
+    14e0:	74736554 	.word	0x74736554
+    14e4:	000a0d21 	.word	0x000a0d21
+
+000014e8 <UART_ARR>:
+    14e8:	4006b000 4006c000                       ...@...@
+
+000014f0 <PORT_ARR>:
+    14f0:	40049000 4004a000 4004b000 4004c000     ...@...@...@...@
+    1500:	4004d000                                ...@
+
+00001504 <GPIO_ARR>:
+    1504:	400ff000 400ff040 400ff080 400ff0c0     ...@@..@...@...@
+    1514:	400ff100                                ...@

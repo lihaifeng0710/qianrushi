@@ -1,0 +1,650 @@
+Archive member included because of file (symbol)
+
+d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o)
+                              ./05_Driver/uart/uart.o (__aeabi_uidiv)
+d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_dvmd_tls.o)
+                              d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+my                  0x8               ./08_Source/isr.o
+VReference          0x2               ./08_Source/isr.o
+
+Discarded input sections
+
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/isr.o
+ .text          0x00000000        0x0 ./08_Source/isr.o
+ .data          0x00000000        0x0 ./08_Source/isr.o
+ .bss           0x00000000        0x0 ./08_Source/isr.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .group         0x00000000        0x8 ./08_Source/main.o
+ .text          0x00000000        0x0 ./08_Source/main.o
+ .data          0x00000000        0x0 ./08_Source/main.o
+ .bss           0x00000000        0x0 ./08_Source/main.o
+ .debug_macro   0x00000000      0x7f6 ./08_Source/main.o
+ .debug_macro   0x00000000       0x10 ./08_Source/main.o
+ .debug_macro   0x00000000      0x214 ./08_Source/main.o
+ .debug_macro   0x00000000     0x5b10 ./08_Source/main.o
+ .debug_macro   0x00000000       0x2e ./08_Source/main.o
+ .debug_macro   0x00000000       0x52 ./08_Source/main.o
+ .debug_macro   0x00000000      0x12a ./08_Source/main.o
+ .debug_macro   0x00000000       0x16 ./08_Source/main.o
+ .debug_macro   0x00000000       0x22 ./08_Source/main.o
+ .debug_macro   0x00000000       0x28 ./08_Source/main.o
+ .debug_macro   0x00000000       0x28 ./08_Source/main.o
+ .debug_macro   0x00000000       0x1c ./08_Source/main.o
+ .group         0x00000000        0x8 ./07_Soft_Component/common/common.o
+ .group         0x00000000        0x8 ./07_Soft_Component/common/common.o
+ .group         0x00000000        0x8 ./07_Soft_Component/common/common.o
+ .group         0x00000000        0x8 ./07_Soft_Component/common/common.o
+ .group         0x00000000        0x8 ./07_Soft_Component/common/common.o
+ .text          0x00000000        0x0 ./07_Soft_Component/common/common.o
+ .data          0x00000000        0x0 ./07_Soft_Component/common/common.o
+ .bss           0x00000000        0x0 ./07_Soft_Component/common/common.o
+ .bss.int_disable_level
+                0x00000000        0x4 ./07_Soft_Component/common/common.o
+ .text.init_critical
+                0x00000000       0x14 ./07_Soft_Component/common/common.o
+ .text.enter_critical
+                0x00000000       0x20 ./07_Soft_Component/common/common.o
+ .text.exit_critical
+                0x00000000       0x28 ./07_Soft_Component/common/common.o
+ .text.disable_irq
+                0x00000000       0x3c ./07_Soft_Component/common/common.o
+ .text.set_irq_priority
+                0x00000000       0x80 ./07_Soft_Component/common/common.o
+ .debug_macro   0x00000000      0x7f6 ./07_Soft_Component/common/common.o
+ .debug_macro   0x00000000       0x10 ./07_Soft_Component/common/common.o
+ .debug_macro   0x00000000      0x214 ./07_Soft_Component/common/common.o
+ .debug_macro   0x00000000     0x5b10 ./07_Soft_Component/common/common.o
+ .debug_macro   0x00000000       0x2e ./07_Soft_Component/common/common.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./06_App_Component/light/light.o
+ .text          0x00000000        0x0 ./06_App_Component/light/light.o
+ .data          0x00000000        0x0 ./06_App_Component/light/light.o
+ .bss           0x00000000        0x0 ./06_App_Component/light/light.o
+ .text.light_control
+                0x00000000       0x28 ./06_App_Component/light/light.o
+ .text.light_change
+                0x00000000       0x1c ./06_App_Component/light/light.o
+ .debug_macro   0x00000000      0x7f6 ./06_App_Component/light/light.o
+ .debug_macro   0x00000000       0x10 ./06_App_Component/light/light.o
+ .debug_macro   0x00000000      0x214 ./06_App_Component/light/light.o
+ .debug_macro   0x00000000     0x5b10 ./06_App_Component/light/light.o
+ .debug_macro   0x00000000       0x2e ./06_App_Component/light/light.o
+ .debug_macro   0x00000000       0x52 ./06_App_Component/light/light.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/uart/uart.o
+ .text          0x00000000        0x0 ./05_Driver/uart/uart.o
+ .data          0x00000000        0x0 ./05_Driver/uart/uart.o
+ .bss           0x00000000        0x0 ./05_Driver/uart/uart.o
+ .text.uart_sendN
+                0x00000000       0x78 ./05_Driver/uart/uart.o
+ .text.uart_reN
+                0x00000000       0x88 ./05_Driver/uart/uart.o
+ .text.uart_disable_re_int
+                0x00000000       0x68 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000      0x7f6 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000       0x10 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000      0x214 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000     0x5b10 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000       0x2e ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000      0x12a ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000       0x16 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000       0x22 ./05_Driver/uart/uart.o
+ .debug_macro   0x00000000       0x28 ./05_Driver/uart/uart.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/gpio/gpio.o
+ .text          0x00000000        0x0 ./05_Driver/gpio/gpio.o
+ .data          0x00000000        0x0 ./05_Driver/gpio/gpio.o
+ .bss           0x00000000        0x0 ./05_Driver/gpio/gpio.o
+ .text.gpio_get
+                0x00000000       0x54 ./05_Driver/gpio/gpio.o
+ .text.gpio_reverse
+                0x00000000       0x54 ./05_Driver/gpio/gpio.o
+ .text.gpio_pull
+                0x00000000       0xe4 ./05_Driver/gpio/gpio.o
+ .text.gpio_enable_int
+                0x00000000       0xb4 ./05_Driver/gpio/gpio.o
+ .text.gpio_disable_int
+                0x00000000       0x84 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00000000      0x7f6 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00000000       0x10 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00000000      0x214 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00000000     0x5b10 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00000000       0x2e ./05_Driver/gpio/gpio.o
+ .group         0x00000000        0x8 ./05_Driver/dac/dac.o
+ .group         0x00000000        0x8 ./05_Driver/dac/dac.o
+ .group         0x00000000        0x8 ./05_Driver/dac/dac.o
+ .group         0x00000000        0x8 ./05_Driver/dac/dac.o
+ .group         0x00000000        0x8 ./05_Driver/dac/dac.o
+ .text          0x00000000        0x0 ./05_Driver/dac/dac.o
+ .data          0x00000000        0x0 ./05_Driver/dac/dac.o
+ .bss           0x00000000        0x0 ./05_Driver/dac/dac.o
+ .debug_macro   0x00000000      0x7f6 ./05_Driver/dac/dac.o
+ .debug_macro   0x00000000       0x10 ./05_Driver/dac/dac.o
+ .debug_macro   0x00000000      0x214 ./05_Driver/dac/dac.o
+ .debug_macro   0x00000000     0x5b10 ./05_Driver/dac/dac.o
+ .debug_macro   0x00000000       0x2e ./05_Driver/dac/dac.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/startup.o
+ .text          0x00000000        0x0 ./03_MCU/startup.o
+ .data          0x00000000        0x0 ./03_MCU/startup.o
+ .bss           0x00000000        0x0 ./03_MCU/startup.o
+ .debug_macro   0x00000000      0x7f6 ./03_MCU/startup.o
+ .debug_macro   0x00000000       0x10 ./03_MCU/startup.o
+ .debug_macro   0x00000000      0x214 ./03_MCU/startup.o
+ .debug_macro   0x00000000     0x5b10 ./03_MCU/startup.o
+ .debug_macro   0x00000000       0x2e ./03_MCU/startup.o
+ .debug_macro   0x00000000      0x12a ./03_MCU/startup.o
+ .debug_macro   0x00000000       0x16 ./03_MCU/startup.o
+ .debug_macro   0x00000000       0x22 ./03_MCU/startup.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/sysinit.o
+ .text          0x00000000        0x0 ./03_MCU/sysinit.o
+ .data          0x00000000        0x0 ./03_MCU/sysinit.o
+ .bss           0x00000000        0x0 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000      0x7f6 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000       0x10 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000      0x214 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000     0x5b10 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000       0x2e ./03_MCU/sysinit.o
+ .debug_macro   0x00000000      0x12a ./03_MCU/sysinit.o
+ .debug_macro   0x00000000       0x16 ./03_MCU/sysinit.o
+ .debug_macro   0x00000000       0x22 ./03_MCU/sysinit.o
+ .group         0x00000000        0x8 ./03_MCU/vectors.o
+ .group         0x00000000        0x8 ./03_MCU/vectors.o
+ .group         0x00000000        0x8 ./03_MCU/vectors.o
+ .text          0x00000000        0x0 ./03_MCU/vectors.o
+ .data          0x00000000        0x0 ./03_MCU/vectors.o
+ .bss           0x00000000        0x0 ./03_MCU/vectors.o
+ .debug_macro   0x00000000      0x7f6 ./03_MCU/vectors.o
+ .debug_macro   0x00000000      0x12a ./03_MCU/vectors.o
+ .debug_macro   0x00000000       0x16 ./03_MCU/vectors.o
+ .data          0x00000000        0x0 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_interrupts     0x00000000         0x000000c0         xr
+m_text           0x00000800         0x0001fbf0         xr
+m_data_1FFFF000  0x1ffff410         0x00000bf0         rw
+m_data           0x20000410         0x00002bf0         rw
+m_cfmprotrom     0x00000400         0x00000010         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD ./08_Source/isr.o
+LOAD ./08_Source/main.o
+LOAD ./07_Soft_Component/common/common.o
+LOAD ./06_App_Component/light/light.o
+LOAD ./05_Driver/uart/uart.o
+LOAD ./05_Driver/gpio/gpio.o
+LOAD ./05_Driver/dac/dac.o
+LOAD ./03_MCU/startup.o
+LOAD ./03_MCU/sysinit.o
+LOAD ./03_MCU/vectors.o
+LOAD d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib\libstdc++.a
+LOAD d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib\libm.a
+START GROUP
+LOAD d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a
+LOAD d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib\libg.a
+LOAD d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0/../../../../arm-none-eabi/lib\libc.a
+END GROUP
+                0x20003000                _estack = 0x20003000
+                0x20003000                __SP_INIT = _estack
+                0x20003000                __BOOT_STACK_ADDRESS = _estack
+                0x00000000                __heap_size = 0x0
+                0x00000400                __stack_size = 0x400
+                0x1ffff000                __VECTOR_RAM = 0x1ffff000
+
+.interrupts     0x00000000       0xc0
+                0x00000000                __vector_table = .
+                0x00000000                . = ALIGN (0x4)
+ *(.vectortable)
+ .vectortable   0x00000000       0xc0 ./03_MCU/vectors.o
+                0x00000000                rom_vector
+                0x000000c0                . = ALIGN (0x4)
+
+.cfmprotect     0x00000400        0x0
+                0x00000400                . = ALIGN (0x4)
+ *(.cfmconfig)
+                0x00000400                . = ALIGN (0x4)
+
+.text           0x00000800      0xd18
+                0x00000800                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000800       0x9c d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o)
+                0x00000800                __aeabi_uidiv
+                0x00000800                __udivsi3
+                0x00000888                __aeabi_uidivmod
+ .text          0x0000089c        0x4 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_dvmd_tls.o)
+                0x0000089c                __aeabi_idiv0
+                0x0000089c                __aeabi_ldiv0
+ *(.text*)
+ .text.isr_uart1_re
+                0x000008a0       0xf0 ./08_Source/isr.o
+                0x000008a0                isr_uart1_re
+ .text.main     0x00000990       0x70 ./08_Source/main.o
+                0x00000990                main
+ .text.enable_irq
+                0x00000a00       0x60 ./07_Soft_Component/common/common.o
+                0x00000a00                enable_irq
+ .text.light_init
+                0x00000a60       0x2c ./06_App_Component/light/light.o
+                0x00000a60                light_init
+ .text.MCGIRCLK_OutEnable
+                0x00000a8c       0x58 ./05_Driver/uart/uart.o
+ .text.uart_init
+                0x00000ae4      0x26c ./05_Driver/uart/uart.o
+                0x00000ae4                uart_init
+ .text.uart_send1
+                0x00000d50       0x94 ./05_Driver/uart/uart.o
+                0x00000d50                uart_send1
+ .text.uart_send_string
+                0x00000de4       0x70 ./05_Driver/uart/uart.o
+                0x00000de4                uart_send_string
+ .text.uart_re1
+                0x00000e54       0xac ./05_Driver/uart/uart.o
+                0x00000e54                uart_re1
+ .text.uart_enable_re_int
+                0x00000f00       0x68 ./05_Driver/uart/uart.o
+                0x00000f00                uart_enable_re_int
+ .text.gpio_port_pin_resolution
+                0x00000f68       0x34 ./05_Driver/gpio/gpio.o
+ .text.gpio_init
+                0x00000f9c       0xb4 ./05_Driver/gpio/gpio.o
+                0x00000f9c                gpio_init
+ .text.gpio_set
+                0x00001050       0x80 ./05_Driver/gpio/gpio.o
+                0x00001050                gpio_set
+ .text.dac_init
+                0x000010d0       0xbc ./05_Driver/dac/dac.o
+                0x000010d0                dac_init
+ .text.dac_convert
+                0x0000118c       0x28 ./05_Driver/dac/dac.o
+                0x0000118c                dac_convert
+ .text.dac_set_buffer
+                0x000011b4       0x70 ./05_Driver/dac/dac.o
+                0x000011b4                dac_set_buffer
+ .text.startup  0x00001224       0x2c ./03_MCU/startup.o
+                0x00001224                startup
+ .text.vector_init
+                0x00001250       0x54 ./03_MCU/startup.o
+ .text.m_zero_fill_bss
+                0x000012a4       0x3c ./03_MCU/startup.o
+ .text.m_data_seg_init
+                0x000012e0       0x48 ./03_MCU/startup.o
+ .text.sys_pin_enable_port
+                0x00001328       0x24 ./03_MCU/startup.o
+ .text.sys_init
+                0x0000134c      0x180 ./03_MCU/sysinit.o
+                0x0000134c                sys_init
+ .text.NOS_isrDummy
+                0x000014cc        0x8 ./03_MCU/vectors.o
+                0x000014cc                NOS_isrDummy
+ *(.rodata)
+ .rodata        0x000014d4       0x14 ./08_Source/main.o
+ *(.rodata*)
+ .rodata.UART_ARR
+                0x000014e8        0x8 ./05_Driver/uart/uart.o
+ .rodata.PORT_ARR
+                0x000014f0       0x14 ./05_Driver/gpio/gpio.o
+ .rodata.GPIO_ARR
+                0x00001504       0x14 ./05_Driver/gpio/gpio.o
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x00001518                . = ALIGN (0x4)
+                0x00001518                _etext = .
+                0x00001518                __START_DATA_ROM = _etext
+
+.vfp11_veneer   0x00001518        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00001518        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00001518        0x0
+ .iplt          0x00000000        0x0 ./08_Source/isr.o
+
+.rel.dyn        0x00001518        0x0
+ .rel.iplt      0x00000000        0x0 ./08_Source/isr.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x00001518        0x0
+                0x00001518                __exidx_start = .
+ *(.ARM.exidx*)
+                0x00001518                __exidx_end = .
+
+.ctors          0x00001518        0x0
+                0x00001518                __CTOR_LIST__ = .
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x00001518                __CTOR_END__ = .
+
+.dtors          0x00001518        0x0
+                0x00001518                __DTOR_LIST__ = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x00001518                __DTOR_END__ = .
+
+.preinit_array  0x00001518        0x0
+                0x00001518                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x00001518                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x00001518        0x0
+                0x00001518                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                0x00001518                PROVIDE (__init_array_end, .)
+
+.fini_array     0x00001518        0x0
+                0x00001518                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+                0x00001518                PROVIDE (__fini_array_end, .)
+                0x00001518                ___ROM_AT = .
+
+.data           0x20000410        0x4 load address 0x00001518
+                0x20000410                . = ALIGN (0x4)
+                0x20000410                _sdata = .
+                0x20000410                __START_DATA = _sdata
+ *(.data)
+ *(.data*)
+ .data.table_irq_uart
+                0x20000410        0x4 ./05_Driver/uart/uart.o
+                0x20000414                . = ALIGN (0x4)
+                0x20000414                _edata = .
+                0x20000414                __END_DATA = _edata
+                0x00000004                ___data_size = (_edata - _sdata)
+                0x0000151c                ___m_data_1FFFF000_ROMStart = (___ROM_AT + SIZEOF (.data))
+
+.igot.plt       0x20000414        0x0 load address 0x0000151c
+ .igot.plt      0x00000000        0x0 ./08_Source/isr.o
+
+.m_data_1FFFF000
+                0x1ffff410        0x0 load address 0x0000151c
+                0x1ffff410                . = ALIGN (0x4)
+                0x1ffff410                ___m_data_1FFFF000_RAMStart = .
+ *(.m_data_1FFFF000)
+                0x1ffff410                ___m_data_1FFFF000_RAMEnd = .
+                0x1ffff410                . = ALIGN (0x4)
+                0x00000000                ___m_data_1FFFF000_ROMSize = (___m_data_1FFFF000_RAMEnd - ___m_data_1FFFF000_RAMStart)
+                0x1ffff410                . = ALIGN (0x4)
+
+.bss            0x20000414       0x10 load address 0x0000151c
+                0x20000414                __START_BSS = .
+                0x20000414                __bss_start__ = __START_BSS
+ *(.bss)
+ *(.bss*)
+ .bss.i.4726    0x20000414        0x4 ./08_Source/isr.o
+ *(COMMON)
+ COMMON         0x20000418        0xa ./08_Source/isr.o
+                0x20000418                my
+                0x20000420                VReference
+                0x20000424                . = ALIGN (0x4)
+ *fill*         0x20000422        0x2 
+                0x20000424                __END_BSS = .
+                0x20000424                __bss_end__ = __END_BSS
+
+._user_heap_stack
+                0x20000424      0x400 load address 0x0000152c
+                0x20000424                . = ALIGN (0x4)
+                0x20000424                PROVIDE (end, .)
+                0x20000424                PROVIDE (_end, .)
+                0x20000424                __heap_addr = .
+                0x20000424                . = (. + __heap_size)
+                0x20000824                . = (. + __stack_size)
+ *fill*         0x20000424      0x400 
+                0x20000824                . = ALIGN (0x4)
+                0x0000151c                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_1FFFF000))
+
+.romp           0x1ffff410       0x24 load address 0x0000151c
+                0x0000151c                __S_romp = _romp_at
+                0x1ffff410        0x4 LONG 0x1518 ___ROM_AT
+                0x1ffff414        0x4 LONG 0x20000410 _sdata
+                0x1ffff418        0x4 LONG 0x4 ___data_size
+                0x1ffff41c        0x4 LONG 0x151c ___m_data_1FFFF000_ROMStart
+                0x1ffff420        0x4 LONG 0x1ffff410 ___m_data_1FFFF000_RAMStart
+                0x1ffff424        0x4 LONG 0x0 ___m_data_1FFFF000_ROMSize
+                0x1ffff428        0x4 LONG 0x0
+                0x1ffff42c        0x4 LONG 0x0
+                0x1ffff430        0x4 LONG 0x0
+
+.ARM.attributes
+                0x00000000       0x32
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x32 ./08_Source/isr.o
+ .ARM.attributes
+                0x00000032       0x32 ./08_Source/main.o
+ .ARM.attributes
+                0x00000064       0x32 ./07_Soft_Component/common/common.o
+ .ARM.attributes
+                0x00000096       0x32 ./06_App_Component/light/light.o
+ .ARM.attributes
+                0x000000c8       0x32 ./05_Driver/uart/uart.o
+ .ARM.attributes
+                0x000000fa       0x32 ./05_Driver/gpio/gpio.o
+ .ARM.attributes
+                0x0000012c       0x32 ./05_Driver/dac/dac.o
+ .ARM.attributes
+                0x0000015e       0x32 ./03_MCU/startup.o
+ .ARM.attributes
+                0x00000190       0x32 ./03_MCU/sysinit.o
+ .ARM.attributes
+                0x000001c2       0x32 ./03_MCU/vectors.o
+ .ARM.attributes
+                0x000001f4       0x23 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000217       0x23 d:/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.0\libgcc.a(_dvmd_tls.o)
+OUTPUT(KL25_DAC.elf elf32-littlearm)
+
+.debug_info     0x00000000     0x200e
+ .debug_info    0x00000000      0x105 ./08_Source/isr.o
+ .debug_info    0x00000105       0xed ./08_Source/main.o
+ .debug_info    0x000001f2      0x273 ./07_Soft_Component/common/common.o
+ .debug_info    0x00000465      0x118 ./06_App_Component/light/light.o
+ .debug_info    0x0000057d      0x8a6 ./05_Driver/uart/uart.o
+ .debug_info    0x00000e23      0x4af ./05_Driver/gpio/gpio.o
+ .debug_info    0x000012d2      0x3e1 ./05_Driver/dac/dac.o
+ .debug_info    0x000016b3      0x517 ./03_MCU/startup.o
+ .debug_info    0x00001bca      0x3bd ./03_MCU/sysinit.o
+ .debug_info    0x00001f87       0x87 ./03_MCU/vectors.o
+
+.debug_abbrev   0x00000000      0x9ba
+ .debug_abbrev  0x00000000       0xa6 ./08_Source/isr.o
+ .debug_abbrev  0x000000a6       0x99 ./08_Source/main.o
+ .debug_abbrev  0x0000013f      0x11c ./07_Soft_Component/common/common.o
+ .debug_abbrev  0x0000025b       0x7b ./06_App_Component/light/light.o
+ .debug_abbrev  0x000002d6      0x1e1 ./05_Driver/uart/uart.o
+ .debug_abbrev  0x000004b7      0x127 ./05_Driver/gpio/gpio.o
+ .debug_abbrev  0x000005de      0x136 ./05_Driver/dac/dac.o
+ .debug_abbrev  0x00000714      0x128 ./03_MCU/startup.o
+ .debug_abbrev  0x0000083c       0xf3 ./03_MCU/sysinit.o
+ .debug_abbrev  0x0000092f       0x8b ./03_MCU/vectors.o
+
+.debug_aranges  0x00000000      0x220
+ .debug_aranges
+                0x00000000       0x20 ./08_Source/isr.o
+ .debug_aranges
+                0x00000020       0x20 ./08_Source/main.o
+ .debug_aranges
+                0x00000040       0x48 ./07_Soft_Component/common/common.o
+ .debug_aranges
+                0x00000088       0x30 ./06_App_Component/light/light.o
+ .debug_aranges
+                0x000000b8       0x60 ./05_Driver/uart/uart.o
+ .debug_aranges
+                0x00000118       0x58 ./05_Driver/gpio/gpio.o
+ .debug_aranges
+                0x00000170       0x30 ./05_Driver/dac/dac.o
+ .debug_aranges
+                0x000001a0       0x40 ./03_MCU/startup.o
+ .debug_aranges
+                0x000001e0       0x20 ./03_MCU/sysinit.o
+ .debug_aranges
+                0x00000200       0x20 ./03_MCU/vectors.o
+
+.debug_ranges   0x00000000      0x180
+ .debug_ranges  0x00000000       0x10 ./08_Source/isr.o
+ .debug_ranges  0x00000010       0x10 ./08_Source/main.o
+ .debug_ranges  0x00000020       0x38 ./07_Soft_Component/common/common.o
+ .debug_ranges  0x00000058       0x20 ./06_App_Component/light/light.o
+ .debug_ranges  0x00000078       0x50 ./05_Driver/uart/uart.o
+ .debug_ranges  0x000000c8       0x48 ./05_Driver/gpio/gpio.o
+ .debug_ranges  0x00000110       0x20 ./05_Driver/dac/dac.o
+ .debug_ranges  0x00000130       0x30 ./03_MCU/startup.o
+ .debug_ranges  0x00000160       0x10 ./03_MCU/sysinit.o
+ .debug_ranges  0x00000170       0x10 ./03_MCU/vectors.o
+
+.debug_macro    0x00000000     0x6bb7
+ .debug_macro   0x00000000       0x9c ./08_Source/isr.o
+ .debug_macro   0x0000009c      0x7f6 ./08_Source/isr.o
+ .debug_macro   0x00000892       0x10 ./08_Source/isr.o
+ .debug_macro   0x000008a2      0x214 ./08_Source/isr.o
+ .debug_macro   0x00000ab6     0x5b10 ./08_Source/isr.o
+ .debug_macro   0x000065c6       0x2e ./08_Source/isr.o
+ .debug_macro   0x000065f4       0x52 ./08_Source/isr.o
+ .debug_macro   0x00006646      0x12a ./08_Source/isr.o
+ .debug_macro   0x00006770       0x16 ./08_Source/isr.o
+ .debug_macro   0x00006786       0x22 ./08_Source/isr.o
+ .debug_macro   0x000067a8       0x28 ./08_Source/isr.o
+ .debug_macro   0x000067d0       0x28 ./08_Source/isr.o
+ .debug_macro   0x000067f8       0x1c ./08_Source/isr.o
+ .debug_macro   0x00006814       0x9c ./08_Source/main.o
+ .debug_macro   0x000068b0       0x41 ./07_Soft_Component/common/common.o
+ .debug_macro   0x000068f1       0x59 ./06_App_Component/light/light.o
+ .debug_macro   0x0000694a       0x22 ./06_App_Component/light/light.o
+ .debug_macro   0x0000696c       0x71 ./05_Driver/uart/uart.o
+ .debug_macro   0x000069dd       0x50 ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00006a2d       0x4c ./05_Driver/gpio/gpio.o
+ .debug_macro   0x00006a79       0x4b ./05_Driver/dac/dac.o
+ .debug_macro   0x00006ac4       0x6e ./03_MCU/startup.o
+ .debug_macro   0x00006b32       0x62 ./03_MCU/sysinit.o
+ .debug_macro   0x00006b94       0x23 ./03_MCU/vectors.o
+
+.debug_line     0x00000000     0x1f5c
+ .debug_line    0x00000000      0x544 ./08_Source/isr.o
+ .debug_line    0x00000544      0x53d ./08_Source/main.o
+ .debug_line    0x00000a81      0x1e0 ./07_Soft_Component/common/common.o
+ .debug_line    0x00000c61      0x2cd ./06_App_Component/light/light.o
+ .debug_line    0x00000f2e      0x426 ./05_Driver/uart/uart.o
+ .debug_line    0x00001354      0x2ba ./05_Driver/gpio/gpio.o
+ .debug_line    0x0000160e      0x231 ./05_Driver/dac/dac.o
+ .debug_line    0x0000183f      0x31c ./03_MCU/startup.o
+ .debug_line    0x00001b5b      0x317 ./03_MCU/sysinit.o
+ .debug_line    0x00001e72       0xea ./03_MCU/vectors.o
+
+.debug_str      0x00000000    0x21e65
+ .debug_str     0x00000000    0x2173b ./08_Source/isr.o
+                              0x21aa1 (size before relaxing)
+ .debug_str     0x0002173b       0x2b ./08_Source/main.o
+                              0x21aa0 (size before relaxing)
+ .debug_str     0x00021766      0x104 ./07_Soft_Component/common/common.o
+                              0x2143e (size before relaxing)
+ .debug_str     0x0002186a       0x57 ./06_App_Component/light/light.o
+                              0x2149b (size before relaxing)
+ .debug_str     0x000218c1      0x237 ./05_Driver/uart/uart.o
+                              0x21b7b (size before relaxing)
+ .debug_str     0x00021af8       0xf6 ./05_Driver/gpio/gpio.o
+                              0x21528 (size before relaxing)
+ .debug_str     0x00021bee       0x8d ./05_Driver/dac/dac.o
+                              0x214c3 (size before relaxing)
+ .debug_str     0x00021c7b      0x183 ./03_MCU/startup.o
+                              0x21b3b (size before relaxing)
+ .debug_str     0x00021dfe       0x26 ./03_MCU/sysinit.o
+                              0x219fb (size before relaxing)
+ .debug_str     0x00021e24       0x41 ./03_MCU/vectors.o
+                               0x27dc (size before relaxing)
+
+.comment        0x00000000       0x2a
+ .comment       0x00000000       0x2a ./08_Source/isr.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b ./08_Source/main.o
+ .comment       0x00000000       0x2b ./07_Soft_Component/common/common.o
+ .comment       0x00000000       0x2b ./06_App_Component/light/light.o
+ .comment       0x00000000       0x2b ./05_Driver/uart/uart.o
+ .comment       0x00000000       0x2b ./05_Driver/gpio/gpio.o
+ .comment       0x00000000       0x2b ./05_Driver/dac/dac.o
+ .comment       0x00000000       0x2b ./03_MCU/startup.o
+ .comment       0x00000000       0x2b ./03_MCU/sysinit.o
+ .comment       0x00000000       0x2b ./03_MCU/vectors.o
+
+.debug_frame    0x00000000      0x544
+ .debug_frame   0x00000000       0x30 ./08_Source/isr.o
+ .debug_frame   0x00000030       0x30 ./08_Source/main.o
+ .debug_frame   0x00000060       0xc4 ./07_Soft_Component/common/common.o
+ .debug_frame   0x00000124       0x70 ./06_App_Component/light/light.o
+ .debug_frame   0x00000194      0x12c ./05_Driver/uart/uart.o
+ .debug_frame   0x000002c0      0x110 ./05_Driver/gpio/gpio.o
+ .debug_frame   0x000003d0       0x70 ./05_Driver/dac/dac.o
+ .debug_frame   0x00000440       0xa8 ./03_MCU/startup.o
+ .debug_frame   0x000004e8       0x30 ./03_MCU/sysinit.o
+ .debug_frame   0x00000518       0x2c ./03_MCU/vectors.o
